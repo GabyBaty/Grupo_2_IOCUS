@@ -17,7 +17,7 @@
 
 
 ## Integrantes del equipo
-* **Maria Eugenia Amaya:**
+* **Maria Eugenia Amaya:** Tengo 35 años estudiante de programación web full stack en formar 
 <br>
 
 * **Gabriel Carrizo:**
