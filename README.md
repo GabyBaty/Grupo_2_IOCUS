@@ -5,7 +5,7 @@
 ## **E-Commerce: IOCUS** :guardsman::dizzy:
 
 
--Nuestro Sitio Ofrecera todo tipo de juguetes tanto para niños como para coleccionistas.Principalmente Figuras de accion , vehiculos ,Disfrases , juegos de mesa en donde trabajaremos con marcas como Disney, Mattle, Playmates,Hasbro, Lego, entre otras.
+-Nuestro Sitio ofrecera todo tipo de juguetes tanto para niños como para coleccionistas.Principalmente Figuras de accion , vehiculos ,Disfrases , juegos de mesa en donde trabajaremos con marcas como Disney, Mattel, Playmates,Hasbro, Lego, entre otras.
 
 <dl>
   <dt>¿Quién será nuestra audiencia objetivo?</dt>
