@@ -25,6 +25,7 @@
 
 * **Fernando Ojeda:**
 <br>
+
 * **Damian Trajster:** Tengo 35 años. Soy Programador y Coleccionista, Actualmente curso Desarrollador web Full-Stack en Formar/Digital House,quiero dar un giro a mi carrera profesional con este curso :) so let's Go!
 
 
