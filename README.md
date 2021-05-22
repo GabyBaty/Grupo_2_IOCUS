@@ -17,7 +17,7 @@
 
 
 ## Integrantes del equipo
-* **Maria Eugenia Amaya:** Tengo 35 años estudiante de programación web full stack en formar 
+* **Maria Eugenia Amaya:** Tengo 35 años, dos hijos, actualmente estudiante de programación web full stack en Formar. Con muchas ganas de aprender muchas cosas nuevas y poder llegar a ser una gran desarrolladora y crear cosas increibles e innovadoras. Amo leer estudiar y formarme constantemente en distintas areas. 
 <br>
 
 * **Gabriel Carrizo:**
