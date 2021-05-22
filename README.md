@@ -23,8 +23,7 @@
 * **Gabriel Carrizo:**
 <br>
 
-* **Fernando Ojeda:**
-<br>
+* **Fernando Ojeda:** Tengo 32 años y soy estoy estudiando para ser un desarrollador web Full-Stack. En la programación encontré mi pasión y estoy decidido a seguir este camino hasta ser un profesional propiamente dicho. Suelo leer mucho, sobre todo libros o novelas visuales de horror o suspenso. 
 
 * **Damian Trajster:** Tengo 35 años. Soy Programador y Coleccionista, Actualmente curso Desarrollador web Full-Stack en Formar/Digital House,quiero dar un giro a mi carrera profesional con este curso :) so let's Go!
 
