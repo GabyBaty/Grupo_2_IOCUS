@@ -5,7 +5,7 @@
 ## **E-Commerce: IOCUS** :guardsman::dizzy:
 
 
--Nuestro Sitio ofrecera todo tipo de juguetes tanto para niños como para coleccionistas.Principalmente Figuras de accion , vehiculos ,Disfrases , juegos de mesa en donde trabajaremos con marcas como Disney, Mattel, Playmates,Hasbro, Lego, entre otras.
+-Nuestro Sitio ofrecera todo tipo de juguetes tanto para niños como para coleccionistas.Principalmente Figuras de accion , vehiculos ,disfraces , juegos de mesa en donde trabajaremos con marcas como Disney, Mattel, Playmates,Hasbro, Lego, entre otras.
 
 <dl>
   <dt>¿Quién será nuestra audiencia objetivo?</dt>
@@ -20,7 +20,7 @@
 * **Maria Eugenia Amaya:** Tengo 35 años, dos hijos, actualmente estudiante de programación web full stack en Formar. Con muchas ganas de aprender muchas cosas nuevas y poder llegar a ser una gran desarrolladora y crear cosas increibles e innovadoras. Amo leer estudiar y formarme constantemente en distintas areas. 
 <br>
 
-* **Gabriel Carrizo:**
+* **Gabriel Carrizo:** 
 <br>
 
 * **Fernando Ojeda:** Tengo 32 años y soy estoy estudiando para ser un desarrollador web Full-Stack. En la programación encontré mi pasión y estoy decidido a seguir este camino hasta ser un profesional propiamente dicho. Suelo leer mucho, sobre todo libros o novelas visuales de horror o suspenso. 
