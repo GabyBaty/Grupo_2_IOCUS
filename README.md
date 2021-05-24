@@ -1,6 +1,6 @@
 <img width="auto" src="wireframes/img/portadaReadme.jpg">
 
-# **Grupo 2** - tematica: Ecommerce de Jugueteria :star2:
+# **Grupo 2** - tematica: E-commerce de Jugueteria :star2:
 ---
 ## **E-Commerce: IOCUS** :guardsman::dizzy:
 
@@ -12,7 +12,7 @@
   <dd>Nuestra audiencia  objetivo son principalmente los niños cuyo juguetes son fundamentales en el desarrollo y por otra parte los padres tienen un rol imprescindible en la elección y adquisición de estos productos, por ultimo tambien ayudamos a los coleccionistas a completar su coleccion.</dd>
 
 <dl>
-  <dt>¿Cómo ajustaremos nuestra oferta a ese público?</dt>
+  <dt>¿Cómo ajustaremos nuestra oferta a ese público?</d t>
 <dd>Ajustaremos la oferta a traves de encuestas y conocimiento de lo más requerido en el mercado actual.<dd>
 
 
