@@ -20,7 +20,7 @@
 * **Maria Eugenia Amaya:** Tengo 35 años, dos hijos, actualmente estudiante de programación web full stack en Formar. Con muchas ganas de aprender muchas cosas nuevas y poder llegar a ser una gran desarrolladora y crear cosas increibles e innovadoras. Amo leer estudiar y formarme constantemente en distintas areas. 
 <br>
 
-* **Gabriel Carrizo:** 
+* **Gabriel Carrizo:** Tengo 40 años, soy padre de 3 hermosos hijos ( Mariana 13, Mathias 12 y Thomas 10), me encanta jugar al futbol, cantar y hacer reir a todas las personas que se encuentren cerca. Decidi darle un giro a mi vida y hoy me encuentro realizando este curso de Programador Web Full Stack para poder desarrollarme profesionalmente.
 <br>
 
 * **Fernando Ojeda:** Tengo 32 años y soy estoy estudiando para ser un desarrollador web Full-Stack. En la programación encontré mi pasión y estoy decidido a seguir este camino hasta ser un profesional propiamente dicho. Suelo leer mucho, sobre todo libros o novelas visuales de horror o suspenso. 
