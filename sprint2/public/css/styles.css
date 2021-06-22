@@ -1,14 +1,3 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans:wght@500&display=swap');
 @import url('/css/general.css');
 
-header {
-    height: 11rem;
-    background-color: #328cd5;
-    text-align: center;
-}
-
-main {
-    height: 90rem;
-    
-    text-align: center;
-}
