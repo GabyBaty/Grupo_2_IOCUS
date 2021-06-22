@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans:wght@500&display=swap');
-@import url('/css/footer.css');
-* {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: 'Rubik', sans-serif;
-}
-html{
-    font-size: 62.5%;
-   }
-body {
-   font-size: 16px;  /* 1rem =10px  */
-}
+@import url('/css/general.css');
 
 header {
     height: 11rem;
