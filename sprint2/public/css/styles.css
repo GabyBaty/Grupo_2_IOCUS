@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans:wght@500&display=swap');
+@import url('/css/footer.css');
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Rubik', sans-serif;
+}
+html{
+    font-size: 62.5%;
+   }
+body {
+   font-size: 16px;  /* 1rem =10px  */
+}
+
+header {
+    height: 11rem;
+    background-color: #328cd5;
+    text-align: center;
+}
+
+main {
+    height: 90rem;
+    background-color: gray;
+    text-align: center;
+}

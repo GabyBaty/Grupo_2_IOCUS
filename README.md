@@ -1,26 +1,26 @@
 <img width="auto" src="wireframes/img/portadaReadme.jpg">
 
-# **Grupo 2** - tematica: Ecommerce de Jugueteria :star2:
+# **Grupo 2** - tematica: E-commerce de Jugueteria :star2:
 ---
 ## **E-Commerce: IOCUS** :guardsman::dizzy:
 
 
--Nuestro Sitio ofrecera todo tipo de juguetes tanto para niños como para coleccionistas.Principalmente Figuras de accion , vehiculos ,Disfrases , juegos de mesa en donde trabajaremos con marcas como Disney, Mattel, Playmates,Hasbro, Lego, entre otras.
+-Nuestro Sitio ofrecera todo tipo de juguetes tanto para niños como para coleccionistas.Principalmente Figuras de accion , vehiculos ,disfraces , juegos de mesa en donde trabajaremos con marcas como Disney, Mattel, Playmates,Hasbro, Lego, entre otras.
 
 <dl>
   <dt>¿Quién será nuestra audiencia objetivo?</dt>
   <dd>Nuestra audiencia  objetivo son principalmente los niños cuyo juguetes son fundamentales en el desarrollo y por otra parte los padres tienen un rol imprescindible en la elección y adquisición de estos productos, por ultimo tambien ayudamos a los coleccionistas a completar su coleccion.</dd>
 
 <dl>
-  <dt>¿Cómo ajustaremos nuestra oferta a ese público?</dt>
+  <dt>¿Cómo ajustaremos nuestra oferta a ese público?</d t>
 <dd>Ajustaremos la oferta a traves de encuestas y conocimiento de lo más requerido en el mercado actual.<dd>
 
 
 ## Integrantes del equipo
-* **Maria Eugenia Amaya:**
+* **Maria Eugenia Amaya:** Tengo 35 años, dos hijos, actualmente estudiante de programación web full stack en Formar. Con muchas ganas de aprender muchas cosas nuevas y poder llegar a ser una gran desarrolladora y crear cosas increibles e innovadoras. Amo leer estudiar y formarme constantemente en distintas areas. 
 <br>
 
-* **Gabriel Carrizo:**
+* **Gabriel Carrizo:** Tengo 40 años, soy padre de 3 hermosos hijos ( Mariana 13, Mathias 12 y Thomas 10), me encanta jugar al futbol, cantar y hacer reir a todas las personas que se encuentren cerca. Decidi darle un giro a mi vida y hoy me encuentro realizando este curso de Programador Web Full Stack para poder desarrollarme profesionalmente.
 <br>
 
 * **Fernando Ojeda:** Tengo 32 años y soy estoy estudiando para ser un desarrollador web Full-Stack. En la programación encontré mi pasión y estoy decidido a seguir este camino hasta ser un profesional propiamente dicho. Suelo leer mucho, sobre todo libros o novelas visuales de horror o suspenso. 
@@ -39,3 +39,6 @@ Para llevar a cabo este proyecto, tomamos como páginas referentes a las mas gra
  * [Jugueteria Bambi](https://www.jugueteriabambi.com.ar/)
  * [Fisher Price](https://www.fisher-price.com/es-es)
  * [Ondule](https://ondule.com.ar)
+## Tablero de Trello
+
+* [Trello](https://trello.com/b/1rG3XV5j/grupo2iocus)
