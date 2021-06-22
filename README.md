@@ -39,3 +39,6 @@ Para llevar a cabo este proyecto, tomamos como páginas referentes a las mas gra
  * [Jugueteria Bambi](https://www.jugueteriabambi.com.ar/)
  * [Fisher Price](https://www.fisher-price.com/es-es)
  * [Ondule](https://ondule.com.ar)
+## Tablero de Trello
+
+* [Trello](https://trello.com/b/1rG3XV5j/grupo2iocus)
