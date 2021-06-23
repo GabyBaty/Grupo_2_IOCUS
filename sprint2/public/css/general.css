@@ -34,6 +34,7 @@ html {
 body {
   font-size: 16px; /* 1rem =10px  */
   background-image: url("../img/fondo.png");
+  
 }
 
 a {
@@ -93,9 +94,9 @@ h4 {
   
   .formulario-button {
     background-color: var(--color-negro);
-    color: #fff;
+    color: var(--color-blanco);
     border: none;
-    padding: 1.2rem;
+    padding: .8rem;
     cursor: pointer;
   }
   
