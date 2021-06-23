@@ -1,3 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Work+Sans:wght@500&display=swap');
 @import url('/css/general.css');
 
+main {
+    height: 900px;
+    background-image: url("../img/fondo.png");
+}
