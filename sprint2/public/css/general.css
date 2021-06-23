@@ -8,7 +8,7 @@
   --color-naranja: #ff6914;
   --color-blanco: #fff;
   --color-negro: #000;
-
+  --color-gris: #ebebeb;   
   --fuentePrincipal: "Rubik", sans-serif;
   --fuenteSecundaria:'Work Sans', sans-serif; ;
 }
@@ -34,7 +34,9 @@ html {
 body {
   font-size: 16px; /* 1rem =10px  */
 }
-
+main {
+  background-color: var(--color-violeta);
+}
 a {
   text-decoration: none;
 }
