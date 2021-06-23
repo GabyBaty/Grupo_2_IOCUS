@@ -33,10 +33,9 @@ html {
 }
 body {
   font-size: 16px; /* 1rem =10px  */
+  background-image: url('/img/fondo.png');
 }
-main {
-  background-color: var(--color-violeta);
-}
+
 a {
   text-decoration: none;
 }
