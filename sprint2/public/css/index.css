@@ -37,6 +37,27 @@ p {
 
 /* * PRODUCTOS DESTACADOS*/
 
+.Produtos-destacados{
+  background-color: #ebebeb;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: none;
+  box-shadow: 7px 13px 37px var(--color-negro);
+
+}
+
+@media(min-width: 768px){
+  
+.Produtos-destacados{
+  border-radius:4%;
+
+}
+    
+}
+
+
+
 .titulo-destacado {
   text-transform: uppercase;
   font-family: var(--fuenteSecundaria);
@@ -420,3 +441,4 @@ section.Produtos-destacados {
     display: flex;
   }
 }
+

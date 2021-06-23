@@ -2,7 +2,3 @@
 @import url('/css/general.css');
 @import url('/css/index.css');
 
-main {
-    height: 900px;
-    background-image: url("../img/fondo.png");
-}
