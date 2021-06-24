@@ -231,7 +231,7 @@ h4 {
       margin-top: 4rem;
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: center;
       width: 100%;
       opacity: 1;
       height: 2rem;
