@@ -344,3 +344,37 @@
     text-align: center;
     font-size: 1rem;
    }
+   @media (max-width: 768px) {
+
+    .footer-wrap-left, .footer-wrap-right  {
+      display: none;
+    }
+    
+    .footer-column-information, .footer-column-account{
+      display: none;
+    }
+    .footer-column-contact {
+      font-size: 1.1rem;
+    }
+    .footer-column-social i{
+      font-size: 2rem;
+    }
+    .footer-column-social .footer-column-title, .footer-column-contact .footer-column-title {
+      font-size: 1.3rem;
+    }
+    .footer-middle-grow1 {
+      flex-grow: 1;
+      width: 40%;
+      
+    }
+    .footer-copyright {
+      flex-grow: 3;
+    }
+    
+  }
+  
+  @media (max-width: 1400px) {
+    .footer-wrap-left, .footer-wrap-right  {
+      display: none;
+    }
+  }
