@@ -338,7 +338,7 @@ section.Produtos-destacados {
   }
 
   .item-img {
-    width: 40%;
+    width: 70%;
   }
 
   .brand-information {
@@ -359,7 +359,7 @@ section.Produtos-destacados {
   }
 
   .item-img {
-    width: 28%;
+    width: 45%;
     margin-left: 6rem;
   }
 
@@ -399,32 +399,39 @@ section.Produtos-destacados {
   padding: 3rem;
   background-color: #fff;
   line-height: 0.4;
+
 }
 
 .envios article {
   margin-bottom: 5rem;
+  position: relative;
 }
 
 .envios__box {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+
 }
 
 .envios__icono {
   color: #ff6913;
+  font-size: 2.5rem;
   position: absolute;
-  bottom: -1.2rem;
+  bottom: -1rem;
   right: 21rem;
+  
+ 
+  
 }
 
 .envios__titulo {
   text-align: center;
+
 }
 
 .envios__parrafo {
-  margin: -2rem;
+  margin: -1rem;
   font-size: 1.3rem;
 }
 
