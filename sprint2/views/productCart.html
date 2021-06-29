@@ -9,12 +9,148 @@
     <title>IOCUS|Carrito</title>
 </head>
 <body>
-    <header>
-        <h1>Header</h1>
+    <header class="header" >
+        <div class="nav__container container">
+            <div class="nav__logo">
+                <a href="index.html" >
+                <img src="img/Logo.png" alt="logo">
+                </a>
+            </div>
+              <!-- search DESKTOP -->
+              <form class="formulario-full" action="">
+                <input  class="formulario--search" type="text" placeholder="Buscar Producto..."><input class="formulario-button" type="submit" value="BUSCAR">
+              </form>
+      
+              <!--  INICIO Y SHOP -->
+            <div class="shop">
+                <a href="#"><i class="fas fa-user"></i>iniciar</a>
+                <span>|</span>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+             
+              <!-- search mobile -->
+              <form class="formMobile">
+                <a href="#"><i class="fas fa-search"></i></a>             
+             </form>
+  
+             <!--  icono menu mobile HAMBURGUESA -->
+             <button class="ham" type="button"><i class="fas fa-bars" ></i></button>
+            </div>
+  
+       <!-- NAVEGACION -->
+          <nav class="nav-2">
+            <ul class="enlaces-menu">
+              <li><a href="#">figuras de accion</a></li>
+              <li><a href="#">vehiculos</a></li>
+              <li><a href="#">disfraces</a></li>
+              <li><a href="#">juegos de mesa</a></li>
+              <li><a href="">quienes somos</a></li>
+              <li><a href="#">contacto</a></li>
+            </ul>
+          </nav>
     </header>
 
     <main>
-        <h1>Main</h1>
+        <h2 id="order-summary">Resumen de pedido</h2>
+        <div class="cart-main-content">
+            <div class="cart-container-left">
+                <div class="cart-product-titles">
+                    <div class="individual-title"><h3>Producto</h3></div>
+                    <div class="individual-title"><h3>Precio</h3></div>
+                    <div class="individual-title"><h3>Cantidad</h3></div>
+                    <div class="individual-title"><h3>Subtotal</h3></div>    
+                    <div class="individual-title"><h3>Eliminar</h3></div>
+                </div>
+                <div class="cart-product-row-content1">
+                    <div class="cart-product-content-description">
+                        <p class="cart-product-name">Nombre del producto</p>
+                        <img class="cart-img-product" src="/img/img-product1.jpg" alt="img-product1">
+                    </div>
+                    <div class="cart-product-content-price">
+                        <p>$ 1.500</p>
+                    </div>
+                    <div class="cart-product-content-quantity">
+                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input class="input-quantity" type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    </div>
+                    <div class="cart-product-content-subtotal">
+                        <p>$ 1.500</p>
+                    </div>
+                    <div class="cart-product-content-delete">
+                        <a href="#delete"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                   
+                </div>
+                <div class="cart-product-row-content2">
+                    <div class="cart-product-content-description">
+                        <p>Nombre del producto</p>
+                        <img class="cart-img-product" src="/img/img-product2.jpg" alt="img-product2">
+                    </div>
+                    <div class="cart-product-content-price">
+                        <p>$ 1.900</p>
+                    </div>
+                    <div class="cart-product-content-quantity">
+                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input class="input-quantity" type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    </div>
+                    <div class="cart-product-content-subtotal">
+                        <p>$ 3.800</p>
+                    </div>
+                    <div class="cart-product-content-delete">
+                        <a href="#delete"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="cart-container-right">
+                <div class="cart-container-right-top">
+                    <div class="cart-container-right-subtotal">
+                        <h3>Subtotal</h3>
+                        <p>$ 5.300</p>
+                    </div>
+                    <div class="cart-container-right-discount">
+                        <h3>Descuento</h3>
+                        <p>$ 0</p>
+                    </div>
+                    <div class="cart-container-right-delivery">
+                        <h3>Costo de envío</h3>
+                        <p>$ 0</p>
+                    </div>
+                </div>
+                <div class="cart-container-right-bottom">
+                    <div class="cart-container-right-total">
+                        <h2>Total</h2>
+                        <h2>$ 5.300</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-secondary-content">
+            <div class="cart-secondary-content-button">
+                <button class="cart-add-products">Agregar más productos</button>
+            </div>
+            <div class="cart-secondary-content-button">
+                <button class="cart-confirm">Confirmar pedido</button>
+            </div>
+            
+        </div>
+        <div class="cart-secondary-content-wrap-login">
+            <h3 id="title-login">Inicia sesión para completar tu pedido</h3>
+            <div class="wrap-login">
+                <div class="email">
+                    <label>Email</label>
+                    <input class="controls" type="email" name="correo" id="correo" placeholder="">
+                </div>
+                <div class="password">
+                    <label for="">Contraseña</label>
+                    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="">
+                </div>
+                <button class="cart-login">Ingresar</button>
+                <h3>¿Olvidaste tu contraseña?</h3>
+            </div>
+            <div class="wrap-register">
+                <h3>¿Todavía no estás registrado?</h3>
+                <button class="cart-register">Regístrate</button>
+            </div>
+        </div> 
     </main>
 
     <footer>
