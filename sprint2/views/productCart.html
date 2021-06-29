@@ -10,13 +10,90 @@
 </head>
 <body>
     <header>
-        <h1>Header</h1>
-        
+        <header class="header" >
+            <div class="nav__container container">
+              <div class="nav__logo">
+              <a href="index.html" >
+                <img src="img/Logo.png" alt="logo">
+              </a>
+            </div>
+              <!-- search DESKTOP -->
+              <form class="formulario-full" action="">
+                <input  class="formulario--search" type="text" placeholder="Buscar Producto..."><input class="formulario-button" type="submit" value="BUSCAR">
+              </form>
+      
+              <!--  INICIO Y SHOP -->
+            <div class="shop">
+                <a href="#"><i class="fas fa-user"></i>iniciar</a>
+                <span>|</span>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+             
+              <!-- search mobile -->
+              <form class="formMobile">
+                <a href="#"><i class="fas fa-search"></i></a>             
+             </form>
+  
+             <!--  icono menu mobile HAMBURGUESA -->
+             <button class="ham" type="button"><i class="fas fa-bars" ></i></button>
+            </div>
+  
+       <!-- NAVEGACION -->
+          <nav class="nav-2">
+            <ul class="enlaces-menu">
+              <li><a href="#">figuras de accion</a></li>
+              <li><a href="#">vehiculos</a></li>
+              <li><a href="#">disfraces</a></li>
+              <li><a href="#">juegos de mesa</a></li>
+              <li><a href="">quienes somos</a></li>
+              <li><a href="#">contacto</a></li>
+            </ul>
+          </nav>
     </header>
 
     <main>
-        <h1>Main</h1>
-        
+        <h2>Resumen de pedido</h2>
+        <div class="cart-main-content">
+            <div class="cart-container-left">
+                <div class="column-container-left1">
+                    <h3 class="column-container-left-title">Producto</h3>
+                    <p class="column-container-left-product-name">Nombre del producto</p>
+                    <img class="cart-img-product" src="/img/img-product1.jpg" alt="img-product1">
+                    <h3 class="column-container-left-title">Producto</h3>
+                    <p class="column-container-left-product-name">Nombre del producto</p>
+                    <img class="cart-img-product" src="/img/img-product2.jpg" alt="img-product2">
+                </div>
+                <div class="column-container-left2">
+                    <h3 class="column-container-left-title">Precio</h3>
+                    <p class="column-container-left2-price">$ 1.500</p>
+                    <p class="column-container-left2-price">$ 1.900</p>
+                </div>
+                <div class="column-container-left3">
+                    <h3 class="column-container-left-title">Cantidad</h3>
+                    <div class="column-container-left3-quantity">
+                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    </div>
+                    <div class="column-container-left3-quantity">
+                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                </div>
+                <div class="column-container-left4">
+                    <h3 class="column-container-left-title">Subtotal</h3>
+                    <p class="column-container-left2-subtotal">$ 1.500</p>
+                    <p class="column-container-left2-subtotal">$ 3.800</p>
+                </div>
+                <div class="column-container-left5">
+                    <h3 class="column-container-left-title">Eliminar</h3>
+                    <div class="column-container-left3-delete"><a href="#delete"><i class="fas fa-trash-alt"></i></div></a>
+                    <div class="column-container-left3-delete"><a href="#delete"><i class="fas fa-trash-alt"></i></div></a>
+                </div>
+            </div>
+            <div class="column-container-right">
+                <div class="column-container-right-subtotal"><h3>Subtotal</h3><p>$ 5.300</p></div>
+                <div class="column-container-right-discount"><h3>Descuento</h3><p>$ 0</p></div>
+                <div class="column-container-right-subtotal"><h3>Costo de envío</h3><p></p></div>
+                <div class="column-container-right-total"><h2>Total</h2><p>$ 5.300</p></div>
+            </div>
+    
     </main>
 
     <footer>
