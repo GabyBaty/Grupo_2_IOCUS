@@ -9,13 +9,12 @@
     <title>IOCUS|Carrito</title>
 </head>
 <body>
-    <header>
-        <header class="header" >
-            <div class="nav__container container">
-              <div class="nav__logo">
-              <a href="index.html" >
+    <header class="header" >
+        <div class="nav__container container">
+            <div class="nav__logo">
+                <a href="index.html" >
                 <img src="img/Logo.png" alt="logo">
-              </a>
+                </a>
             </div>
               <!-- search DESKTOP -->
               <form class="formulario-full" action="">
@@ -52,48 +51,106 @@
     </header>
 
     <main>
-        <h2>Resumen de pedido</h2>
+        <h2 id="order-summary">Resumen de pedido</h2>
         <div class="cart-main-content">
             <div class="cart-container-left">
-                <div class="column-container-left1">
-                    <h3 class="column-container-left-title">Producto</h3>
-                    <p class="column-container-left-product-name">Nombre del producto</p>
-                    <img class="cart-img-product" src="/img/img-product1.jpg" alt="img-product1">
-                    <h3 class="column-container-left-title">Producto</h3>
-                    <p class="column-container-left-product-name">Nombre del producto</p>
-                    <img class="cart-img-product" src="/img/img-product2.jpg" alt="img-product2">
+                <div class="cart-product-titles">
+                    <div class="individual-title"><h3>Producto</h3></div>
+                    <div class="individual-title"><h3>Precio</h3></div>
+                    <div class="individual-title"><h3>Cantidad</h3></div>
+                    <div class="individual-title"><h3>Subtotal</h3></div>    
+                    <div class="individual-title"><h3>Eliminar</h3></div>
                 </div>
-                <div class="column-container-left2">
-                    <h3 class="column-container-left-title">Precio</h3>
-                    <p class="column-container-left2-price">$ 1.500</p>
-                    <p class="column-container-left2-price">$ 1.900</p>
-                </div>
-                <div class="column-container-left3">
-                    <h3 class="column-container-left-title">Cantidad</h3>
-                    <div class="column-container-left3-quantity">
-                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                <div class="cart-product-row-content1">
+                    <div class="cart-product-content-description">
+                        <p class="cart-product-name">Nombre del producto</p>
+                        <img class="cart-img-product" src="/img/img-product1.jpg" alt="img-product1">
                     </div>
-                    <div class="column-container-left3-quantity">
-                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    <div class="cart-product-content-price">
+                        <p>$ 1.500</p>
+                    </div>
+                    <div class="cart-product-content-quantity">
+                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input class="input-quantity" type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    </div>
+                    <div class="cart-product-content-subtotal">
+                        <p>$ 1.500</p>
+                    </div>
+                    <div class="cart-product-content-delete">
+                        <a href="#delete"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                   
                 </div>
-                <div class="column-container-left4">
-                    <h3 class="column-container-left-title">Subtotal</h3>
-                    <p class="column-container-left2-subtotal">$ 1.500</p>
-                    <p class="column-container-left2-subtotal">$ 3.800</p>
+                <div class="cart-product-row-content2">
+                    <div class="cart-product-content-description">
+                        <p>Nombre del producto</p>
+                        <img class="cart-img-product" src="/img/img-product2.jpg" alt="img-product2">
+                    </div>
+                    <div class="cart-product-content-price">
+                        <p>$ 1.900</p>
+                    </div>
+                    <div class="cart-product-content-quantity">
+                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input class="input-quantity" type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    </div>
+                    <div class="cart-product-content-subtotal">
+                        <p>$ 3.800</p>
+                    </div>
+                    <div class="cart-product-content-delete">
+                        <a href="#delete"><i class="fas fa-trash-alt"></i></a>
+                    </div>
                 </div>
-                <div class="column-container-left5">
-                    <h3 class="column-container-left-title">Eliminar</h3>
-                    <div class="column-container-left3-delete"><a href="#delete"><i class="fas fa-trash-alt"></i></div></a>
-                    <div class="column-container-left3-delete"><a href="#delete"><i class="fas fa-trash-alt"></i></div></a>
+                
+            </div>
+            <div class="cart-container-right">
+                <div class="cart-container-right-top">
+                    <div class="cart-container-right-subtotal">
+                        <h3>Subtotal</h3>
+                        <p>$ 5.300</p>
+                    </div>
+                    <div class="cart-container-right-discount">
+                        <h3>Descuento</h3>
+                        <p>$ 0</p>
+                    </div>
+                    <div class="cart-container-right-delivery">
+                        <h3>Costo de envío</h3>
+                        <p>$ 0</p>
+                    </div>
+                </div>
+                <div class="cart-container-right-bottom">
+                    <div class="cart-container-right-total">
+                        <h2>Total</h2>
+                        <h2>$ 5.300</h2>
+                    </div>
                 </div>
             </div>
-            <div class="column-container-right">
-                <div class="column-container-right-subtotal"><h3>Subtotal</h3><p>$ 5.300</p></div>
-                <div class="column-container-right-discount"><h3>Descuento</h3><p>$ 0</p></div>
-                <div class="column-container-right-subtotal"><h3>Costo de envío</h3><p></p></div>
-                <div class="column-container-right-total"><h2>Total</h2><p>$ 5.300</p></div>
+        </div>
+        <div class="cart-secondary-content">
+            <div class="cart-secondary-content-button">
+                <button class="cart-add-products">Agregar más productos</button>
             </div>
-    
+            <div class="cart-secondary-content-button">
+                <button class="cart-confirm">Confirmar pedido</button>
+            </div>
+            
+        </div>
+        <div class="cart-secondary-content-wrap-login">
+            <h3 id="title-login">Inicia sesión para completar tu pedido</h3>
+            <div class="wrap-login">
+                <div class="email">
+                    <label>Email</label>
+                    <input class="controls" type="email" name="correo" id="correo" placeholder="">
+                </div>
+                <div class="password">
+                    <label for="">Contraseña</label>
+                    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="">
+                </div>
+                <button class="cart-login">Ingresar</button>
+                <h3>¿Olvidaste tu contraseña?</h3>
+            </div>
+            <div class="wrap-register">
+                <h3>¿Todavía no estás registrado?</h3>
+                <button class="cart-register">Regístrate</button>
+            </div>
+        </div> 
     </main>
 
     <footer>
