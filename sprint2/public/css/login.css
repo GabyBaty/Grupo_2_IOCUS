@@ -1,0 +1,105 @@
+
+.padre{
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+.form-register {
+  display: flex;
+
+  width: 20em;
+  background: #ebebeb;
+  padding: 30px;
+  margin: auto;
+ margin-top: 100px;
+ margin-bottom: 30px;
+  border-radius: 4px;
+ color:#328cd5;
+  text-align: center;
+  box-shadow: 7px 13px 37px #000;
+
+}
+
+.form-register2 {
+  display: flex;
+
+  width: 20em;
+  background: #ebebeb;
+  padding: 30px;
+  margin: auto;
+ margin-top: 100px;
+ margin-bottom: 30px;
+  border-radius: 4px;
+ color:#328cd5;
+  text-align: center;
+  box-shadow: 7px 13px 37px #000;
+
+}
+
+.form-register h3 {
+  color:#328cd5;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.controls {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+ 
+  font-size: 18px;
+  color:#328cd5;
+  border: none;
+}
+
+a {
+  color: #424242 ;
+  height: 60px;
+  text-align: center;
+  font-size: 16px;
+
+  text-decoration: none;
+}
+
+ a:hover {
+  color:#f5c700 ;
+  text-decoration: underline;
+}
+.botons {
+  box-shadow: 2px 3px 0px 0px  #FFC300   ;
+  width: 100%;
+ background: linear-gradient(to bottom,  #FFC300 5%, ff5733 100%); 
+background-color: #ffe333;
+  border-radius: 5px;
+  border: 1px solid   #FFC300  ;
+  padding: 12px;
+  color: black;
+  font-weight: bold;
+  margin: 16px 0;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px #e5a72c;
+}
+
+/* .botons {
+    width: 100%;
+    background: #f5c700;
+    border: none;
+    padding: 12px;
+    color: black;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+   */
+h6 {
+    color: #424242;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: 200;
+  } 
+/* .................................................... */
+  
+@media (min-width:768px){
+.padre{
+flex-direction: row;
+}
+  }
