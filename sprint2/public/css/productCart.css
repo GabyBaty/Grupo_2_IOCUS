@@ -145,23 +145,22 @@ input[type=number] {
 }
 
 .cart-confirm, .cart-add-products {
-	box-shadow: 0.3rem 0.4rem 0rem 0rem #1564ad;
-	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
-	background-color:#79bbff;
-	border-radius:5px;
-	border:1px solid #337bc4;
-	display:inline-flex;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:1.7rem;
-	font-weight:bold;
-	padding:1.2rem 4.4rem;
-	text-decoration:none;
-	text-shadow:0rem 0.1rem 0rem #528ecc;
+    box-shadow: 2px 3px 0px 0px  #FFC300   ;
+    width: 70%;
+    background: #FFC300;
+    background-color: #ffe333;
+    border-radius: 5px;
+    border: 1px solid   #FFC300  ;
+    padding: 12px;
+    color: black;
+    font-weight: bold;
+    margin: 16px 0;
+    font-size: 16px;
+    text-shadow: 0px 1px 0px #e5a72c;
 }
 .cart-confirm:hover, .cart-add-products:hover{
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	background-color:#378de5;
+	background:linear-gradient(to bottom, #ffe666 5%, #ffe555 100%);
+	background-color:#ffe555;
 }
 .cart-confirm:active, .cart-add-products:active{
 	position:relative;
