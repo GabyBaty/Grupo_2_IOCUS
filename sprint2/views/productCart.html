@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <title>IOCUS|Carrito</title>
@@ -23,9 +24,9 @@
       
               <!--  INICIO Y SHOP -->
             <div class="shop">
-                <a href="#"><i class="fas fa-user"></i>iniciar</a>
+                <a href="/login"><i class="fas fa-user"></i>iniciar</a>
                 <span>|</span>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             </div>
              
               <!-- search mobile -->
@@ -51,151 +52,263 @@
     </header>
 
     <main class="product-cart-main">
-        <h2 id="order-summary">Resumen de pedido</h2>
-        <div class="cart-main-content">
-            <div class="cart-container-left">
-                <div class="cart-product-titles">
-                    <div class="individual-title"><h3>Producto</h3></div>
-                    <div class="individual-title"><h3>Precio</h3></div>
-                    <div class="individual-title"><h3>Cantidad</h3></div>
-                    <div class="individual-title"><h3>Subtotal</h3></div>    
-                    <div class="individual-title"><h3>Eliminar</h3></div>
-                </div>
-                <div class="cart-product-row-content1">
-                    <div class="cart-product-content-description">
-                        <p class="cart-product-name">Nombre del producto</p>
-                        <img class="cart-img-product" src="/img/img-product1.jpg" alt="img-product1">
+      <div class="product-cart-main-container">
+      <h2 id="order-summary">Resumen de pedido</h2>
+          <!--Section: Block Content-->
+          <section>
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-8">
+                <!-- Card -->
+                <div class="card wish-list mb-3">
+                  <div class="card-body">
+                      <div class="row mb-4">
+                      <div class="col-md-5 col-lg-3 col-xl-3">
+                        <div class="mb-3 mb-md-0">
+                          <img class="img-fluid w-100"
+                            src="/img/productos/1.png" alt="Sample">
+                        </div>
+                      </div>
+                      <div class="col-md-7 col-lg-9 col-xl-9">
+                        <div>
+                          <div class="d-flex justify-content-between">
+                            <div>
+                              <h5>Nombre producto</h5>
+                              <p class="mb-3 text-muted text-uppercase small"><small>Detalle 1: Texto</small></p>
+                              <p class="mb-2 text-muted text-uppercase small"><small>Detalle 2: Texto</small></p>
+                              <p class="mb-3 text-muted text-uppercase small"><small>Detalle 3: Texto</small></p>
+                            </div>
+                            <div>
+                              <div class="def-number-input number-input safari_only mb-0 w-100">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                  class="minus"><i class="fas fa-arrow-down"></i></button>
+                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                  class="plus"><i class="fas fa-arrow-up"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                                  class="fas fa-trash-alt mr-1"></i> Quitar producto </a>
+                            </div>
+                            <p class="mb-0"><span><strong>$5000</strong></span></p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="cart-product-content-price">
-                        <p>$ 1.500</p>
+                    <hr class="mb-4">
+                    <div class="row mb-4">
+                      <div class="col-md-5 col-lg-3 col-xl-3">
+                        <div class="mb-3 mb-md-0">
+                          <img class="img-fluid w-100"
+                            src="/img/productos/2.png" alt="Sample">
+                        </div>
+                      </div>
+                      <div class="col-md-7 col-lg-9 col-xl-9">
+                        <div>
+                          <div class="d-flex justify-content-between">
+                            <div>
+                              <h5>Nombre producto</h5>
+                              <p class="mb-3 text-muted text-uppercase small"><small>Detalle 1: Texto</small></p>
+                              <p class="mb-2 text-muted text-uppercase small"><small>Detalle 2: Texto</small></p>
+                              <p class="mb-3 text-muted text-uppercase small"><small>Detalle 3: Texto</small></p>
+                            </div>
+                            <div>
+                              <div class="def-number-input number-input safari_only mb-0 w-100">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                  class="minus"><i class="fas fa-arrow-down"></i></button>
+                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                  class="plus"><i class="fas fa-arrow-up"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                                  class="fas fa-trash-alt mr-1"></i> Quitar producto </a> 
+                            </div>
+                            <p class="mb-0"><span><strong>$2500</strong></span></p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="cart-product-content-quantity">
-                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input class="input-quantity" type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
-                    </div>
-                    <div class="cart-product-content-subtotal">
-                        <p>$ 1.500</p>
-                    </div>
-                    <div class="cart-product-content-delete">
-                        <a href="#delete"><i class="fas fa-trash-alt"></i></a>
-                    </div>
-                   
-                </div>
-                <div class="cart-product-row-content2">
-                    <div class="cart-product-content-description">
-                        <p>Nombre del producto</p>
-                        <img class="cart-img-product" src="/img/img-product2.jpg" alt="img-product2">
-                    </div>
-                    <div class="cart-product-content-price">
-                        <p>$ 1.900</p>
-                    </div>
-                    <div class="cart-product-content-quantity">
-                        <a href="#increase"><i class="fas fa-arrow-alt-circle-up"></a></i><input class="input-quantity" type="number"><a href="#decrease"><i class="fas fa-arrow-alt-circle-down"></i></a>
-                    </div>
-                    <div class="cart-product-content-subtotal">
-                        <p>$ 3.800</p>
-                    </div>
-                    <div class="cart-product-content-delete">
-                        <a href="#delete"><i class="fas fa-trash-alt"></i></a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="cart-container-right">
-                <div class="cart-container-right-top">
-                    <div class="cart-container-right-subtotal">
-                        <h3>Subtotal</h3>
-                        <p>$ 5.300</p>
-                    </div>
-                    <div class="cart-container-right-discount">
-                        <h3>Descuento</h3>
-                        <p>$ 0</p>
-                    </div>
-                    <div class="cart-container-right-delivery">
-                        <h3>Costo de envío</h3>
-                        <p>$ 0</p>
-                    </div>
-                </div>
-                <div class="cart-container-right-bottom">
-                    <div class="cart-container-right-total">
-                        <h2>Total</h2>
-                        <h2>$ 5.300</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cart-secondary-content">
-            <div class="cart-secondary-content-button">
-                <button class="cart-add-products">Agregar más productos</button>
-            </div>
-            <div class="cart-secondary-content-button">
-                <button class="cart-confirm">Confirmar pedido</button>
-            </div>
-            
-        </div>
-        <div class="cart-secondary-content-wrap-login">
-            <h3 id="title-login">Inicia sesión para completar tu pedido</h3>
-            <div class="wrap-login">
-                <div class="email">
-                    <label>Email</label>
-                    <input class="controls" type="email" name="correo" id="correo" placeholder="">
-                </div>
-                <div class="password">
-                    <label for="">Contraseña</label>
-                    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="">
-                </div>
-                <button class="cart-login">Ingresar</button>
-                <h3>¿Olvidaste tu contraseña?</h3>
-            </div>
-            <div class="wrap-register">
-                <h3>¿Todavía no estás registrado?</h3>
-                <button class="cart-register">Regístrate</button>
-            </div>
-        </div> 
-    </main>
 
-    <footer>
-    <div class="footer-content">
-        <div class="footer-wrap-left"><img class="footer-img" src="/img/img-footer.png" alt="image-left"></div>
-        <div class="footer-wrap-middle">
-            <div class="footer-column-contact footer-middle-grow1">
-                <h3 class="footer-column-title">Contacto</h3>
-                <ul class="footer-column-wrap">
-                    <li><p><i class="fas fa-map-marker-alt"></i> Calle falsa 123</p></li>
-                    <li><p><i class="fas fa-phone-alt"></i> (011)555-5555</p></li>
-                    <li><p><i class="far fa-envelope"></i> example@email.com</p></li>
-                </ul>
-            </div> 
-            
-            <div class="footer-column-information footer-middle-grow1">
-                <h3 class="footer-column-title">Información</h3>
-                <ul class="footer-column-wrap">
-                    <li><a href="">Quiénes somos</a></li>
-                    <li><a href="">Productos</a></li>
-                </ul>
-            </div>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!--Grid column-->
 
-            <div class="footer-column-account footer-middle-grow1">
-                <h3 class="footer-column-title">Cuenta</h3>
-                <ul class="footer-column-wrap">
-                    <li><a href="">Mi cuenta</a></li>
-                    <li><a href="">Carrito</a></li>
-                    <li><a href="">Finalizar compra</a></li>
-                </ul>
-            </div>
+              <!--Grid column-->
+              <div class="col-lg-4">
 
-            <div class="footer-column-social footer-middle-grow1">
-                <h3 class="footer-column-title">Seguinos en</h3>
-                <ul class="footer-column-wrap">
-                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square footer-social-icon"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram footer-social-icon"></i></a></li>
-                    <li><a href="https://www.twitter.com/"><i class="fab fa-twitter-square footer-social-icon"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube-square footer-social-icon"></i></a></li>
-                </ul>
+                <!-- Card -->
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                        Subtotal
+                        <span>$7500</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        Descuento
+                        <span>$0</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        Costo envío
+                        <span>Gratis</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                        <div>
+                          <strong>
+                            <p class="mb-0">Total</p>
+                          </strong>
+                        </div>
+                        <span><strong>$7500</strong></span>
+                      </li>
+                    </ul>
+                    <div class="d-flex flex-column">
+                    <button id="shopping-cart-button" type="button" class="btn btn-warning btn-block waves-effect waves-light">Finalizar compra</button>
+                    <hr>
+                    <button id="shopping-cart-button" type="button" class="btn btn-primary btn-block waves-effect waves-light">Agregar más productos</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!--Grid column-->
             </div>
-            <div class="footer-copyright"><p>© 2021 Grupo 2 - IOCUS. Todos los derechos reservados.</p></div>
-        </div>    
-        <div class="footer-wrap-right"><img class="footer-img" src="/img/img-footer-right.png" alt="image-right"></div>
+            <!--Grid row-->
+          </section>
+          <!--Section: Block Content-->
+      <h2 id="login-before-purchase">Inicia sesión para completar tu pedido</h2>
+          <div class="product-cart-login-container">
+            <div class="container-fluid">
+            <div class="row main-content text-center">
+              <div class="col-md-4 text-center company__info">
+                <span class="company__logo"><h2><img src="/img/logo.png" alt="logo"></h2></span>
+              </div>
+              <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                <div class="container-fluid">
+                  <div class="row">
+                    <h2>Ingresar</h2>
+                  </div>
+                  <div class="row">
+                    <form control="" class="form-group">
+                      <div class="row">
+                        <input type="email" name="email" id="email" class="form__input" placeholder="Email">
+                      </div>
+                      <div class="row">
+                        <!-- <span class="fa fa-lock"></span> -->
+                        <input type="password" name="password" id="password" class="form__input" placeholder="Contraseña">
+                      </div>
+                      <div class="row">
+                        <input type="submit" value="Ingresar" class="btn btn-warning btn-block waves-effect waves-light">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="row">
+                    <p>¿No tiene una cuenta? <a href="/login">Crear cuenta</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
     </div>
-    </footer>
+
+  </main>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    
+    <!-- Section: Links  start-->
+    <section class="footer-container">
+      <div class="container text-md-start mt-5">
+        <!-- Grid row start-->
+        <div class="row mt-3">
+          <!-- Grid column start-->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h5 class="text-uppercase fw-bold mb-4">
+              Contacto
+            </h5>
+            <p><i class="fas fa-home me-3"></i> Calle Falsa, 123, ARG</p>
+            <p><i class="fas fa-envelope me-3"></i>info@example.com</p>
+            <p><i class="fas fa-phone me-3"></i> + 011 555 5555</p>
+          </div>
+          <!-- Grid column end-->  
+          <!-- Grid column start-->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h5 class="text-uppercase fw-bold mb-4">
+              Información
+            </h5>
+            <p>
+              <a href="#!" class="text-reset">¿Quiénes somos?</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Productos</a>
+            </p>
+          </div>
+          <!-- Grid column end-->
+  
+          <!-- Grid column start-->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h5 class="text-uppercase  fw-bold mb-4">
+              Cuenta
+            </h5>
+            <p>
+              <a href="/login" class="text-reset">Mi cuenta</a>
+            </p>
+            <p>
+              <a href="/productCart" class="text-reset">Carrito</a>
+            </p>
+            <p>
+              <a href="/productCart" class="text-reset">Finalizar compra</a>
+            </p>
+          </div>
+          <!-- Grid column end-->
+
+          <!-- Grid column start-->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h5 class="text-uppercase fw-bold mb-4">
+              Seguinos en
+            </h5>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fab fa-youtube"></i>
+              </a>
+          </div>
+          <!-- Grid column end-->
+  
+        </div>
+        <!-- Grid row end-->
+      </div>
+    </section>
+    <!-- Section: Links end -->
+    <!-- Copyright -->
+    <div class="text-center p-4 copyright-footer">
+      © 2021 Copyright: Grupo 2 IOCUS.
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

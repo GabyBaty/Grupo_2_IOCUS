@@ -209,6 +209,11 @@ section.Produtos-destacados {
   padding: 1rem;
   font-size: 2rem;
 }
+.arrow i:hover{
+  cursor: pointer;
+  background-color: var(--color-naranja);
+  color: white;
+}
 
 /* slider */
 

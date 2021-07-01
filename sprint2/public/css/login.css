@@ -13,8 +13,8 @@ body.login .main-container{
   padding: 30px;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 30px;
-  border-radius: 4px;
+  margin-bottom: 3rem;
+  border-radius: 2rem;
   color:#328cd5;
   text-align: center;
   box-shadow: 7px 13px 37px #000;
@@ -29,8 +29,8 @@ body.login .main-container{
   padding: 30px;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 30px;
-  border-radius: 4px;
+  margin-bottom: 3rem;
+  border-radius: 2rem;
   color:#328cd5;
   text-align: center;
   box-shadow: 7px 13px 37px #000;
@@ -98,5 +98,12 @@ body.login .main-container h6 {
 
 }
 
- 
+@media (min-width: 1280px) {
+  .main-form-login {
+    width: 30%;
+}
+.main-form-register {
+  width: 30%;
+}
+}
 
