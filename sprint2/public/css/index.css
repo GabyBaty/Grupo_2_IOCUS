@@ -37,26 +37,20 @@ p {
 
 /* * PRODUCTOS DESTACADOS*/
 
-.Produtos-destacados{
+.Produtos-destacados {
   background-color: #ebebeb;
   width: 90%;
   margin: 0 auto;
   padding: 3rem;
   border-radius: none;
   box-shadow: 7px 13px 37px var(--color-negro);
-
 }
 
-@media(min-width: 768px){
-  
-.Produtos-destacados{
-  border-radius:4%;
-
+@media (min-width: 768px) {
+  .Produtos-destacados {
+    border-radius: 4%;
+  }
 }
-    
-}
-
-
 
 .titulo-destacado {
   text-transform: uppercase;
@@ -92,6 +86,10 @@ section.Produtos-destacados {
   padding-top: 1rem;
   margin: 2rem;
   flex: 18%;
+}
+
+.producto:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .producto__informacion {
@@ -166,17 +164,17 @@ section.Produtos-destacados {
 }
 
 .informacion {
-  width: 60%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 2rem;
 }
 .titulo_slicky {
-  text-align: left;
+  text-align: center;
   margin-left: 3rem;
 }
 
 .parrafo_slicky {
-  text-align: left;
+  text-align: center;
 }
 /* botones  slider*/
 .thumbnail_slider_area {
@@ -323,7 +321,23 @@ section.Produtos-destacados {
   font-weight: bold;
 }
 
+@media (min-width: 521px) {
+  .item-img {
+    width: 20%;
+  }
+}
+
 @media (min-width: 768px) {
+  .informacion {
+    width: 80%;
+  }
+  .titulo_slicky {
+    text-align: left;
+  }
+
+  .parrafo_slicky {
+    text-align: left;
+  }
   .banner_slider {
     width: 80%;
   }
@@ -339,17 +353,18 @@ section.Produtos-destacados {
 
   .hero-logo {
     width: 40%;
+    margin-top: 5rem;
     margin-left: 3rem;
   }
 
   .item-img {
-    width: 70%;
+    width: 90%;
   }
 
   .brand-information {
-    margin-bottom: 5rem;
     align-items: flex-start;
     margin-left: 10rem;
+    margin-bottom: 5rem;
   }
 
   .brand-information a {
@@ -370,9 +385,7 @@ section.Produtos-destacados {
 
   .arrow {
     display: flex;
- 
   }
-  
 
   .brand-information {
     margin-bottom: 13rem;
@@ -404,7 +417,6 @@ section.Produtos-destacados {
   padding: 3rem;
   background-color: #fff;
   line-height: 0.4;
-
 }
 
 .envios article {
@@ -416,7 +428,6 @@ section.Produtos-destacados {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .envios__icono {
@@ -425,14 +436,10 @@ section.Produtos-destacados {
   position: absolute;
   bottom: -1rem;
   right: 21rem;
-  
- 
-  
 }
 
 .envios__titulo {
   text-align: center;
-
 }
 
 .envios__parrafo {
@@ -453,4 +460,3 @@ section.Produtos-destacados {
     display: flex;
   }
 }
-
