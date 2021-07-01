@@ -51,3 +51,22 @@ jQuery(document).ready(function($){
           ]
       });
 });
+
+// Botón ir al cielo.
+mybutton = document.getElementById("myBtn");
+
+// Cuando el usuario se desplaza hacia abajo más de 20px, mostrará el botón
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// Cuando el usuario hace click en el botón, se desplaza hacia el comienzo del documento.
+function topFunction() {
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; // Chrome, Firefox, EDGE y Opera
+} 
