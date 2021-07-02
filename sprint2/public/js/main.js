@@ -69,7 +69,7 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // Safari
   document.documentElement.scrollTop = 0; // Chrome, Firefox, EDGE y Opera
-}
+} 
 function changeImage(element) {
 
   var main_prodcut_image = document.getElementById('main_product_image');
