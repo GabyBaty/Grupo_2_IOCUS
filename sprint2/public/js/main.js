@@ -52,24 +52,33 @@ jQuery(document).ready(function($){
       });
 });
 
-// Botón ir al cielo.
-mybutton = document.getElementById("myBtn");
+//Boton ir al cielo
+let mybutton = document.getElementById("btn-back-to-top");
 
-// Cuando el usuario se desplaza hacia abajo más de 20px, mostrará el botón
-window.onscroll = function() {scrollFunction()};
+// Cuando el usuario se desplaza más de 20px, el botón aparecerá.
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
   }
 }
-// Cuando el usuario hace click en el botón, se desplaza hacia el comienzo del documento.
-function topFunction() {
-  document.body.scrollTop = 0; // Safari
-  document.documentElement.scrollTop = 0; // Chrome, Firefox, EDGE y Opera
-} 
+// Cuando el usuario hace click en el botón, será desplazado al inicio del documento
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//Cambio de imágenes en el detalle de un producto
 function changeImage(element) {
 
   var main_prodcut_image = document.getElementById('main_product_image');
