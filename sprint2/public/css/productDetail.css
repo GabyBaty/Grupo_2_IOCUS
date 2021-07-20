@@ -205,8 +205,14 @@ input[type=number] {
 }
 
 #info-productDetail{
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
+
+#info2-productDetail{
+    font-size: 1.6rem;
+}
+
+
 .product-detail-price{
   color:var(--color-dorado);
   font-weight: 700;
