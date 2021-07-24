@@ -6,7 +6,13 @@
 
 .card {
   border: none;
-  overflow: hidden
+  overflow: hidden;
+  border-radius: 1.7rem;
+}
+@media (min-width: 768px) {
+  .card {
+    border-radius: 3.7rem;
+  }
 }
 
 .thumbnail_images ul {
@@ -205,8 +211,12 @@ input[type=number] {
 }
 
 #info-productDetail{
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
+#product-details-info{
+  font-size: 1.8rem;
+}
+
 .product-detail-price{
   color:var(--color-dorado);
   font-weight: 700;

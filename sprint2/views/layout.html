@@ -10,46 +10,273 @@
 </head>
 <body>
    <!--    HEADER -->
-        <header class="header" >
-          <div class="nav__container container">
-            <div class="nav__logo">
-            <a href="/" >
-              <img src="img/Logo.png" alt="logo">
-            </a>
+   <header>
+    <div class="header-container">
+      <input type="checkbox" name="" id="check">
+      <div class="logo-container">
+        <a href="/"><img class="img-fluid" src="/img/logo.png" alt="logo-img"></a>
+      </div>
+      <div class="nav-btn">
+        <div class="search-input">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar producto..." aria-label="Buscar producto..."
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+            </div>
           </div>
-            <!-- search DESKTOP -->
-            <form class="formulario-full" action="">
-              <input  class="formulario--search" type="text" placeholder="Buscar Producto..."><input class="formulario-button" type="submit" value="BUSCAR">
-            </form>
-    
-            <!--  INICIO Y SHOP -->
-          <div class="shop">
-              <a href="#"><i class="fas fa-user"></i>iniciar</a>
-              <span>|</span>
-              <a href="#"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-           
-            <!-- search mobile -->
-            <form class="formMobile">
-              <a href="#"><i class="fas fa-search"></i></a>             
-           </form>
-
-           <!--  icono menu mobile HAMBURGUESA -->
-           <button class="ham" type="button"><i class="fas fa-bars" ></i></button>
-          </div>
-
-     <!-- NAVEGACION -->
-        <nav class="nav-2">
-          <ul class="enlaces-menu">
-            <li><a href="#">figuras de accion</a></li>
-            <li><a href="#">vehiculos</a></li>
-            <li><a href="#">disfraces</a></li>
-            <li><a href="#">juegos de mesa</a></li>
-            <li><a href="">quienes somos</a></li>
-            <li><a href="#">contacto</a></li>
+        </div>
+        <div class="login-cart">
+          <a href="/login"><i class="fas fa-user"></i> Ingresar</a>
+          <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="header-nav-links">
+          <ul>
+            <li class="header-nav-link">
+              <a href="#" class="header-dropdown-content">Figuras de acción<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown hidden">
+                <ul>
+                  <li class="dropdown-link" >
+                    <a href="#" class="header-dropdown-content">Marcas<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">Disney</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Mattel</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Playmates</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Hasbro</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Lego</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Marvel</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Edades<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">De 0 a 24 meses</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 2 a 4 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 5 a 7 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 8 a 13 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 14 años y Mayores</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#">Ver todo</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-nav-link">
+              <a href="#" class="header-dropdown-content">Vehículos<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown hidden">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Marcas<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">Disney</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Mattel</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Playmates</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Hasbro</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Lego</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Marvel</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Edades<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">De 0 a 24 meses</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 2 a 4 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 5 a 7 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 8 a 13 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 14 años y Mayores</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#">Ver todo</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-nav-link">
+              <a href="#" class="header-dropdown-content">Disfraces<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown hidden">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Marcas<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">Disney</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Mattel</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Playmates</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Hasbro</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Lego</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Marvel</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Edades<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">De 0 a 24 meses</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 2 a 4 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 5 a 7 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 8 a 13 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 14 años y Mayores</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#">Ver todo</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-nav-link">
+              <a href="#" class="header-dropdown-content">Juegos de mesa<i class="fas fa-caret-down"></i></a>
+              <div class="dropdown hidden">
+                <ul>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Marcas<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">Disney</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Mattel</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Playmates</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Hasbro</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Lego</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">Marvel</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#" class="header-dropdown-content">Edades<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown header-dropdown-secondary hidden">
+                      <ul>
+                        <li class="dropdown-link">
+                          <a href="#">De 0 a 24 meses</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 2 a 4 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 5 a 7 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 8 a 13 años</a>
+                        </li>
+                        <li class="dropdown-link">
+                          <a href="#">De 14 años y Mayores</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#">Ver todo</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-nav-link">
+              <a href="#">Quiénes somos</a>
+            </li>
+            <li class="header-nav-link">
+              <a href="#">Contacto</a>
+            </li>
           </ul>
-        </nav>
-    </header>
+        </div>
+      </div>
+
+      <div class="hamburger-menu-container">
+        <div class="hamburger-menu">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </header>
 
 <!-- MAIN -->
 

@@ -17,7 +17,7 @@ body.login .main-container{
   border-radius: 2rem;
   color:#328cd5;
   text-align: center;
-  box-shadow: 7px 13px 37px #000;
+  box-shadow: 7px 13px 37px var(--color-negro);
   height: 50%;
   align-self: center;
 }
@@ -33,7 +33,7 @@ body.login .main-container{
   border-radius: 2rem;
   color:#328cd5;
   text-align: center;
-  box-shadow: 7px 13px 37px #000;
+  box-shadow: 7px 13px 37px var(--color-negro);
 }
 
 .main-form-register h3 {
