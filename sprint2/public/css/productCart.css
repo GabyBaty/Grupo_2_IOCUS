@@ -38,7 +38,7 @@
     width: 80%;
 }
 .card {
-    box-shadow: 0 5px 5px rgba(0,0,0,.4);
+    box-shadow: 5px 13px 20px var(--color-negro);
 }
 /* QUITANDO LAS ARROWS DEL INPUT NUMBER */
 /* Chrome, Safari, Edge, Opera */
@@ -64,7 +64,7 @@ input[type=number] {
 .product-cart-login-container{
 	width: 50%;
 	border-radius: 20px;
-	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	box-shadow: 5px 13px 20px var(--color-negro);
 	margin: auto;
 	display: flex;
 }

@@ -42,13 +42,13 @@ p {
   width: 90%;
   margin: 0 auto;
   padding: 3rem;
-  border-radius: none;
+  border-radius: 1.7rem;
   box-shadow: 7px 13px 37px var(--color-negro);
 }
 
 @media (min-width: 768px) {
   .Produtos-destacados {
-    border-radius: 4%;
+    border-radius: 3.7rem;
   }
 }
 
