@@ -1,0 +1,109 @@
+
+body.login .main-container{
+  display: flex;
+  flex-flow: row wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.main-form-login {
+  display: flex;
+  width: 20em;
+  background: #ebebeb;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 3rem;
+  border-radius: 2rem;
+  color:#328cd5;
+  text-align: center;
+  box-shadow: 7px 13px 37px var(--color-negro);
+  height: 50%;
+  align-self: center;
+}
+
+.main-form-register {
+  display: flex;
+  width: 20em;
+  background: #ebebeb;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 3rem;
+  border-radius: 2rem;
+  color:#328cd5;
+  text-align: center;
+  box-shadow: 7px 13px 37px var(--color-negro);
+}
+
+.main-form-register h3 {
+  color:#328cd5;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.main-form-register .controls, .main-form-login .controls {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  color:#328cd5;
+  border: none;
+}
+
+body.login .main-container a {
+  color: #424242 ;
+  height: 60px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+body.login .main-container a:hover {
+  color:#f5c700 ;
+  text-decoration: underline;
+}
+.main-form-register-button {
+  box-shadow: 2px 3px 0px 0px  #FFC300   ;
+  width: 100%;
+  background: linear-gradient(to bottom,  #FFC300 5%, ff5733 100%); 
+  background-color: #ffe333;
+  border-radius: 5px;
+  border: 1px solid   #FFC300  ;
+  padding: 12px;
+  color: black;
+  font-weight: bold;
+  margin: 16px 0;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px #e5a72c;
+}
+.main-form-register-button:hover{
+	background:linear-gradient(to bottom, #ffe666 5%, #ffe555 100%);
+	background-color:#ffe555;
+}
+.main-form-register-button:active{
+	position:relative;
+	top:1px;
+}
+body.login .main-container h6 {
+    color: #424242;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: 200;
+  }
+.main-form-register input.checkbox {
+  width: 1.8rem;
+  height: 1.8rem;
+
+}
+
+@media (min-width: 1280px) {
+  .main-form-login {
+    width: 30%;
+}
+.main-form-register {
+  width: 30%;
+}
+}
+
