@@ -1,5 +1,5 @@
 module.exports = {
     index: (req,res) => {
-        return res.render('index', { title: 'Express' });
+        return res.render('index', { title: 'IOCUS-INDEX' });
     }
 }

@@ -1,8 +1,8 @@
 module.exports = {
     detail: (req,res) => {
-        return res.render('products/detail', { title: 'Detalle de producto' });
+        return res.render('products/detail', { title: 'IOCUS-DETALLE' });
     },
     cart: (req,res) => {
-        return res.render('products/cart', { title: 'Carrito' });
+        return res.render('products/cart', { title: 'IOCUS-CARRITO' });
     }
 }
