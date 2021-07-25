@@ -4,5 +4,8 @@ module.exports = {
     },
     cart: (req,res) => {
         return res.render('products/cart', { title: 'IOCUS-CARRITO' });
+    },
+    editor: (req,res) => {
+        return res.render('products/editor', { title: 'Editor de Prodcutos' });
     }
 }
