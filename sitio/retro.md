@@ -1,24 +1,24 @@
 Retrospectiva
-Luego del primer sprint, y tras realizar un análisis en equipo, exponiendo  las situaciones y obstáculos  surgidos durante el mismo, concluimos en pos de la mejora del grupo y nuestro desempeño:
+Luego del segundo sprint, y tras realizar un análisis en equipo, exponiendo  las situaciones y obstáculos surgidos durante el mismo, concluimos en pos de la mejora del grupo y nuestro desempeño:
 
 *Hacer mas:
-   Comenzar a implementar daily Scrum.
-   Practicar código.
-   Repasar varias veces el código para no ocasionarle un inconveniente a mis compañeros.
-   Poner horarios y días de reunión.
-   Repartir tareas.
+  Administrar mejor los tiempos.
+  Repartir las tareas en grupos de 2 personas.
+  Consultar más a los profesores durante el sprint.
 
 *Comenzar a hacer:
-    No quedarme con dudas si tengo alguna idea/contribución para portar.
-    Puntuar las consignas para determinar prioridad.
-    Destacar las fortalezas y debilidades de cada integrante para aportar y complementar al equipo.
+  Repasar javascript, JSON y métodos de Array.
+  Implementar las dailys de 15 minnutos mínimo.
 
 *Dejar de hacer:
-   Creer que todo lo tengo que hacer solo.
+  Repartir las tareas individualmente.
 
-  *Hacer menos:
-    Procrastinar.
+*Hacer menos:
+  Desvirtuar las reuniones.
 
 *Seguir haciendo:
-  Utilizar trello
-  Estar en contacto con el equipo
+  Continuar complementandonos cuando se presentan dudas.
+  Mantener una buena comunicación.
+  Reuniones constantes.
+
+Link al starfish: https://jamboard.google.com/d/1fxwpzjzMaWq_xVZSEbaO6gIHZziOqOa_46m5DxmmIWw/edit?usp=sharing
