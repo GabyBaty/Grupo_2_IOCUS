@@ -1,0 +1,127 @@
+/* FILTROS */
+
+
+
+.filtro-aside .filtro-span {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+
+.filtro .filtro-aside {
+  background-color: var(--color-gris);
+  height: 30%;
+}
+
+
+.filtro .accordion-body {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.filtro .filtro-botones .btn {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+}
+
+/* PRODUCTOS */
+.filtro .Produtos-destacados{
+  background-color:var(--color-gris);
+  border-radius: 1.7rem;
+  box-shadow: 7px 13px 37px var(--color-negro);
+
+}
+
+
+.filtro .titulo-destacado {
+  text-transform: uppercase;
+  font-family: var(--fuenteSecundaria);
+  font-weight: bold;
+  text-decoration: underline var(--color-naranja);
+}
+
+@media (min-width: 768px) {
+  .filtro .Produtos-destacados {
+    border-radius: 4%;
+  }
+}
+
+section.Produtos-destacados {
+  margin-top: 3rem;
+}
+
+.filtro .flex {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+  .filtro .flex {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.filtro .producto {
+  background-color: var(--color-blanco);
+  border-radius: 1rem;
+  padding-top: .7rem;
+  margin: 2rem;
+  flex: 20%;
+}
+
+@media(min-width: 768px) {
+  .filtro .producto {
+    flex: 26%;
+   }
+}
+
+
+@media(min-width: 1024px) {
+  .filtro .producto {
+    flex: 20%;
+
+
+  }
+}
+
+
+.filtro .producto:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.filtro .producto__informacion {
+  border-top: 0.5rem solid var(--color-naranja);
+}
+
+.filtro .producto__imagen {
+  width: 100%;
+}
+
+.filtro .producto__nombre {
+  font-size: 2.2rem;
+  color: var(--color-negro);
+}
+
+.filtro .producto__precios {
+  font-size: 1.9rem;
+  color: var(--color-dorado);
+}
+
+.filtro .producto__marca {
+  font-size: 2rem;
+  color: var(--color-negro);
+}
+
+.filtro .producto__nombre,
+.filtro .producto__precios,
+.filtro .producto__marca {
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
+}

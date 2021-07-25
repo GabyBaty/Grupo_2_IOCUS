@@ -7,5 +7,9 @@ module.exports = {
     },
     editor: (req,res) => {
         return res.render('products/editor', { title: 'Editor de Prodcutos' });
-    }
+    },
+    filter: (req,res) => {
+        return res.render('products/filter', { title: 'Lista de productos' });
+    },
+    
 }

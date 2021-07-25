@@ -1,0 +1,255 @@
+<%- include('../partials/head.ejs')%>
+
+<body class="filtro">
+ <%- include('../partials/header.ejs')%>
+  <main>
+
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class=" contenedor-principal d-flex justify-content-sm-evenly flex-wrap mt-5 ">
+    <!--   FILTROS -->
+      <aside class="filtro-aside col-12 col-lg-6 col-xl-2 p-3">
+        <h2 class="filtro-titulo">FILTROS</h2>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne"></h2>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne">
+              <span class="filtro-span">Marcas</span>
+            </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse "
+              aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-disney" name="marcas" id="marcas">
+                  <label class="form-check-label" for="c-disney">disney</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-mattel" name="marcas" id="marcas">
+                  <label class="form-check-label" for="c-mattel">mattel</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-playmates" name="edades" id="edades">
+                  <label class="form-check-label" for="c-playmates">playmates</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-hasbro" name="edades" id="edades">
+                  <label class="form-check-label" for="c-hasbro">hasbro</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-lego" name="edades" id="edades">
+                  <label class="form-check-label" for="c-lego">lego</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-marvel" name="edades" id="edades">
+                  <label class="form-check-label" for="c-marvel">marvel</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                <span class="filtro-span">Edades</span>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-24m" name="edades" id="edades">
+                  <label class="form-check-label" for="c-24m">De 0 a 24 meses</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-4a" name="edades" id="edades">
+                  <label class="form-check-label" for="c-4a">De 2 a 4 años</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-7a" name="edades" id="edades">
+                  <label class="form-check-label" for="c-7a">De 5 a 7 años</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-13a" name="edades" id="edades">
+                  <label class="form-check-label" for="c-13a">De 8 a 13 años</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-mayores" name="edades" id="edades">
+                  <label class="form-check-label" for="c-mayores">De 14 años y Mayores</label>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+                <span class="filtro-span">Categoria de Productos</span>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-figuras" name="categoria" id="categoria">
+                  <label class="form-check-label" for="c-figuras">figuras de accion</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-vehiculos" name="categoria" id="categoria">
+                  <label class="form-check-label" for="c-vehiculos">vehiculos</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-disfraces" name="categoria" id="categoria">
+                  <label class="form-check-label" for="c-disfraces">disfraces</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" id="c-juegosm" name="categoria" id="categoria">
+                  <label class="form-check-label" for="c-juegosm">juegos de mesa</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filtro-botones">
+          <div class="gap-2 col-12 col-lg-12 d-flex 
+                justify-content-lg-end   justify-content-center mt-2  ">
+            <button class="btn btn-primary " type="button">Aplicar</button>
+            <button class="btn btn-danger" type="button">Cancelar</button>
+          </div>
+        </div>
+      </aside>
+
+     <!--  PRODUCTOS -->
+      <section class=" col-12 col-md-6 col-lg-8   mt-3 ">
+
+        <!-- Productos superior -->
+        <div class="productos-destacados-superior d-flex justify-content-between mb-3">
+          <h3>Resultados de la búsqueda:</h3>
+          <select id="grid-sort-input" title="Sort Filter Input" aria-label="product filter">
+            <option value="sort">Ordenar por</option>
+            <option value="name-asc">Nombre A-Z</option>
+            <option value="name-desc">Nombre Z-A</option>
+            <option value="newest">Precio</option>
+          </select>
+        </div>
+        
+       <!--  PRODUCTOS INDIVIDUALES -->
+      <div class="flex Produtos-destacados ">
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/1.png" alt="producto1" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Volver al futuro</p>
+                <p class="producto__precios">$5000</p>
+                <p class="producto__marca">disney</p>
+              </div>
+            </a>
+            
+          </div>
+          <!-- .producto -->
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Thanos</p>
+                <p class="producto__precios">$2500</p>
+                <p class="producto__marca">disney</p>
+              </div>
+            </a>
+           
+          </div>
+          <!-- .producto -->
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/3.png" alt="producto3" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Spiderman</p>
+                <p class="producto__precios">$1200</p>
+                <p class="producto__marca">disney</p>
+              </div>
+            </a>
+            
+          </div>
+          <!-- .producto -->
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/4.png" alt="producto4" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Batman</p>
+                <p class="producto__precios">$3500</p>
+                <p class="producto__marca">disney</p>
+              </div>
+            </a>
+            
+          </div>
+          <!-- .producto -->
+
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/5.png" alt="producto5" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Rompecabeza</p>
+                <p class="producto__precios">$2000</p>
+              </div>
+            </a>
+           
+          </div>
+          <!-- .producto -->
+
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/6.png" alt="imagen camisa" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Power Ranger</p>
+                <p class="producto__precios">$2500</p>
+              </div>
+            </a>
+           
+          </div>
+          <!-- .producto -->
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/7.png" alt="imagen camisa" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Cars Auto Remote</p>
+                <p class="producto__precios">$1200</p>
+              </div>
+            </a>
+            
+          </div>
+          <!-- .producto -->
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/8.png" alt="imagen camisa" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">The child</p>
+                <p class="producto__precios">$3500</p>
+              </div>
+            </a>
+            
+          </div>
+          <!-- .producto -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+
+  <!-- Footer -->
+  <%- include('../partials/footer.ejs')%>
+  <!-- Footer -->
+
+  <!--SCRIPTS-->
+  <%- include('../partials/scripts.ejs')%>
+
+
+</body>
+
+</html>
