@@ -6,7 +6,7 @@
 
 
     <!-- CONTENEDOR PRINCIPAL -->
-    <div class=" contenedor-principal d-flex justify-content-sm-evenly flex-wrap mt-5 ">
+    <div class=" contenedor-principal d-flex justify-content-sm-between justify-content-lg-around flex-wrap m-5 ">
     <!--   FILTROS -->
       <aside class="filtro-aside col-12 col-lg-6 col-xl-2 p-3">
         <h2 class="filtro-titulo">FILTROS</h2>
@@ -126,23 +126,25 @@
       </aside>
 
      <!--  PRODUCTOS -->
-      <section class=" col-12 col-md-6 col-lg-8   mt-3 ">
+      <section class=" col-12  col-lg-8  mt-3 ">
 
         <!-- Productos superior -->
-        <div class="productos-destacados-superior d-flex justify-content-between mb-3">
-          <h3>Resultados de la búsqueda:</h3>
-          <select id="grid-sort-input" title="Sort Filter Input" aria-label="product filter">
+        <div class="productos-destacados-superior d-flex  justify-content-between mb-5">
+          <div><h3>Resultados de la búsqueda:</h3></div>
+          <div>
+            <select id="grid-sort-input" title="Sort Filter Input" aria-label="product filter">
             <option value="sort">Ordenar por</option>
             <option value="name-asc">Nombre A-Z</option>
             <option value="name-desc">Nombre Z-A</option>
             <option value="newest">Precio</option>
           </select>
         </div>
+        </div>
         
        <!--  PRODUCTOS INDIVIDUALES -->
       <div class="flex Produtos-destacados ">
           <div class="producto">
-            <a href="/productDetail">
+            <a href="/products/detail">
               <img class="producto__imagen" src="/img/productos/1.png" alt="producto1" />
               <div class="producto__informacion">
                 <p class="producto__nombre">Volver al futuro</p>
@@ -196,6 +198,7 @@
               <div class="producto__informacion">
                 <p class="producto__nombre">Rompecabeza</p>
                 <p class="producto__precios">$2000</p>
+                <p class="producto__marca">disney</p>
               </div>
             </a>
            
@@ -208,6 +211,7 @@
               <div class="producto__informacion">
                 <p class="producto__nombre">Power Ranger</p>
                 <p class="producto__precios">$2500</p>
+                <p class="producto__marca">disney</p>
               </div>
             </a>
            
@@ -219,6 +223,7 @@
               <div class="producto__informacion">
                 <p class="producto__nombre">Cars Auto Remote</p>
                 <p class="producto__precios">$1200</p>
+                <p class="producto__marca">disney</p>
               </div>
             </a>
             
@@ -230,11 +235,24 @@
               <div class="producto__informacion">
                 <p class="producto__nombre">The child</p>
                 <p class="producto__precios">$3500</p>
+                <p class="producto__marca">disney</p>
               </div>
             </a>
             
           </div>
           <!-- .producto -->
+          
+          <div class="producto">
+            <a href="/productDetail">
+              <img class="producto__imagen" src="/img/productos/6.png" alt="imagen camisa" />
+              <div class="producto__informacion">
+                <p class="producto__nombre">Power Ranger</p>
+                <p class="producto__precios">$2500</p>
+                <p class="producto__marca">disney</p>
+              </div>
+            </a>
+           
+          </div>
         </div>
       </section>
     </div>
