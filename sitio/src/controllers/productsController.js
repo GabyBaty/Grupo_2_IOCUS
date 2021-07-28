@@ -10,5 +10,8 @@ module.exports = {
     },
     edit: (req,res) => {
         return res.render('products/edit', { title: 'Editar prodcuto' });
-    }
+    },
+    filter: (req,res) => {
+        return res.render('products/filter', { title: 'IOCUS-LISTA' });
+    },
 }
