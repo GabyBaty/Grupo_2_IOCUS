@@ -1,0 +1,22 @@
+.products-editor-page > .container {
+    background-color: var(--color-gris);
+}
+.products-editor-page > .container > .left-box,
+.products-editor-page > .container > .right-box {
+    height: auto;
+}
+#floatingTextarea{
+    height: 7rem;
+    line-height: 2;
+}
+#floatingInput {
+    line-height: 2;
+}
+
+
+/*---------------- Categorías-------------*/
+.form-floating > .form-select {
+    font-size: 1.3rem;
+    padding-top: 2rem;
+    height: 5rem;
+}
