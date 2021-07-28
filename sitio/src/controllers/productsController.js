@@ -5,7 +5,13 @@ module.exports = {
     cart: (req,res) => {
         return res.render('products/cart', { title: 'IOCUS-CARRITO' });
     },
-    editor: (req,res) => {
-        return res.render('products/editor', { title: 'Editor de Prodcutos' });
-    }
+    add: (req,res) => {
+        return res.render('products/add', { title: 'Agregar prodcuto' });
+    },
+    edit: (req,res) => {
+        return res.render('products/edit', { title: 'Editar prodcuto' });
+    },
+    filter: (req,res) => {
+        return res.render('products/filter', { title: 'IOCUS-LISTA' });
+    },
 }
