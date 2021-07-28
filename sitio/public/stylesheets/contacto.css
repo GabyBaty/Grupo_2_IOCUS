@@ -1,0 +1,9 @@
+.contenedorinfo{
+    background-color: var(--color-blanco);
+    border-radius: 1rem;
+    padding-top: 1rem;
+    margin: 2rem;
+    flex: 18%;
+    text-align: center;
+    }
+
