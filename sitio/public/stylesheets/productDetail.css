@@ -9,11 +9,7 @@
   overflow: hidden;
   border-radius: 1.7rem;
 }
-@media (min-width: 768px) {
-  .card {
-    border-radius: 3.7rem;
-  }
-}
+
 
 .thumbnail_images ul {
   list-style: none;

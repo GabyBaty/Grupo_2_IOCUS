@@ -1,128 +1,108 @@
 <%- include('../partials/head.ejs')%>
-  
+
 <body>
-    
-<!-- HEADER -->
-<%- include('../partials/header.ejs')%>
-    <!--Botón ir hacia arriba-->
-    <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i class="fas fa-arrow-up"></i></button>
-    <main>
-      <div class="product-detail-main-container">
-        <div class="container mt-5 mb-5">
-          <div class="col-md-12">
-         <p><a href="#">Categoria </a>> <a href="#">Figura de Acción </a>> <a href="#">Mayores de 9 años </a></p> 
-          </div>
-          <div class="card">
-            <div class="row g-0">
-              <!-- Carousel -->
-              <div class="col-md-6 border-end">
-                <div class="d-flex flex-column justify-content-center">
-                  <div class="main_image">
-                    <img
-                      src="/img/detalle/principal.jpg"
-                      id="main_product_image"
-                      width="350"
-                    />
-                  </div>
-                  <div class="thumbnail_images">
-                    <ul id="thumbnail">
-                      <li>
-                        <img
-                          onclick="changeImage(this)"
-                          src="/img/detalle/principal.jpg"
-                          width="70"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          onclick="changeImage(this)"
-                          src="/img/detalle/1.jpg"
-                          width="70"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          onclick="changeImage(this)"
-                          src="/img/detalle/2.jpg"
-                          width="70"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          onclick="changeImage(this)"
-                          src="/img/detalle/3.jpg"
-                          width="70"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          onclick="changeImage(this)"
-                          src="/img/detalle/4.jpg"
-                          width="70"
-                        />
-                      </li>
-                    </ul>
-                  </div>
+
+  <!-- HEADER -->
+  <%- include('../partials/header.ejs')%>
+  <!--Botón ir hacia arriba-->
+  <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
+      class="fas fa-arrow-up"></i></button>
+  <main>
+    <div class="product-detail-main-container">
+      <div class="container mt-5 mb-5">
+        <div class="col-md-12">
+          <p><a href="#">Categoria </a>> <a href="#">Figura de Acción </a>> <a href="#">Mayores de 9 años </a></p>
+        </div>
+        <div class="card">
+          <div class="row g-0">
+            <!-- Carousel -->
+            <div class="col-md-6 border-end">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="main_image">
+                  <img src="/img/detalle/principal.jpg" id="main_product_image" width="350" />
+                </div>
+                <div class="thumbnail_images">
+                  <ul id="thumbnail">
+                    <li>
+                      <img onclick="changeImage(this)" src="/img/detalle/principal.jpg" width="70" />
+                    </li>
+                    <li>
+                      <img onclick="changeImage(this)" src="/img/detalle/1.jpg" width="70" />
+                    </li>
+                    <li>
+                      <img onclick="changeImage(this)" src="/img/detalle/2.jpg" width="70" />
+                    </li>
+                    <li>
+                      <img onclick="changeImage(this)" src="/img/detalle/3.jpg" width="70" />
+                    </li>
+                    <li>
+                      <img onclick="changeImage(this)" src="/img/detalle/4.jpg" width="70" />
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="p-3 right-side">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="mb-5 display-4">Muñeco Anime Naruto Kakashi</h3>
-                  </div>
-                  <div class="mt-2 pr-3 content">
-                    <p class="mb-5" id="info-productDetail">
-                      Figura más detallada y articula de linea Naruto.<br />Con
-                      una altura de 15cm y con más puntos de articulación y
-                      manos adicionales, esta figura se puede colocar en cientos
-                      de posiciones.
-                    </p>
-                  </div>
-                  <h6 class="mb-5" id="product-details-info">-Personaje : Hatake Kakashi</h6>
-                  <h6 class="mb-5" id="product-details-info">-Manos intercambiables</h6>
-                  <h6 class="mb-5" id="product-details-info">-15 cm de altura</h6>
-                  
-                  <h6 class="me-5">*imagen meramente ilustrativa</h6>
-                
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 right-side">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h3 class="mb-5 display-4">Muñeco Anime Naruto Kakashi</h3>
                 </div>
+                <div class="mt-2 pr-3 content">
+                  <p class="mb-5" id="info-productDetail">
+                    Figura más detallada y articula de linea Naruto.<br />Con
+                    una altura de 15cm y con más puntos de articulación y
+                    manos adicionales, esta figura se puede colocar en cientos
+                    de posiciones.
+                  </p>
+                </div>
+                <h6 class="mb-5" id="product-details-info">-Personaje : Hatake Kakashi</h6>
+                <h6 class="mb-5" id="product-details-info">-Manos intercambiables</h6>
+                <h6 class="mb-5" id="product-details-info">-15 cm de altura</h6>
+
+                <h6 class="me-5">*imagen meramente ilustrativa</h6>
+
               </div>
-              <div class="col-md-6 border-end">
-                <div class="d-flex align-items-center flex-column align-self-center">
-               <h2 class="product-detail-price display-2">$ 1.500</h2>
-               <h6><em>*Precio comprando por la web</em></h6>
+            </div>
+            <div class="col-md-6 border-end">
+              <div class="d-flex align-items-center flex-column align-self-center">
+                <h2 class="product-detail-price display-2">$ 1.500</h2>
+                <h6><em>*Precio comprando por la web</em></h6>
               </div>
-               <h5 class="mt-5 ms-5 mb-5">SKU: MLU 8734</h5>
-              </div>
-              <div class="col-md-6 d-flex flex-column align-items-center ">
+              <h5 class="mt-5 ms-5 mb-5">SKU: MLU 8734</h5>
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-center ">
               <h5 class="mb-5">Stock Disponible</h5>
-              <div class="def-number-input number-input safari_only w-100 d-flex flex-row mb-3 align-items-center justify-content-evenly">
+              <div
+                class="def-number-input number-input safari_only w-100 d-flex flex-row mb-3 align-items-center justify-content-evenly">
                 <div>
-                <button id="shopping-cart-button" type="button" class="btn btn-primary btn-block waves-effect waves-light">Añadir al Carrito</button>
-              </div>
-              <div>
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                  class="minus"><i class="fas fa-arrow-down"></i></button>
-                <input class="quantity" min="0" name="quantity" value="1" type="number">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                  class="plus"><i class="fas fa-arrow-up"></i></button>
+                  <button id="shopping-cart-button" type="button"
+                    class="btn btn-primary btn-block waves-effect waves-light">Añadir al Carrito</button>
+                </div>
+                <div>
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i
+                      class="fas fa-arrow-down"></i></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i
+                      class="fas fa-arrow-up"></i></button>
                 </div>
               </div>
               <div class="d-flex flex-row align-items-center w-60 p-5 product-detail-info-delivery">
                 <i class="fas fa-truck"></i>
                 <p>Envio gratis a CABA y Gran Bs. As.</p>
               </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <!-- Footer -->
-    <%- include('../partials/footer.ejs')%>
-    <!-- Footer -->
-    
+    </div>
+  </main>
+  <!-- Footer -->
+  <%- include('../partials/footer.ejs')%>
+  <!-- Footer -->
+
   <!-- SCRIPT -->
   <%- include('../partials/scripts.ejs')%>
 
-  </body>
+</body>
+
 </html>

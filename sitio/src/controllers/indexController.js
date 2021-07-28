@@ -4,5 +4,9 @@ module.exports = {
     },
     contacto: (req,res) => {
         return res.render('contacto', { title: 'IOCUS-CONTACTO' });
-    }
+    },
+    about: (req,res) => {
+        return res.render('about', { title: 'IOCUS-ABOUT'});
+    },  
+    
 }
