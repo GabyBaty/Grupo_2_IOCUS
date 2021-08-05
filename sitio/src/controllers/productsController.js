@@ -8,6 +8,7 @@ module.exports = {
     add: (req,res) => {
         return res.render('products/add', { title: 'Agregar prodcuto' });
     },
+    
     edit: (req,res) => {
         return res.render('products/edit', { title: 'Editar prodcuto' });
     },

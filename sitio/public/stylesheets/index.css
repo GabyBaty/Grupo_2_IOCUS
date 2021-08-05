@@ -86,6 +86,7 @@ section.Produtos-destacados {
   padding-top: 1rem;
   margin: 2rem;
   flex: 18%;
+  
 }
 
 .producto:hover {
@@ -94,6 +95,31 @@ section.Produtos-destacados {
 
 .producto__informacion {
   border-top: 0.5rem solid var(--color-naranja);
+ 
+  height: 26%;
+}
+@media(min-width: 768px){
+  .producto__informacion {
+   
+    height: 23%;
+  }
+  
+}
+
+@media(min-width: 800px){
+  .producto__informacion {
+   
+    height: 34%;
+  }
+  
+}
+
+@media(min-width: 1024px){
+  .producto__informacion {
+   
+    height: 26%;
+  }
+  
 }
 
 .producto__imagen {
@@ -101,8 +127,24 @@ section.Produtos-destacados {
 }
 
 .producto__nombre {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--color-negro);
+}
+
+.precio__oculto {
+  font-size: 1.5rem;
+  visibility: hidden;
+  text-align: center;
+}
+
+.producto__oferta  {
+  font-size: 1.5rem;
+  color: var(--color-naranja);
+  text-align: center;
+}
+
+.producto__oferta span {
+  text-decoration: line-through;
 }
 
 .producto__precios {
@@ -126,6 +168,8 @@ section.Produtos-destacados {
   line-height: 1;
   font-family: var(--fuenteSecundaria);
   font-weight: 500;
+
+  
 }
 
 .productos__boton1 {
