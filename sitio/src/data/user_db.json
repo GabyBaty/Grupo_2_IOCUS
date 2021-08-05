@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "moncholo",
+        "lastname": "fulanazo",
+        "email": "eladminmasloco@holahola.org.ar.net",
+        "password": "m4ss3cr3t01mp0s1bl3",
+        "category": "admin"
+    },
+    {
+        "id": 2,
+        "name": "example",
+        "lastname": "another example",
+        "email": "pirulin@chauchau.org",
+        "password": "supersecreto123",
+        "category": "user"
+    }
+]
