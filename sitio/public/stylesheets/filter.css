@@ -50,6 +50,7 @@
 
 section.Produtos-destacados {
   margin-top: 3rem;
+ 
 }
 
 .filtro .flex {
@@ -74,6 +75,8 @@ section.Produtos-destacados {
   padding-top: .7rem;
   margin: 2rem;
   flex: 20%;
+  
+ 
 }
 
 
@@ -120,6 +123,7 @@ section.Produtos-destacados {
   }
 
   .filtro .producto {
+  
     flex: 24%;
   }
 
@@ -143,11 +147,14 @@ section.Produtos-destacados {
   }
 
   .filtro .producto {
+    flex: 13%;
     padding: 1rem;
-    flex: 25%;
+   
 
 
   }
+
+ 
 
   .filtro .producto__precios {
     font-size: 1.9rem;

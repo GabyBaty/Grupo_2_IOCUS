@@ -48,8 +48,9 @@
 
       <div class="flex">
          <% destacados.forEach(destacado=> { %>
+          <div class="col-12 col-sm-6 col-lg-3">
           <div class=" producto">
-            <a href="/products/detail">
+            <a href="/products/detail/<%= destacado.id %>">
               <img class="producto__imagen" src="/img/productos/<%= destacado.image %>" alt="imagen-producto" />
               <div class="producto__informacion">
                 <p class="producto__nombre"><%= destacado.name %> </p>
@@ -60,23 +61,24 @@
                   <b><%= destacado.discount %>% OFF</b>
                 </p>
                 <p class="producto__precios">
-                  $<%= destacado.price %>
+                  $<%=toThousand(finalPrice(destacado.price,destacado.discount)) %>
                   <% }else{ %>
                 </p>
                 <p class="precio__oculto">-</p>
                 <p class="producto__precios">
-                  $<%= destacado.price %>
+                  $<%= toThousand(destacado.price) %>
                   <% } %>
                 </p>
               </div>
              
             </a>
             <div class="botones">
-              <a href="/products/cart" class="productos__boton1">comprar</a>
-              <a href="/products/detail" class="productos__boton2"><i class="fas fa-eye"></i>ver</a>
+              <a href="/products/cart/<%= destacado.id %>" class="productos__boton1">comprar</a>
+              <a href="/products/detail/<%= destacado.id %> " class="productos__boton2"><i class="fas fa-eye"></i>ver</a>
             </div>
            
           </div>
+        </div>
          <% }) %>
        
       

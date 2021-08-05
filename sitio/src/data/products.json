@@ -79,7 +79,7 @@
     "description": "Foto de la plaza roja en la madre Rusia",
     "price": 3500,
     "discount": 0,
-    "stock": 20,
+    "stock": 0,
     "image": "5.png",
     "destacado": true
   },
@@ -199,7 +199,7 @@
     "price": 1850,
     "discount": 5,
     "stock": 30,
-    "image": "12.png",
+    "image": "2.png",
     "destacado": false
   },
   {
@@ -270,5 +270,6 @@
     "image": "16.png",
     "destacado": false
   }
+  
 
 ]

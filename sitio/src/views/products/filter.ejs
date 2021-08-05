@@ -117,7 +117,7 @@
         </div>
 
         <div class="filtro-botones">
-          <div class="gap-2 col-12 col-lg-12 d-flex 
+          <div class="gap-2 col-12 col-lg- d-flex 
                 justify-content-lg-end   justify-content-center mt-2  ">
             <button class="btn btn-primary " type="button">Aplicar</button>
             <button class="btn btn-danger" type="button">Cancelar</button>
@@ -143,296 +143,38 @@
         
        <!--  PRODUCTOS INDIVIDUALES -->
       <div class="flex Produtos-destacados ">
+        <% productos.forEach(producto => { %>
+          <div class="col-12 col-sm-6 col-lg-4">
           <div class="producto">
             <a href="/products/detail">
-              <img class="producto__imagen" src="/img/productos/1.png" alt="producto1" />
+              <img class="producto__imagen" src="/img/productos/<%= producto.image %>" alt="producto1" />
               <div class="producto__informacion">
-                <p class="producto__nombre">Volver al futuro</p>
-                <p class="producto__precios">$5000</p>
-                <p class="producto__marca">disney</p>
+                <p class="producto__nombre"><%= producto.name %></p>
+                <% if(producto.discount !== 0) { %> 
+                  <p class="producto__oferta">
+                    <span><%= producto.price %></span>
+                    /
+                    <b><%= producto.discount %>% OFF</b>
+                  </p>
+                  <p class="producto__precios">
+                    $<%=toThousand(finalPrice(producto.price,producto.discount)) %>
+                    <% }else{ %>
+                  </p>
+                  <p class="precio__oculto">-</p>
+                  <p class="producto__precios">
+                    $<%= toThousand(producto.price) %>
+                    <% } %>
+                <p class="producto__marca"><%= producto.brand %></p>
               </div>
             </a>
             
           </div>
           <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/3.png" alt="producto3" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Spiderman</p>
-                <p class="producto__precios">$1200</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-            
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/4.png" alt="producto4" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Batman</p>
-                <p class="producto__precios">$3500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-            
-          </div>
-          <!-- .producto -->
-
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/5.png" alt="producto5" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Rompecabeza</p>
-                <p class="producto__precios">$2000</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/6.png" alt="imagen camisa" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Power Ranger</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/7.png" alt="imagen camisa" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Cars Auto Remote</p>
-                <p class="producto__precios">$1200</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-            
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/8.png" alt="imagen camisa" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">The child</p>
-                <p class="producto__precios">$3500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-            
-          </div>
-          <!-- .producto -->
-          
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/6.png" alt="imagen camisa" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Power Ranger</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-            
-           
-          </div>
-          <div class="producto">
-            <a href="/productDetail">
-              <img class="producto__imagen" src="/img/productos/2.png" alt="producto2" />
-              <div class="producto__informacion">
-                <p class="producto__nombre">Thanos</p>
-                <p class="producto__precios">$2500</p>
-                <p class="producto__marca">disney</p>
-              </div>
-            </a>
-           
-          </div>
-          <!-- .producto -->
+        </div>
+        <% }) %>
+      
+         
+         </div>
           
       </section>
     </div>
