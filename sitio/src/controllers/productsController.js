@@ -9,7 +9,9 @@ module.exports = {
         return res.render('products/add', { title: 'Agregar prodcuto' });
     },
     edit: (req,res) => {
-        return res.render('products/edit', { title: 'Editar prodcuto' });
+        return res.render('products/edit',
+         { title: 'Editar prodcuto' },
+         );
     },
     filter: (req,res) => {
         return res.render('products/filter', { title: 'IOCUS-LISTA' });
