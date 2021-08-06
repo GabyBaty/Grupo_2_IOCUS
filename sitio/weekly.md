@@ -1,5 +1,5 @@
 
-###WEEKLY
+###WEEKLY sitio
 
 ###Fernando Ojeda : Durante la semana terminé de armar las views de los formularios de creación y edición de productos con EJS.
 
