@@ -16,7 +16,9 @@
           </div>
           <div class="col-md-6 d-flex justify-content-end align-items-center">
             <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
-            <button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button>
+            <form action="/products/delete/<%= producto.id %>?_method=DELETE"
+              method="POST"><button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button></form>
+            
           </div>
         </div>
         <div class="card">

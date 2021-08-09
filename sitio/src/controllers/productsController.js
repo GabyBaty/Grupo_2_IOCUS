@@ -1,4 +1,4 @@
-const productos = require('../data/products_db');
+let productos = require('../data/products_db');
 const toThousand = require('../utils/toThousand')
 const finalPrice = require('../utils/finalPrice')
 const fs = require('fs')
@@ -80,7 +80,7 @@ module.exports = {
     borrar: (req,res) =>{
         productos=productos.filter(producto =>producto.id !== +req.params.id);
         guardarJSON(productos);
-        return res.redirect('/')
+        return res.redirect('/products/filter')
     },
 
 

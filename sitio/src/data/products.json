@@ -38,25 +38,6 @@
     "destacado": "on"
   },
   {
-    "id": 3,
-    "sku": "FAC003",
-    "name": "Heman",
-    "category": "Figuras de acción",
-    "brand": "Mattel",
-    "age": "De 0 a 24 meses",
-    "description": "Figura de acción articulada con accesorios de colección, vintage",
-    "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
-    },
-    "price": 1700,
-    "discount": 5,
-    "stock": 40,
-    "image": "3.png",
-    "destacado": "on"
-  },
-  {
     "id": 4,
     "sku": "FAC004",
     "name": "Batman",
@@ -92,25 +73,6 @@
     "discount": 0,
     "stock": 0,
     "image": "5.png",
-    "destacado": "on"
-  },
-  {
-    "id": 6,
-    "sku": "DIS006",
-    "name": "Disfraz Power Ranger ",
-    "category": "Disfraces",
-    "brand": "Hasbro",
-    "age": "De 8 a 13 años",
-    "description": "Disfraz bien fachero facherito del power ranger azul",
-    "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
-    },
-    "price": 2500,
-    "discount": 10,
-    "stock": 20,
-    "image": "6.png",
     "destacado": "on"
   },
   {
