@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1,
+    "name": "Volver al futuro",
+    "category": "Figuras de acción",
+    "brand": "Hasbro",
+    "age": "De 0 a 24 meses",
+    "description": "DESCRIPCIÓN DEL PRODUCTO product description DESCRIPCIÓN DEL PRODUCTO product description",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 555555555,
+    "discount": 55,
+    "stock": 555555555,
+    "image": "1.png",
+    "sku": "555555555",
+    "destacado": "on"
+  },
+  {
+    "id": 2,
+    "sku": "FAC002",
+    "name": "Thanos",
+    "category": "Figuras de acción",
+    "brand": "Marvel",
+    "age": "De 8 a 13 años",
+    "description": "Este tipo se hizo el loco y quise hacer explotar la mitad del universo. Ahora vuelve re zarpado en forma de figurita\nMaterial: Plástico\n",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 2500,
+    "discount": 0,
+    "stock": 45,
+    "image": "2.png",
+    "destacado": "on"
+  },
+  {
+    "id": 4,
+    "sku": "FAC004",
+    "name": "Batman",
+    "category": "Figuras de acción",
+    "brand": "Mattel",
+    "age": "De 0 a 24 meses",
+    "description": "Figura de acción articulada de la linea Heroes",
+    "details": {
+      "detail1": "LA PAPA LOCA",
+      "detail2": "ESTA RE CRUDA",
+      "detail3": "MAS DURO QUE LA DUREZA MISMA"
+    },
+    "price": 3500,
+    "discount": 0,
+    "stock": 25,
+    "image": "4.png",
+    "destacado": "on"
+  },
+  {
+    "id": 5,
+    "sku": "JDM005",
+    "name": "Rompecabezas 3D Prime",
+    "category": "Juegos de mesa",
+    "brand": "Playmates",
+    "age": "De 2 a 4 años",
+    "description": "Foto de la plaza roja en la madre Rusia",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 3500,
+    "discount": 0,
+    "stock": 0,
+    "image": "5.png",
+    "destacado": "on"
+  },
+  {
+    "id": 7,
+    "sku": "VAC007",
+    "name": "Cars Auto Remote",
+    "category": "Vehiculos",
+    "brand": "Mattel",
+    "age": "14 y Mayores",
+    "description": "Manejá al Rayo McQueen y divertite durante horas y horas y horas y horas",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 1200,
+    "discount": 0,
+    "stock": 30,
+    "image": "7.png",
+    "destacado": "on"
+  },
+  {
+    "id": 8,
+    "sku": "FAC008",
+    "name": "The Child",
+    "category": "Figuras de acción",
+    "brand": "Disney",
+    "age": "De 14 años y Mayores",
+    "description": "Muñeco Star Wars The Child Baby Yoda Animatronic Edition The Mandalorian ,Toca el tope de la cabeza de The Child Animatronic Edition para activar sonidos",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 3500,
+    "discount": 10,
+    "stock": 30,
+    "image": "8.png",
+    "destacado": "on"
+  },
+  {
+    "id": 9,
+    "sku": "FAC009",
+    "name": "Naruto Kakashi",
+    "category": "Figura de acción",
+    "brand": "Disney",
+    "age": "14 y mayores",
+    "description": "El nene de pelo plateado y una cinta en el ojo",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 4600,
+    "discount": 5,
+    "stock": 10,
+    "image": "9.png"
+  },
+  {
+    "id": 10,
+    "sku": "JDM010",
+    "name": "TEG Tradicional Juego de Mesa Tactico",
+    "category": "Juegos de mesa",
+    "brand": "Playmates",
+    "age": "14 y mayores",
+    "description": "Disfruta de una apasionante acción bélica donde intervienen la lógica, la inteligencia y el azar",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 3670,
+    "discount": 15,
+    "stock": 15,
+    "image": "10.png"
+  },
+  {
+    "id": 11,
+    "sku": "DIZ001",
+    "name": "Difraz de Freddy",
+    "category": "Disfraces",
+    "brand": "Disney",
+    "age": "De 5 a 7 años",
+    "description": "Disfraz de Freddy Niño Talle 2, asusta a tus amigos en Halloween",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 1990,
+    "discount": 5,
+    "stock": 50,
+    "image": "11.png"
+  },
+  {
+    "id": 12,
+    "sku": "MUÑ001",
+    "name": "Shimmer y Shine y sus mascotas",
+    "category": "Muñecas",
+    "brand": "Disney",
+    "age": "De 5 a 7 años",
+    "description": "Diviertete con Shimmer y Shine y sus adorables mascotas Tala y Nahal",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 1850,
+    "discount": 5,
+    "stock": 30,
+    "image": "2.png"
+  },
+  {
+    "id": 13,
+    "sku": "FAC013",
+    "name": "Harley Quinn",
+    "category": "Figuras de acción",
+    "brand": "Lego",
+    "age": "14 y Mayores",
+    "description": "Figura coleccionable.Producida con un impecable tratamiento de pintura.",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 1500,
+    "discount": 2,
+    "stock": 10,
+    "image": "13.png"
+  },
+  {
+    "id": 14,
+    "sku": "FAC014",
+    "name": "Leonardo",
+    "category": "Figuras de acción",
+    "brand": "Playmates",
+    "age": "De 14 años y Mayores",
+    "description": "Figura coleccionable. Leonardo de Teenage Mutant Ninja Turtles de la linea Ninja Elite Series",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 4500,
+    "discount": 20,
+    "stock": 30,
+    "image": "14.png"
+  },
+  {
+    "id": 15,
+    "sku": "JGM003",
+    "name": "Monopoly",
+    "category": "Juegos de mesa",
+    "brand": "Hasbro",
+    "age": "14 y mayores",
+    "description": "¡Un clásico! Reuní a tus amistades para disfrutar de horas de risas y diversión mientras juegan a ser agentes inmobiliarios con el Monopoly. Deberán comprar, vender e intercambiar propiedades estratégicamente para aumentar sus fortunas, si te declarás en quiebra... ¡perdiste!",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 4900,
+    "discount": 20,
+    "stock": 10,
+    "image": "15.png"
+  },
+  {
+    "id": 16,
+    "sku": "JGM004",
+    "name": "Difraz Elsa Frozen",
+    "category": "Disfraces",
+    "brand": "Disney",
+    "age": "5 a 7",
+    "description": "Este increíble color azul glaciar del vestido, va en degradado, dándole más luminosidad a la parte superior del traje y fuerza a su pisada con el tono más oscuro al final. Incluye una elegante capa transparente y unos detalles brillantes a modo de corpiño cubierto de cristales de hielo.",
+    "details": {
+      "detail1": "Detalle numero uno del producto",
+      "detail2": "Detalle numero dos del producto",
+      "detail3": "Detalle numero tres del producto"
+    },
+    "price": 3500,
+    "discount": 0,
+    "stock": 20,
+    "image": "16.png"
+  }
+ 
+]

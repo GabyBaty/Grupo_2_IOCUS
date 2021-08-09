@@ -7,82 +7,106 @@
             <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
                     class="fas fa-arrow-up"></i></button>
 
-            <main class="products-editor-page">
-                <div class="container mt-5 p-5">
-                  <form action="/products/add" method="POST">
-                    <div class="row">
-                      <h1 class="display-6">Agregar un producto</h1>
-                          <div class="mb-3">
-                            <input type="text" class="form-control" id="formInputProductName" placeholder="Nombre del producto" maxlength="40" name="name">
-                          </div>
-                          <div class="col-md-10 mt-4">
-                            <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple/>
-                          </div>
-                          <div class="mb-3 mt-5">
-                            <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
-                            <textarea rows="4"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="249" name="description"></textarea>
-                          </div>
-                    </div>
-                    <div class="row mt-5">
-                      <div class="col-sm-4 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category">
-                            <option selected>Sin seleccionar</option>
-                            <option value="Figuras de acción">Figuras de acción</option>
-                            <option value="Vehículos">Vehículos</option>
-                            <option value="Disfraces">Disfraces</option>
-                            <option value="Juegos de mesa">Juegos de mesa</option>
-                          </select>
-                          <label for="floatingSelect">Categoría</label>
-                        </div>                                
-                      </div>
-                      <div class="col-sm-4 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand">
-                            <option selected>Sin seleccionar</option>
-                            <option value="Disney">Disney</option>
-                            <option value="Mattel">Mattel</option>
-                            <option value="Playmates">Playmates</option>
-                            <option value="Hasbro">Hasbro</option>
-                            <option value="Lego">Lego</option>
-                            <option value="Marvel">Marvel</option>
-                          </select>
-                          <label for="floatingSelect2">Marca</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age">
-                            <option >Sin seleccionar</option>
-                            <option value="0 a 24 meses">0 a 24 meses</option>
-                            <option value="2 a 4 años">2 a 4 años</option>
-                            <option value="5 a 7 años">5 a 7 años</option>
-                            <option value="8 a 13 años">8 a 13 años</option>
-                            <option value="14 años y mayores">14 años y mayores</option>
-                          </select>
-                          <label for="floatingSelect3">Edades</label>
-                        </div>                     
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-SKU-input" class="bg-light border border-secondary w-100 text-center">SKU</label>
-                        <input class="w-100" type="text" id="product-add-SKU-input" maxlength="9" name="sku">
-                      </div>
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-price-input" class="bg-light border border-secondary w-100 text-center">Precio</label>
-                        <input class="w-100" type="text"  id="product-add-price-input" maxlength="9" name="price">
-                      </div>
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-stock-input" class="bg-light border border-secondary w-100 text-center">Stock</label>
-                        <input class="w-100" type="text" id="product-add-stock-input" maxlength="9" namne="stock">
-                      </div>
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-discount-input" class="bg-light border border-secondary w-100 text-center">Descuento</label>
-                        <input class="w-100" type="text" id="product-add-discount-input" maxlength="2" name="discount">
-                      </div>
-                    </div>
+                    <main class="products-editor-page">
+                        <div class="container mt-5 p-5">
+                          <form action="/products/add" method="POST">
+                            <div class="row">
+                              <h1 class="display-6">Modificar un producto</h1>
+                                  <div class="mb-3">
+                                    <input type="text" class="form-control" id="formInputProductName"  maxlength="40" name="name">
+                                  </div>
+                                  <div class="col-md-10 mt-4">
+                                    <div class="row mt-5 mb-5">
+                                      <div class="col-sm-12 d-flex flex-wrap">
+                                        <div class="productEdit-thumbnail-img p-1"><img src="/img/productos/" class="img-thumbnail" alt="imageDetailProduct"></div>
+                                      </div>
+                                    </div>
+                                    <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
+                                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
+                                  </div>
+                                  <div class="mb-3 mt-5">
+                                    <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
+                                    <textarea rows="6"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="400" name="description"></textarea>
+                                  </div>
+                            </div>
+                            <div class="row mt-5 d-flex justify-content-center">
+                              <div class="col-sm-3">
+                                
+                                <label class="bg-light w-100 border" for="formInputProductDetail1">Detalle 1</label>
+                                <textarea rows="3"class="form-control" id="formInputProductDetail1" aria-label="textarea" maxlength="160" name="detail1"></textarea>
+                              </div>
+                              <div class="col-sm-3">
+                                <label class="bg-light w-100 border" for="formInputProductDetail2">Detalle 2</label>
+                                <textarea rows="3"class="form-control" id="formInputProductDetail2" aria-label="textarea" maxlength="160" name="detail2"></textarea>
+                              </div>
+                              <div class="col-sm-3">
+                                <label class="bg-light w-100 border" for="formInputProductDetail3">Detalle 3</label>
+                                <textarea rows="3"class="form-control" id="formInputProductDetail3" aria-label="textarea" maxlength="160" name="detail3"></textarea>
+                              </div>
+                            </div>
+                            <div class="row mt-5">
+                              <div class="col-sm-4 mb-3">
+                                <div class="form-floating">
+                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category">
+                                    <option value="Seleccione una categoría">Seleccione una categoría</option>
+                                    <option value="Figuras de acción" >Figuras de acción</option>
+                                    <option value="Vehículos" >Vehículos</option>
+                                    <option value="Disfraces" >Disfraces</option>
+                                    <option value="Juegos de mesa">Juegos de mesa</option>
+                                  </select>
+                                  <label for="floatingSelect">Categoría</label>
+                                </div>                                
+                              </div>
+                              <div class="col-sm-4 mb-3">
+                                <div class="form-floating">
+                                  <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand">
+                                    <option value="Seleccione una categoría">Seleccione una marca</option>
+                                    <option value="Disney" >Disney</option>
+                                    <option value="Mattel" >Mattel</option>
+                                    <option value="Playmates" >Playmates</option>
+                                    <option value="Hasbro" >Hasbro</option>
+                                    <option value="Lego" >Lego</option>
+                                    <option value="Marvel">Marvel</option>
+                                  </select>
+                                  <label for="floatingSelect2">Marca</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 mb-3">
+                                <div class="form-floating">
+                                  <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age">
+                                    <option value="Seleccione una categoría">Seleccione un rango de edad</option>
+                                    <option value="De 0 a 24 meses">De 0 a 24 meses</option>
+                                    <option value="De 2 a 4 años">De 2 a 4 años</option>
+                                    <option value="De 5 a 7 años">De 5 a 7 años</option>
+                                    <option value="De 8 a 13 años" >De 8 a 13 años</option>
+                                    <option value="De 14 años y Mayores" >De 14 años y Mayores</option>
+                                  </select>
+                                  <label for="floatingSelect3">Edades</label>
+                                </div>                     
+                              </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-2 mb-3">
+                                <label for="product-add-SKU-input" class="bg-light border border-secondary w-100 text-center">SKU</label>
+                                <input  class="w-100" type="text"  id="product-add-SKU-input" maxlength="9" name="sku">
+                              </div>
+                              <div class="col-sm-2 mb-3">
+                                <label for="product-add-price-input" class="bg-light border border-secondary w-100 text-center">Precio</label>
+                                <input  class="w-100" type="text"  id="product-add-price-input" maxlength="9" name="price">
+                              </div>
+                              <div class="col-sm-2 mb-3">
+                                <label for="product-add-stock-input" class="bg-light border border-secondary w-100 text-center">Stock</label>
+                                <input  class="w-100" type="text"  id="product-add-stock-input" maxlength="9" name="stock">
+                              </div>
+                              <div class="col-sm-2 mb-3">
+                                <label for="product-add-discount-input" class="bg-light border border-secondary w-100 text-center">Descuento</label>
+                                <input  class="w-100" type="text"  id="product-add-discount-input" maxlength="2" name="discount">
+                              </div>
+                              <div class="col-sm-2 mb-3 form-check form-switch d-flex align-items-center justify-content-evenly">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="destacado">
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Producto Destacado</label>
+                              </div>
+                            </div>
                     <div class="row mt-5 justify-content-evenly">
                       <button type="submit" class="btn-primary mb-3 col-sm-3">Añadir producto</button>
                       <button type="reset" class="btn-danger mb-3 col-sm-3">Vaciar campos</button>

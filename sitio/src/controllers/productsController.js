@@ -25,7 +25,8 @@ module.exports = {
         return res.render('products/add', { title: 'Agregar producto', productos });
     },
     save:(req,res) => {
-         const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body
+        
+         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
     let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
@@ -37,7 +38,11 @@ module.exports = {
         discount,
         stock,
         destacado,
-        description
+        description,
+        detail1,
+        detail2,
+        detail3
+        
     } //Agregando producto y guarda al final del Json//
     productos.push(producto);
     guardarJSON(productos);
