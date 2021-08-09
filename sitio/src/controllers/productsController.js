@@ -34,7 +34,7 @@ module.exports = {
             });
     },
     update: (req,res) => {
-        const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body
+        const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
         productos.forEach(producto => {
             if(producto.id == +req.params.id) {
                 producto.sku = sku
@@ -47,6 +47,10 @@ module.exports = {
                 producto.stock = +stock
                 producto.destacado = destacado
                 producto.description = description
+                producto.details.detail1 = detail1
+                producto.details.detail2 = detail2
+                producto.details.detail3 = detail3
+                
             }
         });
         

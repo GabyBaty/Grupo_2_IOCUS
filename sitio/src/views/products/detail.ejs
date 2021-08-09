@@ -55,8 +55,13 @@
                 </div>
                 <div class="mt-2 pr-3 content">
                   <p class="mb-5" id="info-productDetail">
-                    <textarea rows="15" readonly class="w-100" id="textarea-description-product"><%= producto.description %></textarea>
+                    <%= producto.description %>
                   </p>
+                  <ul class="mt-5 mb-5 ms-3" id="details-info-productDetail">
+                    <li><%= producto.details.detail1 %> </li>
+                    <li><%= producto.details.detail2 %> </li>
+                    <li><%= producto.details.detail3 %> </li>
+                  </ul>
                 </div>
             
 
