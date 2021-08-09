@@ -10,8 +10,16 @@
   <main>
     <div class="product-detail-main-container">
       <div class="container mt-5 mb-5">
-        <div class="col-md-12">
-          <p><a href="#">Categoria </a>> <a href="#"><%= producto.category %></a>> <a href="#"><%= producto.age %> </a></p>
+        <div class="row">
+          <div class="col-md-6">
+            <p><a href="/products/filter">Categoria </a>> <a href="#"><%= producto.category %></a> > <a href="#"><%= producto.age %> </a></p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
+            <form action="/products/delete/<%= producto.id %>?_method=DELETE"
+              method="POST"><button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button></form>
+            
+          </div>
         </div>
         <div class="card">
           <div class="row g-0">
@@ -51,10 +59,13 @@
                   <p class="mb-5" id="info-productDetail">
                     <%= producto.description %>
                   </p>
+                  <ul class="mt-5 mb-5 ms-3" id="details-info-productDetail">
+                    <li><%= producto.details.detail1 %> </li>
+                    <li><%= producto.details.detail2 %> </li>
+                    <li><%= producto.details.detail3 %> </li>
+                  </ul>
                 </div>
-                <h6 class="mb-5" id="product-details-info">-<%= producto.detail1 %></h6>
-                <h6 class="mb-5" id="product-details-info">-<%= producto.detail2%></h6>
-                <h6 class="mb-5" id="product-details-info">-<%= producto.detail3 %></h6>
+            
 
                 <h6 class="me-5">*imagen meramente ilustrativa</h6>
 
@@ -74,7 +85,7 @@
                     <% }else{ %> 		
                     </h2>
                   <h2 class="product-detail-price display-2">
-                    $<%= toThousand(producto.price) %> 
+                    $<%= toThousand(producto.price) %>
                     <% } %> 	
                   </h2>
              

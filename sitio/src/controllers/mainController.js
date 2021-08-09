@@ -5,7 +5,7 @@ const finalPrice = require('../utils/finalPrice')
 
 module.exports = {
     index: (req,res) => {
-        let destacados = productos.filter(producto => producto.destacado === true)
+        let destacados = productos.filter(producto => producto.destacado === 'on')
         return res.render('index', { 
             title: 'IOCUS-INDEX',
             productos,
