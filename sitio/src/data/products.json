@@ -1,19 +1,17 @@
-[{
+[
+  {
     "id": 1,
-    "sku": "VEC01",
-    "name": "Volver al Futuro",
-    "category": "Vehículos",
+    "name": "Volver al futuro",
+    "category": "Figuras de acción",
     "brand": "Hasbro",
-    "age": "8 a 13",
-    "detail1": "Escala: 1:24",
-    "detail2": "Material: Metal con partes plásticas",
-    "detail3": "Medidas: Largo x ancho x alto: 17.5 x 6.5 x 4.5 cm aprox.",
-    "description": "Colección de la Trilogía Volver al Futuro. Incluye los 3 autos en caja cerrada.",
-    "price": 15000,
-    "discount": 5,
-    "stock": 10,
+    "age": "De 0 a 24 meses",
+    "description": "Nñasdhajksdhlaksjdhalsd\r\n puiashdlkajdlkajshd\r\n-asjdholhdolsjd",
+    "price": 555555555,
+    "discount": 55,
+    "stock": 555555555,
     "image": "1.png",
-    "destacado": true
+    "sku": "555555555",
+    "destacado": "on"
   },
   {
     "id": 2,
@@ -21,16 +19,16 @@
     "name": "Thanos",
     "category": "Figuras de acción",
     "brand": "Marvel",
-    "age": "8 a 13",
-    "detail1": "Material: Plástico",
+    "age": "De 8 a 13 años",
+    "detail1": "",
     "detail2": "Altura: 15cm aprox",
     "detail3": "Medidas: Largo x ancho x alto: 17.5 x 6.5 x 4.5 cm aprox.",
-    "description": "Este tipo se hizo el loco y quise hacer explotar la mitad del universo. Ahora vuelve re zarpado en forma de figurita",
+    "description": "Este tipo se hizo el loco y quise hacer explotar la mitad del universo. Ahora vuelve re zarpado en forma de figurita\nMaterial: Plástico\n",
     "price": 2500,
     "discount": 0,
     "stock": 45,
     "image": "2.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 3,
@@ -38,7 +36,7 @@
     "name": "Heman",
     "category": "Figuras de acción",
     "brand": "Mattel",
-    "age": "8 a 13",
+    "age": "De 0 a 24 meses",
     "detail1": "Material: Plástico",
     "detail2": "Altura: 15cm aprox",
     "detail3": "Totalmente articulado",
@@ -47,7 +45,7 @@
     "discount": 5,
     "stock": 40,
     "image": "3.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 4,
@@ -55,7 +53,7 @@
     "name": "Batman",
     "category": "Figuras de acción",
     "brand": "Mattel",
-    "age": "8 a 13",
+    "age": "De 0 a 24 meses",
     "detail1": "Material: Plástico",
     "detail2": "Altura: 30cm aprox",
     "detail3": "Viene con frases incorporadas",
@@ -64,7 +62,7 @@
     "discount": 0,
     "stock": 25,
     "image": "4.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 5,
@@ -72,7 +70,7 @@
     "name": "Rompecabezas 3D Prime",
     "category": "Juegos de mesa",
     "brand": "Playmates",
-    "age": "8 a 13",
+    "age": "De 2 a 4 años",
     "detail1": "1000 piesas",
     "detail2": "Altura: 61 x 46cm",
     "detail3": "Ancho: 24 x 18cm",
@@ -81,7 +79,7 @@
     "discount": 0,
     "stock": 0,
     "image": "5.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 6,
@@ -89,7 +87,7 @@
     "name": "Disfraz Power Ranger ",
     "category": "Disfraces",
     "brand": "Hasbro",
-    "age": "8 a 13",
+    "age": "De 8 a 13 años",
     "detail1": "Material : 91% Poliéster, 9% Elastano",
     "detail2": "Altura: 100cm aprox",
     "detail3": "Azul",
@@ -98,7 +96,7 @@
     "discount": 10,
     "stock": 20,
     "image": "6.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 7,
@@ -110,12 +108,12 @@
     "detail1": "Material: Plástico",
     "detail2": "Medidas: 32 cm de largo, 15 cm de ancho, 9 cm de alto.",
     "detail3": "No incluye pilas",
-    "description": "Manejá al Rayo Mc Queen y divertite durante horas",
+    "description": "Manejá al Rayo McQueen y divertite durante horas y horas y horas y horas",
     "price": 1200,
     "discount": 0,
     "stock": 30,
     "image": "7.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 8,
@@ -123,7 +121,7 @@
     "name": "The Child",
     "category": "Figuras de acción",
     "brand": "Disney",
-    "age": "8 a 13",
+    "age": "De 14 años y Mayores",
     "detail1": "25 entre sonidos y movimientos",
     "detail2": "Medida 15 cm aprox",
     "detail3": "Requiere 3 baterias AA, no incluidas",
@@ -132,7 +130,7 @@
     "discount": 10,
     "stock": 30,
     "image": "8.png",
-    "destacado": true
+    "destacado": "on"
   },
   {
     "id": 9,
@@ -148,8 +146,7 @@
     "price": 4600,
     "discount": 5,
     "stock": 10,
-    "image": "9.png",
-    "destacado": false
+    "image": "9.png"
   },
   {
     "id": 10,
@@ -165,8 +162,7 @@
     "price": 3670,
     "discount": 15,
     "stock": 15,
-    "image": "10.png",
-    "destacado": false
+    "image": "10.png"
   },
   {
     "id": 11,
@@ -174,7 +170,7 @@
     "name": "Difraz de Freddy",
     "category": "Disfraces",
     "brand": "Disney",
-    "age": "8 a 13",
+    "age": "De 5 a 7 años",
     "detail1": "tela sintetica",
     "detail2": "De 5 a 6 años. Medidas 68 cm x 34 cm y 45 cm x 40 cm casaca",
     "detail3": "Incluye pantalón,remera, sombrero y garra",
@@ -182,8 +178,7 @@
     "price": 1990,
     "discount": 5,
     "stock": 50,
-    "image": "11.png",
-    "destacado": false
+    "image": "11.png"
   },
   {
     "id": 12,
@@ -191,7 +186,7 @@
     "name": "Shimmer y Shine y sus mascotas",
     "category": "Muñecas",
     "brand": "Disney",
-    "age": "8 a 13",
+    "age": "De 5 a 7 años",
     "detail1": "Hermosa muñeca perfumada",
     "detail2": "Muñeca de 17 cm",
     "detail3": "Mascotas incluidas",
@@ -199,8 +194,7 @@
     "price": 1850,
     "discount": 5,
     "stock": 30,
-    "image": "2.png",
-    "destacado": false
+    "image": "2.png"
   },
   {
     "id": 13,
@@ -216,8 +210,7 @@
     "price": 1500,
     "discount": 2,
     "stock": 10,
-    "image": "13.png",
-    "destacado": false
+    "image": "13.png"
   },
   {
     "id": 14,
@@ -225,7 +218,7 @@
     "name": "Leonardo",
     "category": "Figuras de acción",
     "brand": "Playmates",
-    "age": "8 a 13",
+    "age": "De 14 años y Mayores",
     "detail1": "Totalmente articulada",
     "detail2": "Con accesorios y base exhibidor",
     "detail3": "medidas 17cm aprox",
@@ -233,8 +226,7 @@
     "price": 4500,
     "discount": 20,
     "stock": 30,
-    "image": "14.png",
-    "destacado": false
+    "image": "14.png"
   },
   {
     "id": 15,
@@ -250,8 +242,7 @@
     "price": 4900,
     "discount": 20,
     "stock": 10,
-    "image": "15.png",
-    "destacado": false
+    "image": "15.png"
   },
   {
     "id": 16,
@@ -267,9 +258,6 @@
     "price": 3500,
     "discount": 0,
     "stock": 20,
-    "image": "16.png",
-    "destacado": false
+    "image": "16.png"
   }
-  
-
 ]

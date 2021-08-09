@@ -12,7 +12,9 @@
 #floatingInput {
     line-height: 2;
 }
-
+.products-editor-page .productEdit-thumbnail-img {
+    width: 20%;
+}
 
 /*---------------- Categorías-------------*/
 .form-floating > .form-select {
