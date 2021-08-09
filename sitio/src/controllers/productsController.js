@@ -1,6 +1,22 @@
+const productos = require('../data/products_db');
+const toThousand = require('../utils/toThousand')
+const finalPrice = require('../utils/finalPrice')
+const fs = require('fs')
+const path = require('path')
+
+let guardarJSON = (productos) =>{fs.writeFileSync(path.join(__dirname,"../data/products.json"),JSON.stringify(productos,null,2),'utf-8')}
+
 module.exports = {
+    
     detail: (req,res) => {
-        return res.render('products/detail', { title: 'IOCUS-DETALLE' });
+        let producto = productos.find(producto => producto.id === +req.params.id);
+        return res.render('products/detail', { 
+            title: 'IOCUS-DETALLE' ,
+            producto,
+            toThousand,
+            finalPrice
+        
+        });
     },
     cart: (req,res) => {
         return res.render('products/cart', { title: 'IOCUS-CARRITO' });
@@ -9,9 +25,40 @@ module.exports = {
         return res.render('products/add', { title: 'Agregar prodcuto' });
     },
     edit: (req,res) => {
-        return res.render('products/edit', { title: 'Editar prodcuto' });
+        let producto = productos.find(producto => producto.id === +req.params.id);
+        let categorias = producto.category
+            return res.render('products/edit', { 
+             title: 'Edición de producto',
+             producto,
+             categorias
+            });
+    },
+    update: (req,res) => {
+        const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body
+        productos.forEach(producto => {
+            if(producto.id == +req.params.id) {
+                producto.sku = sku
+                producto.name = name
+                producto.category = category
+                producto.brand = brand
+                producto.age = age
+                producto.price = +price
+                producto.discount = +discount
+                producto.stock = +stock
+                producto.destacado = destacado
+                producto.description = description
+            }
+        });
+        
+        guardarJSON(productos)
+        return res.redirect('/')
     },
     filter: (req,res) => {
-        return res.render('products/filter', { title: 'IOCUS-LISTA' });
+        return res.render('products/filter', { 
+            title: 'IOCUS-LISTA',
+            productos,
+            toThousand,
+            finalPrice
+         });
     },
 }

@@ -10,8 +10,14 @@
   <main>
     <div class="product-detail-main-container">
       <div class="container mt-5 mb-5">
-        <div class="col-md-12">
-          <p><a href="#">Categoria </a>> <a href="#">Figura de Acción </a>> <a href="#">Mayores de 9 años </a></p>
+        <div class="row">
+          <div class="col-md-6">
+            <p><a href="/products/filter">Categoria </a>> <a href="#"><%= producto.category %></a> > <a href="#"><%= producto.age %> </a></p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
+            <button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button>
+          </div>
         </div>
         <div class="card">
           <div class="row g-0">
@@ -19,12 +25,12 @@
             <div class="col-md-6 border-end">
               <div class="d-flex flex-column justify-content-center">
                 <div class="main_image">
-                  <img src="/img/detalle/principal.jpg" id="main_product_image" width="350" />
+                  <img src="/img/productos/<%= producto.image %> " id="main_product_image" width="350" />
                 </div>
                 <div class="thumbnail_images">
                   <ul id="thumbnail">
                     <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/principal.jpg" width="70" />
+                      <img onclick="changeImage(this)" src="/img/productos/<%= producto.image %> " width="70" />
                     </li>
                     <li>
                       <img onclick="changeImage(this)" src="/img/detalle/1.jpg" width="70" />
@@ -45,19 +51,14 @@
             <div class="col-md-6">
               <div class="p-3 right-side">
                 <div class="d-flex justify-content-between align-items-center">
-                  <h3 class="mb-5 display-4">Muñeco Anime Naruto Kakashi</h3>
+                  <h3 class="mb-5 display-4"><%= producto.name%></h3>
                 </div>
                 <div class="mt-2 pr-3 content">
                   <p class="mb-5" id="info-productDetail">
-                    Figura más detallada y articula de linea Naruto.<br />Con
-                    una altura de 15cm y con más puntos de articulación y
-                    manos adicionales, esta figura se puede colocar en cientos
-                    de posiciones.
+                    <textarea rows="15" readonly class="w-100" id="textarea-description-product"><%= producto.description %></textarea>
                   </p>
                 </div>
-                <h6 class="mb-5" id="product-details-info">-Personaje : Hatake Kakashi</h6>
-                <h6 class="mb-5" id="product-details-info">-Manos intercambiables</h6>
-                <h6 class="mb-5" id="product-details-info">-15 cm de altura</h6>
+            
 
                 <h6 class="me-5">*imagen meramente ilustrativa</h6>
 
@@ -65,18 +66,46 @@
             </div>
             <div class="col-md-6 border-end">
               <div class="d-flex align-items-center flex-column align-self-center">
-                <h2 class="product-detail-price display-2">$ 1.500</h2>
+                <% if(producto.discount !== 0) { %> 
+                  <p class="text-success">
+                    <span class="">$<%= producto.price %> </span>
+                    /
+                    <b><%= producto.discount %>% OFF</b>
+                  </p>
+                
+                  <h2 class="product-detail-price display-2">
+                    $<%= toThousand(finalPrice(producto.price,producto.discount)) %> 
+                    <% }else{ %> 		
+                    </h2>
+                  <h2 class="product-detail-price display-2">
+                    $<%= toThousand(producto.price) %>
+                    <% } %> 	
+                  </h2>
+             
                 <h6><em>*Precio comprando por la web</em></h6>
               </div>
-              <h5 class="mt-5 ms-5 mb-5">SKU: MLU 8734</h5>
+              <h5 class="mt-5 ms-5 mb-5">SKU: <%= producto.sku %></h5>
             </div>
             <div class="col-md-6 d-flex flex-column align-items-center ">
-              <h5 class="mb-5">Stock Disponible</h5>
+              <% if (producto.stock === 0) { %>
+                <h5 class="mb-5 alert alert-danger"> No hay Stock Disponible </h5>
+              <% }else{ %>
+                <h5 class="mb-5 alert alert-success">Hay Stock Disponible </h5>
+
+                <% } %>
               <div
                 class="def-number-input number-input safari_only w-100 d-flex flex-row mb-3 align-items-center justify-content-evenly">
                 <div>
-                  <button id="shopping-cart-button" type="button"
-                    class="btn btn-primary btn-block waves-effect waves-light">Añadir al Carrito</button>
+                  <% if (producto.stock === 0) { %>
+                
+                    <button id="shopping-cart-button" type="button"
+                      class="btn btn-danger btn-block waves-effect waves-light" disabled="disabled">Sin Stock</button>
+                  
+                    <% }else{ %>
+                      <a href="/products/cart/<%= producto.id %>"><button id="shopping-cart-button" type="button"
+                        class="btn btn-primary btn-block waves-effect waves-light">Añadir al Carrito</button></a>
+                     
+                      <% } %>
                 </div>
                 <div>
                   <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i

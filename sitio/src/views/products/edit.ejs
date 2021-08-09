@@ -9,88 +9,93 @@
 
                     <main class="products-editor-page">
                         <div class="container mt-5 p-5">
-                          <form action="" class="">
+                          <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST">
                             <div class="row">
                               <h1 class="display-6">Modificar un producto</h1>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="formInputProductSKU" placeholder="Ingrese el SKU del producto que desea modificar" maxlength="8">
-                                </div>
                                   <div class="mb-3">
-                                    <input type="text" class="form-control" id="formInputProductName" placeholder="Nombre del producto" maxlength="40">
+                                    <input type="text" class="form-control" id="formInputProductName" value="<%= producto.name %>" maxlength="40" name="name">
                                   </div>
                                   <div class="col-md-10 mt-4">
-                                    <div class="mt-5 mb-5">espacio reservado para la vista previa de todas las imágenes del producto</div>
+                                    <div class="row mt-5 mb-5">
+                                      <div class="col-sm-12 d-flex flex-wrap">
+                                        <div class="productEdit-thumbnail-img p-1"><img src="/img/productos/<%= producto.image %>" class="img-thumbnail" alt="imageDetailProduct"></div>
+                                      </div>
+                                    </div>
                                     <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
                                     <input class="form-control" type="file" id="formFileMultiple" multiple/>
                                   </div>
                                   <div class="mb-3 mt-5">
                                     <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
-                                    <textarea rows="4"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="249"></textarea>
+                                    <textarea rows="6"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="400" name="description"><%= producto.description %></textarea>
                                   </div>
                             </div>
                             <div class="row mt-5">
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category">
-                                    <option selected>Sin seleccionar</option>
-                                    <option value="1">Figuras de acción</option>
-                                    <option value="2">Vehículos</option>
-                                    <option value="3">Disfraces</option>
-                                    <option value="3">Juegos de mesa</option>
+                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category">
+                                    <option value="Seleccione una categoría">Seleccione una categoría</option>
+                                    <option value="Figuras de acción" <%= producto.category === "Figuras de acción" ? 'selected' : null %>>Figuras de acción</option>
+                                    <option value="Vehículos" <%= producto.category === "Vehículos" ? 'selected' : null %>>Vehículos</option>
+                                    <option value="Disfraces" <%= producto.category === "Disfraces" ? 'selected' : null %>>Disfraces</option>
+                                    <option value="Juegos de mesa" <%= producto.category === "Juegos de mesa" ? 'selected' : null %>>Juegos de mesa</option>
                                   </select>
                                   <label for="floatingSelect">Categoría</label>
                                 </div>                                
                               </div>
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand">
-                                    <option selected>Sin seleccionar</option>
-                                    <option value="1">Disney</option>
-                                    <option value="2">Mattel</option>
-                                    <option value="3">Playmates</option>
-                                    <option value="4">Hasbro</option>
-                                    <option value="5">Lego</option>
-                                    <option value="6">Marvel</option>
+                                  <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand">
+                                    <option value="Seleccione una categoría">Seleccione una marca</option>
+                                    <option value="Disney" <%= producto.brand === "Disney" ? 'selected' : null %>>Disney</option>
+                                    <option value="Mattel" <%= producto.brand === "Mattel" ? 'selected' : null %>>Mattel</option>
+                                    <option value="Playmates" <%= producto.brand === "Playmates" ? 'selected' : null %>>Playmates</option>
+                                    <option value="Hasbro" <%= producto.brand === "Hasbro" ? 'selected' : null %>>Hasbro</option>
+                                    <option value="Lego" <%= producto.brand === "Lego" ? 'selected' : null %>>Lego</option>
+                                    <option value="Marvel" <%= producto.brand === "Marvel" ? 'selected' : null %>>Marvel</option>
                                   </select>
                                   <label for="floatingSelect2">Marca</label>
                                 </div>
                               </div>
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect3" aria-label="Floating label select age">
-                                    <option selected>Sin seleccionar</option>
-                                    <option value="1">0 a 24 meses</option>
-                                    <option value="2">2 a 4 años</option>
-                                    <option value="3">5 a 7 años</option>
-                                    <option value="4">8 a 13 años</option>
-                                    <option value="6">14 años y mayores</option>
+                                  <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age">
+                                    <option value="Seleccione una categoría">Seleccione un rango de edad</option>
+                                    <option value="De 0 a 24 meses" <%= producto.age === "De 0 a 24 meses" ? 'selected' : null %>>De 0 a 24 meses</option>
+                                    <option value="De 2 a 4 años" <%= producto.age === "De 2 a 4 años" ? 'selected' : null %>>De 2 a 4 años</option>
+                                    <option value="De 5 a 7 años" <%= producto.age === "De 5 a 7 años" ? 'selected' : null %>>De 5 a 7 años</option>
+                                    <option value="De 8 a 13 años" <%= producto.age === "De 8 a 13 años" ? 'selected' : null %>>De 8 a 13 años</option>
+                                    <option value="De 14 años y Mayores" <%= producto.age === "De 14 años y Mayores" ? 'selected' : null %>>De 14 años y Mayores</option>
                                   </select>
                                   <label for="floatingSelect3">Edades</label>
                                 </div>                     
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="col-sm-3 mb-3">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-2 mb-3">
                                 <label for="product-add-SKU-input" class="bg-light border border-secondary w-100 text-center">SKU</label>
-                                <input class="w-100" type="text" name="product-add-SKU" id="product-add-SKU-input" maxlength="9">
+                                <input value="<%= producto.sku %>" class="w-100" type="text"  id="product-add-SKU-input" maxlength="9" name="sku">
                               </div>
-                              <div class="col-sm-3 mb-3">
+                              <div class="col-sm-2 mb-3">
                                 <label for="product-add-price-input" class="bg-light border border-secondary w-100 text-center">Precio</label>
-                                <input class="w-100" type="text" name="product-add-price" id="product-add-price-input" maxlength="9">
+                                <input value="<%= producto.price %>" class="w-100" type="text"  id="product-add-price-input" maxlength="9" name="price">
                               </div>
-                              <div class="col-sm-3 mb-3">
+                              <div class="col-sm-2 mb-3">
                                 <label for="product-add-stock-input" class="bg-light border border-secondary w-100 text-center">Stock</label>
-                                <input class="w-100" type="text" name="product-add-stock" id="product-add-stock-input" maxlength="9">
+                                <input value="<%= producto.stock %>" class="w-100" type="text"  id="product-add-stock-input" maxlength="9" name="stock">
                               </div>
-                              <div class="col-sm-3 mb-3">
+                              <div class="col-sm-2 mb-3">
                                 <label for="product-add-discount-input" class="bg-light border border-secondary w-100 text-center">Descuento</label>
-                                <input class="w-100" type="text" name="product-add-discount" id="product-add-discount-input" maxlength="2">
+                                <input value="<%= producto.discount %>" class="w-100" type="text"  id="product-add-discount-input" maxlength="2" name="discount">
+                              </div>
+                              <div class="col-sm-2 mb-3 form-check form-switch d-flex align-items-center justify-content-evenly">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" <%= producto.destacado === "on" ? 'checked' : null %> name="destacado">
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Producto Destacado</label>
                               </div>
                             </div>
                             <div class="row mt-5 justify-content-evenly">
                               <button type="submit" class="btn-primary mb-3 col-sm-3">Modificar producto</button>
                               <button type="reset" class="btn-warning mb-3 col-sm-3">Vaciar campos</button>
-                              <button type="reset" class="btn-danger mb-3 col-sm-3">Eliminar producto</button>
+                              <button type="" class="btn-danger mb-3 col-sm-3">Eliminar producto</button>
                             </div>
                           </form>
                         </div>
