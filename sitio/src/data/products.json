@@ -259,5 +259,37 @@
     "discount": 0,
     "stock": 20,
     "image": "16.png"
+  },
+  {
+    "id": 17,
+    "category": "1",
+    "brand": "1",
+    "age": "Sin seleccionar",
+    "description": ""
+  },
+  {
+    "id": 18,
+    "category": "1",
+    "brand": "1",
+    "age": "1",
+    "description": "la veganza"
+  },
+  {
+    "id": 19,
+    "category": "1",
+    "brand": "1",
+    "age": "1",
+    "description": "rhgdthftfj"
+  },
+  {
+    "id": 20,
+    "sku": "",
+    "name": "thomas",
+    "category": "1",
+    "brand": "1",
+    "age": "0 a 24 meses",
+    "price": "5000",
+    "discount": "",
+    "description": "fgtghhtrh"
   }
 ]
