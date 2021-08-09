@@ -213,6 +213,11 @@ input[type=number] {
 #info-productDetail{
     font-size: 1.6rem;
 }
+#details-info-productDetail{
+    font-size: 1.4rem;
+    list-style: inside;
+    line-height: 5rem;
+}
 
 
 .product-detail-price{
@@ -283,5 +288,3 @@ input[type=number] {
    border-radius: 50%;
    padding: 0.5rem;
  }
-
- 
