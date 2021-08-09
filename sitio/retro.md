@@ -8,7 +8,7 @@ Luego del segundo sprint, y tras realizar un análisis en equipo, exponiendo  la
 
 *Comenzar a hacer:
   Repasar javascript, JSON y métodos de Array.
-  Implementar las dailys de 15 minnutos mínimo.
+  Implementar las dailys de 15 minutos mínimo.
 
 *Dejar de hacer:
   Repartir las tareas individualmente.
