@@ -26,8 +26,9 @@ module.exports = {
     },
     save:(req,res) => {
         
-         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
-    let producto = {
+         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3,images} = req.body
+         let details = {detail1,detail2,detail3}
+         let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
         name,
@@ -39,9 +40,8 @@ module.exports = {
         stock,
         destacado,
         description,
-        detail1,
-        detail2,
-        detail3
+        details,
+        images,
         
     } //Agregando producto y guarda al final del Json//
     productos.push(producto);
@@ -75,6 +75,7 @@ module.exports = {
                 producto.details.detail1 = detail1
                 producto.details.detail2 = detail2
                 producto.details.detail3 = detail3
+                
                 
             }
         });

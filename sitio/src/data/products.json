@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Volver al futuro",
+    "name": "Kakashi",
     "category": "Figuras de acción",
     "brand": "Hasbro",
     "age": "De 0 a 24 meses",
@@ -11,10 +11,14 @@
       "detail2": "Detalle numero dos del producto",
       "detail3": "Detalle numero tres del producto"
     },
-    "price": 555555555,
-    "discount": 55,
-    "stock": 555555555,
-    "image": "1.png",
+    "price": 5000,
+    "discount": 50,
+    "stock": 20,
+    "images": {
+      "mainImg": "principal.jpg",
+      "secondaryImg1": "1.jpg",
+      "secondaryImg2": "2.jpg"
+    },
     "sku": "555555555",
     "destacado": "on"
   },
@@ -34,8 +38,8 @@
     "price": 2500,
     "discount": 0,
     "stock": 45,
-    "image": "2.png",
-    "destacado": "on"
+    "image": "2.png"
+    
   },
   {
     "id": 4,
@@ -53,8 +57,8 @@
     "price": 3500,
     "discount": 0,
     "stock": 25,
-    "image": "4.png",
-    "destacado": "on"
+    "image": "4.png"
+    
   },
   {
     "id": 5,
@@ -72,8 +76,8 @@
     "price": 3500,
     "discount": 0,
     "stock": 0,
-    "image": "5.png",
-    "destacado": "on"
+    "image": "5.png"
+    
   },
   {
     "id": 7,
@@ -91,8 +95,7 @@
     "price": 1200,
     "discount": 0,
     "stock": 30,
-    "image": "7.png",
-    "destacado": "on"
+    "image": "7.png"
   },
   {
     "id": 8,
@@ -110,8 +113,7 @@
     "price": 3500,
     "discount": 10,
     "stock": 30,
-    "image": "8.png",
-    "destacado": "on"
+    "image": "8.png"
   },
   {
     "id": 9,
@@ -257,5 +259,4 @@
     "stock": 20,
     "image": "16.png"
   }
- 
 ]
