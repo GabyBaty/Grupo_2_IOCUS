@@ -1,4 +1,4 @@
-const productos = require('../data/products_db');
+let productos = require('../data/products_db');
 const toThousand = require('../utils/toThousand')
 const finalPrice = require('../utils/finalPrice')
 const fs = require('fs')
@@ -24,29 +24,31 @@ module.exports = {
     add: (req,res) => {
         return res.render('products/add', { title: 'Agregar producto', productos });
     },
-    save: (req,res) => {
+    save:(req,res) => {
+        
+         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3,images} = req.body
+         let details = {detail1,detail2,detail3}
+         let producto = {
+        id:productos[productos.length - 1].id + 1,
+        sku,
+        name,
+        category,
+        brand,
+        age,
+        price,
+        discount,
+        stock,
+        destacado,
+        description,
+        details,
+        images,
+        
+    } //Agregando producto y guarda al final del Json//
+    productos.push(producto);
+    guardarJSON(productos);
+    res.redirect('/products/filter');
 
-
-     const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body;
-let producto= {
-    id: productos[productos.length - 1].id + 1,
-    sku,
-    name, 
-    category,
-    brand,
-    age,
-    price, 
-    discount, 
-    stock,
-    destacado,
-    description
-}
-productos.push(producto);   //agrega un producto nuevo al final del json. y 
-guardarJSON(productos);
-res.redirect('/');
-
-
-    },
+        },
     edit: (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
         let categorias = producto.category
@@ -57,7 +59,7 @@ res.redirect('/');
             });
     },
     update: (req,res) => {
-        const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body
+        const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
         productos.forEach(producto => {
             if(producto.id == +req.params.id) {
                 producto.sku = sku
@@ -70,12 +72,25 @@ res.redirect('/');
                 producto.stock = +stock
                 producto.destacado = destacado
                 producto.description = description
+                producto.details.detail1 = detail1
+                producto.details.detail2 = detail2
+                producto.details.detail3 = detail3
+                
+                
             }
         });
         
         guardarJSON(productos)
         return res.redirect('/')
     },
+    borrar: (req,res) =>{
+        productos=productos.filter(producto =>producto.id !== +req.params.id);
+        guardarJSON(productos);
+        return res.redirect('/products/filter')
+    },
+
+
+
     filter: (req,res) => {
         return res.render('products/filter', { 
             title: 'IOCUS-LISTA',

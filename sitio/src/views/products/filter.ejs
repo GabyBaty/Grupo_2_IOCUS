@@ -149,8 +149,8 @@
         <% productos.forEach(producto => { %>
           <div class="col-12 col-sm-6 col-lg-4">
           <div class="producto">
-            <a href="/products/detail">
-              <img class="producto__imagen" src="/img/productos/<%= producto.image %>" alt="producto1" />
+            <a href="/products/detail/<%= producto.id %>">
+              <img class="producto__imagen" src="/img/detalle/<%= producto.images.mainImg %>" alt="producto1" />
               <div class="producto__informacion">
                 <p class="producto__nombre"><%= producto.name %></p>
                 <% if(producto.discount !== 0) { %> 

@@ -16,7 +16,9 @@
           </div>
           <div class="col-md-6 d-flex justify-content-end align-items-center">
             <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
-            <button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button>
+            <form action="/products/delete/<%= producto.id %>?_method=DELETE"
+              method="POST"><button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button></form>
+            
           </div>
         </div>
         <div class="card">
@@ -25,24 +27,18 @@
             <div class="col-md-6 border-end">
               <div class="d-flex flex-column justify-content-center">
                 <div class="main_image">
-                  <img src="/img/productos/<%= producto.image %> " id="main_product_image" width="350" />
+                  <img src="/img/detalle/<%= producto.images.mainImg %>" id="main_product_image" width="350" />
                 </div>
                 <div class="thumbnail_images">
                   <ul id="thumbnail">
                     <li>
-                      <img onclick="changeImage(this)" src="/img/productos/<%= producto.image %> " width="70" />
+                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images.mainImg %>" width="70" />
                     </li>
                     <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/1.jpg" width="70" />
+                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images.secondaryImg1 %>" width="70" />
                     </li>
                     <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/2.jpg" width="70" />
-                    </li>
-                    <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/3.jpg" width="70" />
-                    </li>
-                    <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/4.jpg" width="70" />
+                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images.secondaryImg2 %>" width="70" />
                     </li>
                   </ul>
                 </div>
@@ -55,8 +51,13 @@
                 </div>
                 <div class="mt-2 pr-3 content">
                   <p class="mb-5" id="info-productDetail">
-                    <textarea rows="15" readonly class="w-100" id="textarea-description-product"><%= producto.description %></textarea>
+                    <%= producto.description %>
                   </p>
+                  <ul class="mt-5 mb-5 ms-3" id="details-info-productDetail">
+                    <li><%= producto.details.detail1 %> </li>
+                    <li><%= producto.details.detail2 %> </li>
+                    <li><%= producto.details.detail3 %> </li>
+                  </ul>
                 </div>
             
 
