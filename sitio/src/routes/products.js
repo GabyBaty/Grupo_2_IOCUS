@@ -4,7 +4,7 @@ const {detail, cart, add, edit, filter, update, save, borrar} = require('../cont
 
 /* GET products page. */
 router.get('/detail/:id', detail);
-router.get('/cart/:id', cart);
+router.get('/cart/', cart);
 router.get('/add', add);
 router.post('/add',save);
 /* EDITAR UN PRODUCTO Y GUARDAR LOS CAMBIOS */
