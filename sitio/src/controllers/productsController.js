@@ -28,6 +28,7 @@ module.exports = {
         
          const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3,images} = req.body
          let details = {detail1,detail2,detail3}
+         let images = {mainImg,secondaryImg1,secondaryImg2}
          let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
@@ -41,7 +42,7 @@ module.exports = {
         destacado,
         description,
         details,
-        images,
+        images: req.file.filename,
         
     } //Agregando producto y guarda al final del Json//
     productos.push(producto);

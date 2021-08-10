@@ -7,87 +7,9 @@
             <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
                     class="fas fa-arrow-up"></i></button>
 
-<<<<<<< HEAD
-            <main class="products-editor-page">
-                <div class="container mt-5 p-5">
-                  <form action="/products/add" method="POST">
-                    <div class="row">
-                      <h1 class="display-6">Agregar un producto</h1>
-                          <div class="mb-3">
-                            <input type="text" class="form-control" id="formInputProductName" placeholder="Nombre del producto" maxlength="40">
-                          </div>
-                          <div class="col-md-10 mt-4">
-                            <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple/>
-                          </div>
-                          <div class="mb-3 mt-5">
-                            <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
-                            <textarea rows="4"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="249" name="description"></textarea>
-                          </div>
-                    </div>
-                    <div class="row mt-5">
-                      <div class="col-sm-4 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category">
-                            <option selected>Sin seleccionar</option>
-                            <option value="Figuras de acción">Figuras de acción</option>
-                            <option value="Vehículos">Vehículos</option>
-                            <option value="Disfraces">Disfraces</option>
-                            <option value="Juegos de mesa">Juegos de mesa</option>
-                          </select>
-                          <label for="floatingSelect">Categoría</label>
-                        </div>                                
-                      </div>
-                      <div class="col-sm-4 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand">
-                            <option selected>Sin seleccionar</option>
-                            <option value="Disney">Disney</option>
-                            <option value="Mattel">Mattel</option>
-                            <option value="Playmates">Playmates</option>
-                            <option value="Hasbro">Hasbro</option>
-                            <option value="Lego">Lego</option>
-                            <option value="Marvel">Marvel</option>
-                          </select>
-                          <label for="floatingSelect2">Marca</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age">
-                            <option >Sin seleccionar</option>
-                            <option value="0 a 24 meses">0 a 24 meses</option>
-                            <option value="2 a 4 años">2 a 4 años</option>
-                            <option value="5 a 7 años">5 a 7 años</option>
-                            <option value="8 a 13 años">8 a 13 años</option>
-                            <option value="14 años y mayores">14 años y mayores</option>
-                          </select>
-                          <label for="floatingSelect3">Edades</label>
-                        </div>                     
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-SKU-input" class="bg-light border border-secondary w-100 text-center">SKU</label>
-                        <input class="w-100" type="text" id="product-add-SKU-input" maxlength="9" name="sku">
-                      </div>
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-price-input" class="bg-light border border-secondary w-100 text-center">Precio</label>
-                        <input class="w-100" type="text"  id="product-add-price-input" maxlength="9" name="price">
-                      </div>
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-stock-input" class="bg-light border border-secondary w-100 text-center">Stock</label>
-                        <input class="w-100" type="text"id="product-add-stock-input" maxlength="9" name="stock"> 
-                      </div>
-                      <div class="col-sm-3 mb-3">
-                        <label for="product-add-discount-input" class="bg-light border border-secondary w-100 text-center">Descuento</label>
-                        <input class="w-100" type="text"id="product-add-discount-input" maxlength="2" name="discount">
-                      </div>
-                    </div>
-=======
                     <main class="products-editor-page">
                         <div class="container mt-5 p-5">
-                          <form action="/products/add" method="POST">
+                          <form action="/products/add" method="POST" enctype="multipart/form-data">
                             <div class="row">
                               <h1 class="display-6">Modificar un producto</h1>
                                   <div class="mb-3">
@@ -100,7 +22,7 @@
                                       </div>
                                     </div>
                                     <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
-                                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
+                                    <input class="form-control" type="file" name="images[]" id="formFileMultiple" multiple/>
                                   </div>
                                   <div class="mb-3 mt-5">
                                     <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
@@ -185,7 +107,6 @@
                                 <label class="form-check-label" for="flexSwitchCheckChecked">Producto Destacado</label>
                               </div>
                             </div>
->>>>>>> 45cf3a3154224f10c4f6680c90cc4e9ab900460e
                     <div class="row mt-5 justify-content-evenly">
                       <button type="submit" class="btn-primary mb-3 col-sm-3">Añadir producto</button>
                       <button type="reset" class="btn-danger mb-3 col-sm-3">Vaciar campos</button>

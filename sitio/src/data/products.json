@@ -43,7 +43,7 @@
       "secondaryImg1": "FAC002secondary1.png",
       "secondaryImg2": "FAC002secondary2.png"
     },
-    "destacado":"on"
+    "destacado": "on"
   },
   {
     "id": 3,
@@ -66,7 +66,7 @@
       "secondaryImg1": "JDM003secondary1.png",
       "secondaryImg2": "JDM003secondary2.png"
     },
-    "destacado":"on"    
+    "destacado": "on"
   },
   {
     "id": 4,
@@ -89,7 +89,7 @@
       "secondaryImg1": "FAC004secondary1.png",
       "secondaryImg2": "FAC004secondary2.png"
     },
-    "destacado":"on"    
+    "destacado": "on"
   },
   {
     "id": 5,
@@ -112,7 +112,7 @@
       "secondaryImg1": "JDM005secondary1.png",
       "secondaryImg2": "JDM005secondary2.png"
     },
-    "destacado":"on"  
+    "destacado": "on"
   },
   {
     "id": 6,
@@ -135,7 +135,7 @@
       "secondaryImg1": "VAC006secondary1.png",
       "secondaryImg2": "VAC006secondary2.png"
     },
-    "destacado":"on"  
+    "destacado": "on"
   },
   {
     "id": 7,
@@ -158,7 +158,7 @@
       "secondaryImg1": "VAC007secondary1.png",
       "secondaryImg2": "VAC007secondary2.png"
     },
-    "destacado":"on" 
+    "destacado": "on"
   },
   {
     "id": 8,
@@ -181,7 +181,7 @@
       "secondaryImg1": "DIZ008secondary1.png",
       "secondaryImg2": "DIZ008secondary2.png"
     },
-    "destacado":"on" 
+    "destacado": "on"
   },
   {
     "id": 9,
@@ -357,6 +357,23 @@
       "mainImg": "DIZ011main.png",
       "secondaryImg1": "DIZ011secondary1.png",
       "secondaryImg2": "DIZ011secondary2.png"
+    }
+  },
+  {
+    "id": 17,
+    "sku": "",
+    "name": "perritos",
+    "category": "Figuras de acción",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "sdfgsdñlmsñldkgñlsdkgf",
+    "details": {
+      "detail1": "dffsdf",
+      "detail2": "",
+      "detail3": ""
     }
   }
 ]
