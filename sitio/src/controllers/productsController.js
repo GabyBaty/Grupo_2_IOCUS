@@ -22,7 +22,30 @@ module.exports = {
         return res.render('products/cart', { title: 'IOCUS-CARRITO' });
     },
     add: (req,res) => {
-        return res.render('products/add', { title: 'Agregar prodcuto' });
+        return res.render('products/add', { title: 'Agregar producto', productos });
+    },
+    save: (req,res) => {
+
+
+     const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body;
+let producto= {
+    id: productos[productos.length - 1].id + 1,
+    sku,
+    name, 
+    category,
+    brand,
+    age,
+    price, 
+    discount, 
+    stock,
+    destacado,
+    description
+}
+productos.push(producto);   //agrega un producto nuevo al final del json. y 
+guardarJSON(productos);
+res.redirect('/');
+
+
     },
     edit: (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
