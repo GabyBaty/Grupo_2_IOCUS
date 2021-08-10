@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Kakashi",
+    "name": "Figura Kakashi Hatake",
     "category": "Figuras de acción",
     "brand": "Hasbro",
     "age": "De 0 a 24 meses",
@@ -15,17 +15,17 @@
     "discount": 50,
     "stock": 20,
     "images": {
-      "mainImg": "principal.jpg",
-      "secondaryImg1": "1.jpg",
-      "secondaryImg2": "2.jpg"
+      "mainImg": "FAC001main.jpg",
+      "secondaryImg1": "FAC001secondary1.jpg",
+      "secondaryImg2": "FAC001secondary2.jpg"
     },
-    "sku": "555555555",
+    "sku": "FAC001",
     "destacado": "on"
   },
   {
     "id": 2,
     "sku": "FAC002",
-    "name": "Thanos",
+    "name": "Figura Thanos",
     "category": "Figuras de acción",
     "brand": "Marvel",
     "age": "De 8 a 13 años",
@@ -35,49 +35,107 @@
       "detail2": "Detalle numero dos del producto",
       "detail3": "Detalle numero tres del producto"
     },
-    "price": 2500,
-    "discount": 0,
+    "price": 12500,
+    "discount": 7,
     "stock": 45,
-    "image": "2.png"
-    
+    "images": {
+      "mainImg": "FAC002main.png",
+      "secondaryImg1": "FAC002secondary1.png",
+      "secondaryImg2": "FAC002secondary2.png"
+    },
+    "destacado":"on"
+  },
+  {
+    "id": 3,
+    "sku": "JDM003",
+    "name": "Juego de cartas Uno",
+    "category": "Juegos de mesa",
+    "brand": "Mattel",
+    "age": "De 8 a 13 años",
+    "description": "Uno es el clásico juego de cartas familiar que es fácil de aprender y muy divertido de jugar. En una carrera para agotar tu mano, combina una de tus cartas con la carta actual que se muestra en la parte superior de la baraja por color o número.    Estrategias para derrotar a tu competencia con tarjetas de acción especiales como saltos, reversos, Draw Twos y tarjetas salvajes que cambian de color.    Cuando estés bajo una tarjeta, no te olvides de gritar 'UNO'",
+    "details": {
+      "detail1": "112 cartas en una lata de almacenamiento resistente",
+      "detail2": "Ideal para viajes",
+      "detail3": "Dimensiones del contenedor: 1.25 x 6.25 x 5.25 pulgadas"
+    },
+    "price": 2500,
+    "discount": 25,
+    "stock": 65,
+    "images": {
+      "mainImg": "JDM003main.png",
+      "secondaryImg1": "JDM003secondary1.png",
+      "secondaryImg2": "JDM003secondary2.png"
+    },
+    "destacado":"on"    
   },
   {
     "id": 4,
     "sku": "FAC004",
-    "name": "Batman",
+    "name": "Figura Batman",
     "category": "Figuras de acción",
     "brand": "Mattel",
     "age": "De 0 a 24 meses",
-    "description": "Figura de acción articulada de la linea Heroes",
+    "description": "La figura de Batman se basa en el estilo icónico de la serie animada de Batman. Diseñado con ultra articulación con hasta 22 partes móviles para una gama completa de posar y jugar.",
     "details": {
-      "detail1": "LA PAPA LOCA",
-      "detail2": "ESTA RE CRUDA",
-      "detail3": "MAS DURO QUE LA DUREZA MISMA"
+      "detail1": "Los accesorios de Batman incluyen un lanzador de grapnel y Batarang.",
+      "detail2": "Incluye tarjeta coleccionable de arte con ilustraciones de Batman la serie animada.",
+      "detail3": "Las figuras se muestran en caja de embalaje con ventana temática de DC."
     },
-    "price": 3500,
-    "discount": 0,
+    "price": 8500,
+    "discount": 19,
     "stock": 25,
-    "image": "4.png"
-    
+    "images": {
+      "mainImg": "FAC004main.png",
+      "secondaryImg1": "FAC004secondary1.png",
+      "secondaryImg2": "FAC004secondary2.png"
+    },
+    "destacado":"on"    
   },
   {
     "id": 5,
     "sku": "JDM005",
-    "name": "Rompecabezas 3D Prime",
+    "name": "Rompecabezas de madera con diseño de animales",
     "category": "Juegos de mesa",
     "brand": "Playmates",
     "age": "De 2 a 4 años",
-    "description": "Foto de la plaza roja en la madre Rusia",
+    "description": "Un diseño gráfico brillante, enseñando a los niños a reconocer letras y números correctamente. Promueve la coordinación ojo-mano y habilidades de resolución de problemas, ayuda a desarrollar habilidades a juego.",
     "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
+      "detail1": "26 piezas de diferentes colores. Un lado es de 26 letras, y el otro de 1 a 26 números.",
+      "detail2": "Tamaño del rompecabezas de serpiente: 19 cm de ancho x 160 cm de alto.",
+      "detail3": "Mejora la capacidad de pensamiento del bebé."
     },
     "price": 3500,
-    "discount": 0,
+    "discount": 20,
     "stock": 0,
-    "image": "5.png"
-    
+    "images": {
+      "mainImg": "JDM005main.png",
+      "secondaryImg1": "JDM005secondary1.png",
+      "secondaryImg2": "JDM005secondary2.png"
+    },
+    "destacado":"on"  
+  },
+  {
+    "id": 6,
+    "sku": "VAC006",
+    "name": "Coches de juguete",
+    "category": "Vehiculos",
+    "brand": "Playmates",
+    "age": "De 2 a 4 años",
+    "description": "3 juegos de camiones monstruos: El juego de camiones monstruos incluye 3 figuras únicas de animales salvajes de juguete modelo de coche: toro, leopardo y cocodrilo. No necesita pilas, ahorra energía y es respetuoso con el medio ambiente.",
+    "details": {
+      "detail1": "Camión de dibujos animados con boca móvil",
+      "detail2": "Juguete educativo temprano",
+      "detail3": "100% seguro y resistente"
+    },
+    "price": 1200,
+    "discount": 80,
+    "stock": 30,
+    "images": {
+      "mainImg": "VAC006main.png",
+      "secondaryImg1": "VAC006secondary1.png",
+      "secondaryImg2": "VAC006secondary2.png"
+    },
+    "destacado":"on"  
   },
   {
     "id": 7,
@@ -85,53 +143,67 @@
     "name": "Cars Auto Remote",
     "category": "Vehiculos",
     "brand": "Mattel",
-    "age": "14 y Mayores",
-    "description": "Manejá al Rayo McQueen y divertite durante horas y horas y horas y horas",
+    "age": "De 14 años y Mayores",
+    "description": "LIGHTNING MCQUEEN: Ayuda a Lightning McQueen a derrotar a su nuevo rival Jackson Storm con tu propio coche de carreras McQueen a control remoto.",
     "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
+      "detail1": "Réplica realista que representa la escala 1:24.",
+      "detail2": "USB recargable y pilas para mando a distancia",
+      "detail3": "Radio contronl de 2 canales"
     },
-    "price": 1200,
-    "discount": 0,
+    "price": 11200,
+    "discount": 10,
     "stock": 30,
-    "image": "7.png"
+    "images": {
+      "mainImg": "VAC007main.png",
+      "secondaryImg1": "VAC007secondary1.png",
+      "secondaryImg2": "VAC007secondary2.png"
+    },
+    "destacado":"on" 
   },
   {
     "id": 8,
-    "sku": "FAC008",
-    "name": "The Child",
-    "category": "Figuras de acción",
+    "sku": "DIZ008",
+    "name": "Disfraz Darth Vader",
+    "category": "Disfraces",
     "brand": "Disney",
     "age": "De 14 años y Mayores",
-    "description": "Muñeco Star Wars The Child Baby Yoda Animatronic Edition The Mandalorian ,Toca el tope de la cabeza de The Child Animatronic Edition para activar sonidos",
+    "description": "Incluye traje, máscara, guantes, cinturón y capa desmontable. Presione el botón en el cinturón para escuchar ocho frases de Darth Vader.",
     "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
+      "detail1": "Guantes con tejido negro brillante en la parte superior",
+      "detail2": "Panel de pecho de plástico moldeado",
+      "detail3": "Capa desmontable con cierre de tejido autoadhesivo"
     },
     "price": 3500,
     "discount": 10,
     "stock": 30,
-    "image": "8.png"
+    "images": {
+      "mainImg": "DIZ008main.png",
+      "secondaryImg1": "DIZ008secondary1.png",
+      "secondaryImg2": "DIZ008secondary2.png"
+    },
+    "destacado":"on" 
   },
   {
     "id": 9,
-    "sku": "FAC009",
-    "name": "Naruto Kakashi",
-    "category": "Figura de acción",
-    "brand": "Disney",
+    "sku": "JDM009",
+    "name": "Juego de la Vida",
+    "category": "Juegos de mesa",
+    "brand": "Hasbro",
     "age": "14 y mayores",
-    "description": "El nene de pelo plateado y una cinta en el ojo",
+    "description": "Elige un camino para una vida de acción, aventura y sorpresas inesperadas",
     "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
+      "detail1": "El juego Game of Life está lleno de sorpresas",
+      "detail2": "Adopta mascotas. De 2 a 4 jugadores.",
+      "detail3": "Divertido juego familiar"
     },
     "price": 4600,
-    "discount": 5,
+    "discount": 0,
     "stock": 10,
-    "image": "9.png"
+    "images": {
+      "mainImg": "JDM009main.png",
+      "secondaryImg1": "JDM009secondary1.png",
+      "secondaryImg2": "JDM009secondary2.png"
+    }
   },
   {
     "id": 10,
@@ -140,20 +212,24 @@
     "category": "Juegos de mesa",
     "brand": "Playmates",
     "age": "14 y mayores",
-    "description": "Disfruta de una apasionante acción bélica donde intervienen la lógica, la inteligencia y el azar",
+    "description": "El juego propone un conflicto bélico que tiene lugar en un planisferio dividido en 50 países. Cada jugador tiene un objetivo secreto a cumplir, para lo cual deberá ampliar sus dominios, reordenar sus fuerzas, realizar pactos, emprender ataques y defenderse de los adversarios. El primer jugador en lograr su objetivo, o conquistar 30 países (objetivo común), ¡Será el ganador! ¡¿Qué esperas para salir a conquistar el mundo?! ¿Te animas a desafiarte?",
     "details": {
-      "detail1": "Detalle numero uno del producto",
-      "detail2": "Detalle numero dos del producto",
-      "detail3": "Detalle numero tres del producto"
+      "detail1": "1 tablero,6 sets de 100 fichas,50 tarjetas de países,15 tarjetas de objetivos,6 dados,1 reglamento",
+      "detail2": "De 2 a 6 jugadores",
+      "detail3": "Edición tradicional"
     },
     "price": 3670,
-    "discount": 15,
+    "discount": 0,
     "stock": 15,
-    "image": "10.png"
+    "images": {
+      "mainImg": "JDM010main.png",
+      "secondaryImg1": "JDM010secondary1.png",
+      "secondaryImg2": "JDM010secondary2.png"
+    }
   },
   {
     "id": 11,
-    "sku": "DIZ001",
+    "sku": "DIZ011",
     "name": "Difraz de Freddy",
     "category": "Disfraces",
     "brand": "Disney",
@@ -165,9 +241,13 @@
       "detail3": "Detalle numero tres del producto"
     },
     "price": 1990,
-    "discount": 5,
+    "discount": 0,
     "stock": 50,
-    "image": "11.png"
+    "images": {
+      "mainImg": "DIZ011main.png",
+      "secondaryImg1": "DIZ011secondary1.png",
+      "secondaryImg2": "DIZ011secondary2.png"
+    }
   },
   {
     "id": 12,
@@ -183,9 +263,13 @@
       "detail3": "Detalle numero tres del producto"
     },
     "price": 1850,
-    "discount": 5,
+    "discount": 0,
     "stock": 30,
-    "image": "2.png"
+    "images": {
+      "mainImg": "DIZ011main.png",
+      "secondaryImg1": "DIZ011secondary1.png",
+      "secondaryImg2": "DIZ011secondary2.png"
+    }
   },
   {
     "id": 13,
@@ -201,9 +285,13 @@
       "detail3": "Detalle numero tres del producto"
     },
     "price": 1500,
-    "discount": 2,
+    "discount": 0,
     "stock": 10,
-    "image": "13.png"
+    "images": {
+      "mainImg": "DIZ011main.png",
+      "secondaryImg1": "DIZ011secondary1.png",
+      "secondaryImg2": "DIZ011secondary2.png"
+    }
   },
   {
     "id": 14,
@@ -219,9 +307,13 @@
       "detail3": "Detalle numero tres del producto"
     },
     "price": 4500,
-    "discount": 20,
+    "discount": 0,
     "stock": 30,
-    "image": "14.png"
+    "images": {
+      "mainImg": "DIZ011main.png",
+      "secondaryImg1": "DIZ011secondary1.png",
+      "secondaryImg2": "DIZ011secondary2.png"
+    }
   },
   {
     "id": 15,
@@ -237,9 +329,13 @@
       "detail3": "Detalle numero tres del producto"
     },
     "price": 4900,
-    "discount": 20,
+    "discount": 0,
     "stock": 10,
-    "image": "15.png"
+    "images": {
+      "mainImg": "DIZ011main.png",
+      "secondaryImg1": "DIZ011secondary1.png",
+      "secondaryImg2": "DIZ011secondary2.png"
+    }
   },
   {
     "id": 16,
@@ -257,6 +353,10 @@
     "price": 3500,
     "discount": 0,
     "stock": 20,
-    "image": "16.png"
+    "images": {
+      "mainImg": "DIZ011main.png",
+      "secondaryImg1": "DIZ011secondary1.png",
+      "secondaryImg2": "DIZ011secondary2.png"
+    }
   }
 ]
