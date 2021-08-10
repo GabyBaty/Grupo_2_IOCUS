@@ -362,18 +362,144 @@
   {
     "id": 17,
     "sku": "",
-    "name": "perritos",
-    "category": "Figuras de acción",
+    "name": "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "category": "Seleccione una categoría",
     "brand": "Seleccione una categoría",
     "age": "Seleccione una categoría",
     "price": "",
     "discount": "",
     "stock": "",
-    "description": "sdfgsdñlmsñldkgñlsdkgf",
+    "description": "",
     "details": {
-      "detail1": "dffsdf",
+      "detail1": "",
       "detail2": "",
       "detail3": ""
     }
+  },
+  {
+    "id": 18,
+    "sku": "",
+    "name": "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "imgVariable": {}
+  },
+  {
+    "id": 19,
+    "sku": "",
+    "name": "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": {}
+  },
+  {
+    "id": 20,
+    "sku": "",
+    "name": "ESTA ES LA BUENA",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": {}
+  },
+  {
+    "id": 21,
+    "sku": "",
+    "name": "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": {}
+  },
+  {
+    "id": 22,
+    "sku": "",
+    "name": "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": {}
+  },
+  {
+    "id": 23,
+    "sku": "",
+    "name": "UUUUUUUUUUUUUUUUUUUUUUUU",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": {}
+  },
+  {
+    "id": 24,
+    "sku": "",
+    "name": "weqweqweqweqweqweqwe",
+    "category": "Seleccione una categoría",
+    "brand": "Seleccione una categoría",
+    "age": "Seleccione una categoría",
+    "price": "",
+    "discount": "",
+    "stock": "",
+    "description": "",
+    "details": {
+      "detail1": "",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": {}
   }
 ]
