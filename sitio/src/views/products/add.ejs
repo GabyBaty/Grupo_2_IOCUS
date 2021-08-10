@@ -9,7 +9,7 @@
 
                     <main class="products-editor-page">
                         <div class="container mt-5 p-5">
-                          <form action="/products/add" method="POST">
+                          <form action="/products/add" method="POST" enctype="multipart/form-data">
                             <div class="row">
                               <h1 class="display-6">Agregar un producto</h1>
                                   <div class="mb-3">
@@ -22,7 +22,7 @@
                                       </div>
                                     </div>
                                     <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
-                                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
+                                    <input class="form-control" type="file" name="images[]" id="formFileMultiple" multiple/>
                                   </div>
                                   <div class="mb-3 mt-5">
                                     <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
