@@ -42,9 +42,9 @@
     "stock": 45,
     "images": [
       {
-        "mainImg": "FAC002main.png",
-        "secondaryImg1": "FAC002secondary1.png",
-        "secondaryImg2": "FAC002secondary2.png"
+        "mainImg": "FAC002secondary2.png",
+        "secondaryImg1": "FAC002main.png",
+        "secondaryImg2": "FAC002secondary1.png"
       }
     ],
     "destacado": "on"
@@ -92,9 +92,9 @@
     "stock": 25,
     "images": [
       {
-        "mainImg": "FAC004main.png",
-        "secondaryImg1": "FAC004secondary1.png",
-        "secondaryImg2": "FAC004secondary2.png"
+        "mainImg": "FAC004secondary2.png",
+        "secondaryImg1": "FAC004main.png",
+        "secondaryImg2": "FAC004secondary1.png"
       }
     ],
     "destacado": "on"
@@ -275,7 +275,7 @@
     "id": 12,
     "sku": "MUÑ001",
     "name": "Shimmer y Shine y sus mascotas",
-    "category": "Muñecas",
+    "category": "Seleccione una categoría",
     "brand": "Disney",
     "age": "De 5 a 7 años",
     "description": "Diviertete con Shimmer y Shine y sus adorables mascotas Tala y Nahal",
@@ -289,9 +289,9 @@
     "stock": 30,
     "images": [
       {
-        "mainImg": "DIZ011main.png",
-        "secondaryImg1": "DIZ011secondary1.png",
-        "secondaryImg2": "DIZ011secondary2.png"
+        "mainImg": "12bis3.png",
+        "secondaryImg1": "12bis2.png",
+        "secondaryImg2": "12bis.png"
       }
     ]
   },
@@ -301,7 +301,7 @@
     "name": "Harley Quinn",
     "category": "Figuras de acción",
     "brand": "Lego",
-    "age": "14 y Mayores",
+    "age": "Seleccione una categoría",
     "description": "Figura coleccionable.Producida con un impecable tratamiento de pintura.",
     "details": {
       "detail1": "Detalle numero uno del producto",
@@ -313,9 +313,9 @@
     "stock": 10,
     "images": [
       {
-        "mainImg": "DIZ011main.png",
-        "secondaryImg1": "DIZ011secondary1.png",
-        "secondaryImg2": "DIZ011secondary2.png"
+        "mainImg": "Harly.jpg",
+        "secondaryImg1": "Harly2.jpg",
+        "secondaryImg2": "Harly3.jpg"
       }
     ]
   },
@@ -337,9 +337,9 @@
     "stock": 30,
     "images": [
       {
-        "mainImg": "DIZ011main.png",
-        "secondaryImg1": "DIZ011secondary1.png",
-        "secondaryImg2": "DIZ011secondary2.png"
+        "mainImg": "Leonardo2.jpg",
+        "secondaryImg1": "leonardo.jpg",
+        "secondaryImg2": "Leonardo3.jpg"
       }
     ]
   },
@@ -349,7 +349,7 @@
     "name": "Monopoly",
     "category": "Juegos de mesa",
     "brand": "Hasbro",
-    "age": "14 y mayores",
+    "age": "Seleccione una categoría",
     "description": "¡Un clásico! Reuní a tus amistades para disfrutar de horas de risas y diversión mientras juegan a ser agentes inmobiliarios con el Monopoly. Deberán comprar, vender e intercambiar propiedades estratégicamente para aumentar sus fortunas, si te declarás en quiebra... ¡perdiste!",
     "details": {
       "detail1": "Detalle numero uno del producto",
@@ -361,9 +361,9 @@
     "stock": 10,
     "images": [
       {
-        "mainImg": "DIZ011main.png",
-        "secondaryImg1": "DIZ011secondary1.png",
-        "secondaryImg2": "DIZ011secondary2.png"
+        "mainImg": "monopoly3.jpg",
+        "secondaryImg1": "monopoly2.jpg",
+        "secondaryImg2": "monopoly.jpg"
       }
     ]
   },
@@ -379,7 +379,21 @@
       "detail1": "Detalle numero uno del producto",
       "detail2": "Detalle numero dos del producto",
       "detail3": "Detalle numero tres del producto"
+<<<<<<< HEAD
     }
     
+=======
+    },
+    "price": 3500,
+    "discount": 0,
+    "stock": 20,
+    "images": [
+      {
+        "mainImg": "Elsa2.jpg",
+        "secondaryImg1": "Elsa.webp",
+        "secondaryImg2": "Elsa3.jpg"
+      }
+    ]
+>>>>>>> 423e85aa03b87d97cd1f69bdf9cf676774387cf7
   }
 ]
