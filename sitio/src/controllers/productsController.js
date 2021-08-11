@@ -28,7 +28,7 @@ module.exports = {
         
          const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
          let details = {detail1,detail2,detail3}
-         let images = {mainImg: req.filename, /* secondaryImg1: uploadFile[1], secondaryImg2: uploadFile[2] */}
+         let images = {mainImg: req.files[0].filename, secondaryImg1: req.files[0].filename, secondaryImg2: req.files[0].filename}
          let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
