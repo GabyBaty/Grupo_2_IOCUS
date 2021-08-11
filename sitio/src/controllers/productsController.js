@@ -25,10 +25,10 @@ module.exports = {
         return res.render('products/add', { title: 'Agregar producto', productos });
     },
     save:(req,res) => {
-        
          const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
          let details = {detail1,detail2,detail3}
-         let images = {mainImg: req.filename, /* secondaryImg1: uploadFile[1], secondaryImg2: uploadFile[2] */}
+         let imagesAOrdenar = [{mainImg: req.files[0].filename, secondaryImg1: req.files[1].filename, secondaryImg2: req.files[2].filename}]
+         let images= imagesAOrdenar.sort()
          let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
@@ -60,6 +60,8 @@ module.exports = {
     },
     update: (req,res) => {
         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
+        let imagesAOrdenar = [{mainImg: req.files[0].filename, secondaryImg1: req.files[1].filename, secondaryImg2: req.files[2].filename}]
+        let images= imagesAOrdenar.sort()
         productos.forEach(producto => {
             if(producto.id == +req.params.id) {
                 producto.sku = sku
@@ -75,7 +77,9 @@ module.exports = {
                 producto.details.detail1 = detail1
                 producto.details.detail2 = detail2
                 producto.details.detail3 = detail3
-                
+                producto.images[0].mainImg = images[0].mainImg
+                producto.images[0].secondaryImg1 = images[0].secondaryImg1
+                producto.images[0].secondaryImg2 = images[0].secondaryImg2
                 
             }
         });

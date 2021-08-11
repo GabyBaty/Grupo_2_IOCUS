@@ -11,13 +11,13 @@ const {detail, cart, add, edit, filter, update, save, borrar} = require('../cont
 router.get('/detail/:id', detail);
 router.get('/cart/', cart);
 router.get('/add', add);
-router.post('/add',uploadFile.array('imagesProductAdd'),save);
+router.post('/add',uploadFile.any('imagesProductAdd'),save);
 
 
 
 /* EDITAR UN PRODUCTO Y GUARDAR LOS CAMBIOS */
 router.get('/edit/:id', edit);
-router.put('/edit/:id', update);
+router.put('/edit/:id',uploadFile.any('imagesProductAdd'),update);
 router.delete('/delete/:id',borrar);
 router.get('/filter',filter);
 

@@ -27,18 +27,18 @@
             <div class="col-md-6 border-end">
               <div class="d-flex flex-column justify-content-center">
                 <div class="main_image">
-                  <img src="/img/detalle/<%= producto.images.mainImg %>" id="main_product_image" width="350" />
+                  <img src="/img/detalle/<%= producto.images[0].mainImg %>" id="main_product_image" width="350" />
                 </div>
                 <div class="thumbnail_images">
                   <ul id="thumbnail">
                     <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images.mainImg %>" width="70" />
+                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images[0].mainImg %>" width="70" />
                     </li>
                     <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images.secondaryImg1 %>" width="70" />
+                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images[0].secondaryImg1 %>" width="70" />
                     </li>
                     <li>
-                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images.secondaryImg2 %>" width="70" />
+                      <img onclick="changeImage(this)" src="/img/detalle/<%= producto.images[0].secondaryImg2 %>" width="70" />
                     </li>
                   </ul>
                 </div>
