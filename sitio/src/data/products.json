@@ -14,11 +14,13 @@
     "price": 5000,
     "discount": 50,
     "stock": 20,
-    "images": {
-      "mainImg": "FAC001main.jpg",
-      "secondaryImg1": "FAC001secondary1.jpg",
-      "secondaryImg2": "FAC001secondary2.jpg"
-    },
+    "images": [
+      {
+        "mainImg": "FAC001main.jpg",
+        "secondaryImg1": "FAC001secondary1.jpg",
+        "secondaryImg2": "FAC001secondary2.jpg"
+      }
+    ],
     "sku": "FAC001",
     "destacado": "on"
   },
@@ -29,20 +31,22 @@
     "category": "Figuras de acción",
     "brand": "Marvel",
     "age": "De 8 a 13 años",
-    "description": "Este tipo se hizo el loco y quise hacer explotar la mitad del universo. Ahora vuelve re zarpado en forma de figurita\nMaterial: Plástico\n",
+    "description": "Este tipo se hizo el loco y quise hacer explotar la mitad del universo. Ahora vuelve re zarpado en forma de figurita\r\n",
     "details": {
-      "detail1": "Detalle numero uno del producto",
+      "detail1": "Material: Plástico",
       "detail2": "Detalle numero dos del producto",
       "detail3": "Detalle numero tres del producto"
     },
     "price": 12500,
     "discount": 7,
     "stock": 45,
-    "images": {
-      "mainImg": "FAC002main.png",
-      "secondaryImg1": "FAC002secondary1.png",
-      "secondaryImg2": "FAC002secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "FAC002main.png",
+        "secondaryImg1": "FAC002secondary1.png",
+        "secondaryImg2": "FAC002secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
@@ -61,11 +65,13 @@
     "price": 2500,
     "discount": 25,
     "stock": 65,
-    "images": {
-      "mainImg": "JDM003main.png",
-      "secondaryImg1": "JDM003secondary1.png",
-      "secondaryImg2": "JDM003secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "JDM003main.png",
+        "secondaryImg1": "JDM003secondary1.png",
+        "secondaryImg2": "JDM003secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
@@ -84,17 +90,19 @@
     "price": 8500,
     "discount": 19,
     "stock": 25,
-    "images": {
-      "mainImg": "FAC004main.png",
-      "secondaryImg1": "FAC004secondary1.png",
-      "secondaryImg2": "FAC004secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "FAC004main.png",
+        "secondaryImg1": "FAC004secondary1.png",
+        "secondaryImg2": "FAC004secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
     "id": 5,
     "sku": "JDM005",
-    "name": "Rompecabezas de madera con diseño de animales",
+    "name": "Rompecabezas de madera ",
     "category": "Juegos de mesa",
     "brand": "Playmates",
     "age": "De 2 a 4 años",
@@ -107,11 +115,13 @@
     "price": 3500,
     "discount": 20,
     "stock": 0,
-    "images": {
-      "mainImg": "JDM005main.png",
-      "secondaryImg1": "JDM005secondary1.png",
-      "secondaryImg2": "JDM005secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "JDM005main.png",
+        "secondaryImg1": "JDM005secondary1.png",
+        "secondaryImg2": "JDM005secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
@@ -130,11 +140,13 @@
     "price": 1200,
     "discount": 80,
     "stock": 30,
-    "images": {
-      "mainImg": "VAC006main.png",
-      "secondaryImg1": "VAC006secondary1.png",
-      "secondaryImg2": "VAC006secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "VAC006main.png",
+        "secondaryImg1": "VAC006secondary1.png",
+        "secondaryImg2": "VAC006secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
@@ -153,11 +165,13 @@
     "price": 11200,
     "discount": 10,
     "stock": 30,
-    "images": {
-      "mainImg": "VAC007main.png",
-      "secondaryImg1": "VAC007secondary1.png",
-      "secondaryImg2": "VAC007secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "VAC007main.png",
+        "secondaryImg1": "VAC007secondary1.png",
+        "secondaryImg2": "VAC007secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
@@ -176,11 +190,13 @@
     "price": 3500,
     "discount": 10,
     "stock": 30,
-    "images": {
-      "mainImg": "DIZ008main.png",
-      "secondaryImg1": "DIZ008secondary1.png",
-      "secondaryImg2": "DIZ008secondary2.png"
-    },
+    "images": [
+      {
+        "mainImg": "DIZ008main.png",
+        "secondaryImg1": "DIZ008secondary1.png",
+        "secondaryImg2": "DIZ008secondary2.png"
+      }
+    ],
     "destacado": "on"
   },
   {
@@ -199,11 +215,13 @@
     "price": 4600,
     "discount": 0,
     "stock": 10,
-    "images": {
-      "mainImg": "JDM009main.png",
-      "secondaryImg1": "JDM009secondary1.png",
-      "secondaryImg2": "JDM009secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "JDM009main.png",
+        "secondaryImg1": "JDM009secondary1.png",
+        "secondaryImg2": "JDM009secondary2.png"
+      }
+    ]
   },
   {
     "id": 10,
@@ -221,11 +239,13 @@
     "price": 3670,
     "discount": 0,
     "stock": 15,
-    "images": {
-      "mainImg": "JDM010main.png",
-      "secondaryImg1": "JDM010secondary1.png",
-      "secondaryImg2": "JDM010secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "JDM010main.png",
+        "secondaryImg1": "JDM010secondary1.png",
+        "secondaryImg2": "JDM010secondary2.png"
+      }
+    ]
   },
   {
     "id": 11,
@@ -243,11 +263,13 @@
     "price": 1990,
     "discount": 0,
     "stock": 50,
-    "images": {
-      "mainImg": "DIZ011main.png",
-      "secondaryImg1": "DIZ011secondary1.png",
-      "secondaryImg2": "DIZ011secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "DIZ011main.png",
+        "secondaryImg1": "DIZ011secondary1.png",
+        "secondaryImg2": "DIZ011secondary2.png"
+      }
+    ]
   },
   {
     "id": 12,
@@ -265,11 +287,13 @@
     "price": 1850,
     "discount": 0,
     "stock": 30,
-    "images": {
-      "mainImg": "DIZ011main.png",
-      "secondaryImg1": "DIZ011secondary1.png",
-      "secondaryImg2": "DIZ011secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "DIZ011main.png",
+        "secondaryImg1": "DIZ011secondary1.png",
+        "secondaryImg2": "DIZ011secondary2.png"
+      }
+    ]
   },
   {
     "id": 13,
@@ -287,11 +311,13 @@
     "price": 1500,
     "discount": 0,
     "stock": 10,
-    "images": {
-      "mainImg": "DIZ011main.png",
-      "secondaryImg1": "DIZ011secondary1.png",
-      "secondaryImg2": "DIZ011secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "DIZ011main.png",
+        "secondaryImg1": "DIZ011secondary1.png",
+        "secondaryImg2": "DIZ011secondary2.png"
+      }
+    ]
   },
   {
     "id": 14,
@@ -309,11 +335,13 @@
     "price": 4500,
     "discount": 0,
     "stock": 30,
-    "images": {
-      "mainImg": "DIZ011main.png",
-      "secondaryImg1": "DIZ011secondary1.png",
-      "secondaryImg2": "DIZ011secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "DIZ011main.png",
+        "secondaryImg1": "DIZ011secondary1.png",
+        "secondaryImg2": "DIZ011secondary2.png"
+      }
+    ]
   },
   {
     "id": 15,
@@ -331,11 +359,13 @@
     "price": 4900,
     "discount": 0,
     "stock": 10,
-    "images": {
-      "mainImg": "DIZ011main.png",
-      "secondaryImg1": "DIZ011secondary1.png",
-      "secondaryImg2": "DIZ011secondary2.png"
-    }
+    "images": [
+      {
+        "mainImg": "DIZ011main.png",
+        "secondaryImg1": "DIZ011secondary1.png",
+        "secondaryImg2": "DIZ011secondary2.png"
+      }
+    ]
   },
   {
     "id": 16,
@@ -343,20 +373,13 @@
     "name": "Difraz Elsa Frozen",
     "category": "Disfraces",
     "brand": "Disney",
-    "age": "5 a 7",
+    "age": "Seleccione una categoría",
     "description": "Este increíble color azul glaciar del vestido, va en degradado, dándole más luminosidad a la parte superior del traje y fuerza a su pisada con el tono más oscuro al final. Incluye una elegante capa transparente y unos detalles brillantes a modo de corpiño cubierto de cristales de hielo.",
     "details": {
       "detail1": "Detalle numero uno del producto",
       "detail2": "Detalle numero dos del producto",
       "detail3": "Detalle numero tres del producto"
-    },
-    "price": 3500,
-    "discount": 0,
-    "stock": 20,
-    "images": {
-      "mainImg": "DIZ011main.png",
-      "secondaryImg1": "DIZ011secondary1.png",
-      "secondaryImg2": "DIZ011secondary2.png"
     }
+    
   }
 ]

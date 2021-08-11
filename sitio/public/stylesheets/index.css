@@ -86,7 +86,14 @@ section.Produtos-destacados {
   padding-top: 1rem;
   margin: 2rem;
   flex: 18%;
-  
+}
+.index-product-img-wrapper{
+  padding: 5px;
+  width: 100%;
+  height: 220px;
+}
+.index-product-img-wrapper > img {
+  height: 100%;
 }
 
 .producto:hover {
@@ -124,6 +131,7 @@ section.Produtos-destacados {
 
 .producto__imagen {
   width: 100%;
+  height: 100%;
 }
 
 .producto__nombre {

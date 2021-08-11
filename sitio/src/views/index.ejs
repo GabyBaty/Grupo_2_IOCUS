@@ -51,7 +51,7 @@
           <div class="col-12 col-sm-6 col-lg-3">
           <div class=" producto">
             <a href="/products/detail/<%= destacado.id %>">
-              <img class="producto__imagen" src="/img/detalle/<%= destacado.images.mainImg %>" alt="imagen-producto" />
+              <div class="index-product-img-wrapper"><img class="producto__imagen" src="/img/detalle/<%= destacado.images[0].mainImg %>" alt="imagen-producto" /></div>
               <div class="producto__informacion">
                 <p class="producto__nombre"><%= destacado.name %> </p>
                 <% if(destacado.discount !== 0) { %> 
