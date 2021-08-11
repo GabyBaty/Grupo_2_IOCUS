@@ -379,10 +379,6 @@
       "detail1": "Detalle numero uno del producto",
       "detail2": "Detalle numero dos del producto",
       "detail3": "Detalle numero tres del producto"
-<<<<<<< HEAD
-    }
-    
-=======
     },
     "price": 3500,
     "discount": 0,
@@ -394,6 +390,6 @@
         "secondaryImg2": "Elsa3.jpg"
       }
     ]
->>>>>>> 423e85aa03b87d97cd1f69bdf9cf676774387cf7
   }
+  
 ]
