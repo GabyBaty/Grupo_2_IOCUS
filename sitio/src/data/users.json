@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "nombre": "moncholo",
+    "apellido": "fulanazo",
+    "correo": "eladminmasloco@holahola.org.ar.net",
+    "password": "m4ss3cr3t01mp0s1bl3",
+    "role": "user",
+    "avatar": ""
+  },
+  {
+    "id": 2,
+    "name": "example",
+    "apellido": "another example",
+    "correo": "pirulin@chauchau.org",
+    "password": "supersecreto123",
+    "role": "user",
+    "avatar": ""
+  },
+  {
+    "id": 3,
+    "nombre": "Eric",
+    "apellido": "Mena",
+    "correo": "ericmena@gmail.com",
+    "password": "123123",
+    "role": "admin",
+    "avatar": ""
+  }
+  
+
+
+
+]
