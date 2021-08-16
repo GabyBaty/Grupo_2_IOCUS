@@ -14,15 +14,11 @@
     "price": 5000,
     "discount": 50,
     "stock": 20,
-    "images": [
-      {
-        "mainImg": "FAC001main.jpg",
-        "secondaryImg1": "FAC001secondary1.jpg",
-        "secondaryImg2": "FAC001secondary2.jpg"
-      }
-    ],
     "sku": "FAC001",
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "FAC001main.jpg",
+    "images2": "FAC001secondary1.jpg",
+    "images3": "FAC001secondary2.jpg"
   },
   {
     "id": 2,
@@ -40,14 +36,10 @@
     "price": 12500,
     "discount": 7,
     "stock": 45,
-    "images": [
-      {
-        "mainImg": "FAC002secondary2.png",
-        "secondaryImg1": "FAC002main.png",
-        "secondaryImg2": "FAC002secondary1.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "FAC002main.png",
+    "images2": "FAC002secondary1.png",
+    "images3": "FAC002secondary2.png"
   },
   {
     "id": 3,
@@ -65,14 +57,10 @@
     "price": 2500,
     "discount": 25,
     "stock": 65,
-    "images": [
-      {
-        "mainImg": "JDM003main.png",
-        "secondaryImg1": "JDM003secondary1.png",
-        "secondaryImg2": "JDM003secondary2.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "JDM003main.png",
+    "images2": "JDM003secondary1.png",
+    "images3": "JDM003secondary2.png"
   },
   {
     "id": 4,
@@ -90,14 +78,10 @@
     "price": 8500,
     "discount": 19,
     "stock": 25,
-    "images": [
-      {
-        "mainImg": "FAC004secondary2.png",
-        "secondaryImg1": "FAC004main.png",
-        "secondaryImg2": "FAC004secondary1.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "FAC004main.png",
+    "images2": "FAC004secondary1.png",
+    "images3": "FAC004secondary2.png"
   },
   {
     "id": 5,
@@ -115,20 +99,16 @@
     "price": 3500,
     "discount": 20,
     "stock": 0,
-    "images": [
-      {
-        "mainImg": "JDM005main.png",
-        "secondaryImg1": "JDM005secondary1.png",
-        "secondaryImg2": "JDM005secondary2.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "JDM005main.png",
+    "images2": "JDM005secondary1.png",
+    "images3": "JDM005secondary2.png"
   },
   {
     "id": 6,
     "sku": "VAC006",
     "name": "Coches de juguete",
-    "category": "Vehiculos",
+    "category": "Seleccione una categoría",
     "brand": "Playmates",
     "age": "De 2 a 4 años",
     "description": "3 juegos de camiones monstruos: El juego de camiones monstruos incluye 3 figuras únicas de animales salvajes de juguete modelo de coche: toro, leopardo y cocodrilo. No necesita pilas, ahorra energía y es respetuoso con el medio ambiente.",
@@ -140,20 +120,16 @@
     "price": 1200,
     "discount": 80,
     "stock": 30,
-    "images": [
-      {
-        "mainImg": "VAC006main.png",
-        "secondaryImg1": "VAC006secondary1.png",
-        "secondaryImg2": "VAC006secondary2.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "VAC006main.png",
+    "images2": "VAC006secondary1.png",
+    "images3": "VAC006secondary2.png"
   },
   {
     "id": 7,
     "sku": "VAC007",
     "name": "Cars Auto Remote",
-    "category": "Vehiculos",
+    "category": "Seleccione una categoría",
     "brand": "Mattel",
     "age": "De 14 años y Mayores",
     "description": "LIGHTNING MCQUEEN: Ayuda a Lightning McQueen a derrotar a su nuevo rival Jackson Storm con tu propio coche de carreras McQueen a control remoto.",
@@ -165,14 +141,10 @@
     "price": 11200,
     "discount": 10,
     "stock": 30,
-    "images": [
-      {
-        "mainImg": "VAC007main.png",
-        "secondaryImg1": "VAC007secondary1.png",
-        "secondaryImg2": "VAC007secondary2.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "VAC007main.png",
+    "images2": "VAC007secondary1.png",
+    "images3": "VAC007secondary2.png"
   },
   {
     "id": 8,
@@ -190,14 +162,10 @@
     "price": 3500,
     "discount": 10,
     "stock": 30,
-    "images": [
-      {
-        "mainImg": "DIZ008main.png",
-        "secondaryImg1": "DIZ008secondary1.png",
-        "secondaryImg2": "DIZ008secondary2.png"
-      }
-    ],
-    "destacado": "on"
+    "destacado": "on",
+    "images1": "DIZ008main.png",
+    "images2": "DIZ008secondary1.png",
+    "images3": "DIZ008secondary2.png"
   },
   {
     "id": 9,
@@ -205,7 +173,7 @@
     "name": "Juego de la Vida",
     "category": "Juegos de mesa",
     "brand": "Hasbro",
-    "age": "14 y mayores",
+    "age": "Seleccione una categoría",
     "description": "Elige un camino para una vida de acción, aventura y sorpresas inesperadas",
     "details": {
       "detail1": "El juego Game of Life está lleno de sorpresas",
@@ -214,14 +182,10 @@
     },
     "price": 4600,
     "discount": 0,
-    "stock": 10,
-    "images": [
-      {
-        "mainImg": "JDM009main.png",
-        "secondaryImg1": "JDM009secondary1.png",
-        "secondaryImg2": "JDM009secondary2.png"
-      }
-    ]
+    "images1": "JDM009main.png",
+    "images2": "JDM009secondary1.png",
+    "images3": "JDM009secondary2.png",
+    "stock": 0
   },
   {
     "id": 10,
@@ -229,7 +193,7 @@
     "name": "TEG Tradicional Juego de Mesa Tactico",
     "category": "Juegos de mesa",
     "brand": "Playmates",
-    "age": "14 y mayores",
+    "age": "Seleccione una categoría",
     "description": "El juego propone un conflicto bélico que tiene lugar en un planisferio dividido en 50 países. Cada jugador tiene un objetivo secreto a cumplir, para lo cual deberá ampliar sus dominios, reordenar sus fuerzas, realizar pactos, emprender ataques y defenderse de los adversarios. El primer jugador en lograr su objetivo, o conquistar 30 países (objetivo común), ¡Será el ganador! ¡¿Qué esperas para salir a conquistar el mundo?! ¿Te animas a desafiarte?",
     "details": {
       "detail1": "1 tablero,6 sets de 100 fichas,50 tarjetas de países,15 tarjetas de objetivos,6 dados,1 reglamento",
@@ -239,13 +203,9 @@
     "price": 3670,
     "discount": 0,
     "stock": 15,
-    "images": [
-      {
-        "mainImg": "JDM010main.png",
-        "secondaryImg1": "JDM010secondary1.png",
-        "secondaryImg2": "JDM010secondary2.png"
-      }
-    ]
+    "images1": "JDM010main.png",
+    "images2": "JDM010secondary1.png",
+    "images3": "JDM010secondary2.png"
   },
   {
     "id": 11,
@@ -263,13 +223,9 @@
     "price": 1990,
     "discount": 0,
     "stock": 50,
-    "images": [
-      {
-        "mainImg": "DIZ011main.png",
-        "secondaryImg1": "DIZ011secondary1.png",
-        "secondaryImg2": "DIZ011secondary2.png"
-      }
-    ]
+    "images1": "DIZ011main.png",
+    "images2": "DIZ011secondary1.png",
+    "images3": "DIZ011secondary2.png"
   },
   {
     "id": 12,
@@ -287,13 +243,9 @@
     "price": 1850,
     "discount": 0,
     "stock": 30,
-    "images": [
-      {
-        "mainImg": "12bis3.png",
-        "secondaryImg1": "12bis2.png",
-        "secondaryImg2": "12bis.png"
-      }
-    ]
+    "images1": "12bis.png",
+    "images2": "12bis2.png",
+    "images3": "12bis3.png"
   },
   {
     "id": 13,
@@ -311,13 +263,9 @@
     "price": 1500,
     "discount": 0,
     "stock": 10,
-    "images": [
-      {
-        "mainImg": "Harly.jpg",
-        "secondaryImg1": "Harly2.jpg",
-        "secondaryImg2": "Harly3.jpg"
-      }
-    ]
+    "images1": "Harly.jpg",
+    "images2": "Harly2.jpg",
+    "images3": "Harly3.jpg"
   },
   {
     "id": 14,
@@ -335,13 +283,9 @@
     "price": 4500,
     "discount": 0,
     "stock": 30,
-    "images": [
-      {
-        "mainImg": "Leonardo2.jpg",
-        "secondaryImg1": "leonardo.jpg",
-        "secondaryImg2": "Leonardo3.jpg"
-      }
-    ]
+    "images1": "leonardo.jpg",
+    "images2": "Leonardo2.jpg",
+    "images3": "Leonardo3.jpg"
   },
   {
     "id": 15,
@@ -365,7 +309,10 @@
         "secondaryImg1": "monopoly2.jpg",
         "secondaryImg2": "monopoly.jpg"
       }
-    ]
+    ],
+    "images1": "monopoly.jpg",
+    "images2": "monopoly2.jpg",
+    "images3": "monopoly3.jpg"
   },
   {
     "id": 16,
@@ -383,12 +330,9 @@
     "price": 3500,
     "discount": 0,
     "stock": 20,
-    "images": [
-      {
-        "mainImg": "Elsa2.jpg",
-        "secondaryImg1": "Elsa.webp",
-        "secondaryImg2": "Elsa3.jpg"
-      }
-    ]
+    "images1": "Elsa.webp",
+    "images2": "Elsa2.jpg",
+    "images3": "Elsa3.jpg"
   }
 ]
+

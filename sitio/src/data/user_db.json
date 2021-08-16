@@ -5,7 +5,8 @@
         "lastname": "fulanazo",
         "email": "eladminmasloco@holahola.org.ar.net",
         "password": "m4ss3cr3t01mp0s1bl3",
-        "category": "admin"
+        "role": "user",
+        "avatar": ""
     },
     {
         "id": 2,
@@ -13,6 +14,16 @@
         "lastname": "another example",
         "email": "pirulin@chauchau.org",
         "password": "supersecreto123",
-        "category": "user"
+        "role": "user",
+        "avatar": ""
+    },
+    {
+        "id": 3,
+        "name": "Eric",
+        "lastname": "Mena",
+        "email": "ericmena@gmail.com",
+        "password": "123123",
+        "role": "admin",
+        "avatar": ""
     }
 ]
