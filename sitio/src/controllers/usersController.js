@@ -37,7 +37,12 @@ module.exports = {
                  errores:errores.mapped()
               }
           )}
-        }
+        },
       
   
+    profile: (req,res) => {
+        return res.render('users/profile', {
+            title: 'Mi perfil'
+        })
+    }
 }

@@ -94,21 +94,32 @@ header {
   flex: 60% ;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.search-input .input-group {
-  width: 60%;    
-  margin: 0 auto;
-  height: 3.35rem;
+
+.search-input > .search-form {
+  width: 60%;
   
 }
-.search-input .input-group button {
-  background-color: var(--color-blanco);
+.search-input .input-search-header {
+  width: 100%;    
+  margin: 0 auto;
   height: 3.35rem;
+  text-indent: 25px;
+  position: relative;
+}
+.search-input .input-search-header > input:focus {
+  border: darkblue 2px solid;
+}
+.search-input .input-search-header button {
+  background-color: darkblue;
+  height: 3.1rem;
   border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-.search-input .input-group button:hover{
-  color: #000;
-}
+
 .login-cart {
   flex: 20%;
   display: flex;

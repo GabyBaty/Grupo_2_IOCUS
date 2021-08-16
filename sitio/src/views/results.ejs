@@ -1,0 +1,54 @@
+<%- include('partials/head.ejs')%>
+
+<body class="filtro">
+  <%- include('partials/header.ejs')%>
+
+  <main>
+    <section class="container-sm">
+      <div class="row">
+        <%if(resultados.length > 0) {%>
+          <% resultados.forEach(producto => { %>
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto">
+              <a href="/products/detail/<%= producto.id %>">
+                <div class="index-product-img-wrapper"><img class="producto__imagen" src="/img/detalle/<%= producto.images1%>" alt="producto1" /></div>
+                <div class="producto__informacion">
+                  <p class="producto__nombre"><%= producto.name %></p>
+                  <% if(producto.discount !== 0) { %> 
+                    <p class="producto__oferta">
+                      <span><%= producto.price %></span>
+                      /
+                      <b><%= producto.discount %>% OFF</b>
+                    </p>
+                    <p class="producto__precios">
+                      $<%=toThousand(finalPrice(producto.price,producto.discount)) %>
+                      <% }else{ %>
+                    </p>
+                    <p class="precio__oculto">-</p>
+                    <p class="producto__precios">
+                      $<%= toThousand(producto.price) %>
+                      <% } %>
+                  <p class="producto__marca"><%= producto.brand %></p>
+                </div>
+              </a>
+              
+            </div>
+            <!-- .producto -->
+          </div>
+          <% }) %>
+          <% } else { %>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <h2 class="warning">No hay productos que coincidan con esa búsqueda</h2>
+            </div>
+            <% } %> 
+        </div>
+    </section>
+  </main>
+ 
+  <!-- Footer -->
+  <%- include('partials/footer.ejs')%>
+  <!-- Footer -->
+</body>
+<!--SCRIPTS-->
+<%- include('partials/scripts.ejs')%>
+</html>
