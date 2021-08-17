@@ -25,9 +25,12 @@
     "password": "123123",
     "role": "admin",
     "avatar": ""
+  },
+  {
+    "id": 4,
+    "nombre": "Damian",
+    "apellido": "Trajster",
+    "correo": "damiantrajster@gmail.com",
+    "password": "$2a$10$tSobOIlIqwCU6.dKDdUZLeB26OaWRJIZYzL9DomMlr/lSwxu/kZLe"
   }
-  
-
-
-
 ]

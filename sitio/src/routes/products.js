@@ -11,7 +11,7 @@ const {detail, cart, add, edit, filter, update, save, borrar} = require('../cont
 router.get('/detail/:id', detail);
 router.get('/cart/', cart);
 router.get('/add', add);
-router.post('/add',uploadFile.any('imagesProductAdd',3),save);
+router.post('/add',uploadFile.any('imagesProductAdd'),save);
 
 
 

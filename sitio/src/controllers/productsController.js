@@ -27,10 +27,12 @@ module.exports = {
     save:(req,res) => {
         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
       let details = {detail1,detail2,detail3}
-      let images1= (req.files[0]?req.files[0].filename:"default-image.jpg")
-      let images2= (req.files[1]?req.files[1].filename:"default-image.jpg")
-      let images3= (req.files[2]?req.files[2].filename:"default-image.jpg")
-      
+     
+      if(req.files){
+        var imagenes = req.files.map(imagen => imagen.filename)
+    }
+
+    
         let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
@@ -44,9 +46,7 @@ module.exports = {
         destacado,
         description,
         details,
-        images1,
-        images2,
-        images3
+        images : req.files.length != 0 ? imagenes : ['default-image.jpg'],    
        
 } 
 
@@ -85,9 +85,9 @@ module.exports = {
                 producto.details.detail1 = detail1
                 producto.details.detail2 = detail2
                 producto.details.detail3 = detail3
-                producto.images1 = (req.files[0]) ? req.files[0].filename : producto.images1
-                producto.images2 = (req.files[1]) ? req.files[1].filename : producto.images2
-                producto.images3 = (req.files[2]) ? req.files[2].filename : producto.images3
+                producto.images[0] = (req.files[0]) ? req.files[0].filename : producto.images[0]
+                producto.images[1] = (req.files[1]) ? req.files[1].filename : producto.images[1]
+                producto.images[2] = (req.files[2]) ? req.files[2].filename : producto.images[2]
                
       
             }

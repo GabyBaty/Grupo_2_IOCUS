@@ -16,9 +16,11 @@
     "stock": 20,
     "sku": "FAC001",
     "destacado": "on",
-    "images1": "FAC001main.jpg",
-    "images2": "FAC001secondary1.jpg",
-    "images3": "FAC001secondary2.jpg"
+    "images": [
+      "FAC001main.jpg",
+      "FAC001secondary1.jpg",
+      "FAC001secondary2.jpg"
+    ]
   },
   {
     "id": 2,
@@ -37,9 +39,11 @@
     "discount": 7,
     "stock": 45,
     "destacado": "on",
-    "images1": "FAC002main.png",
-    "images2": "FAC002secondary1.png",
-    "images3": "FAC002secondary2.png"
+    "images": [
+      "FAC002main.png",
+      "FAC002secondary1.png",
+      "FAC002secondary2.png"
+    ]
   },
   {
     "id": 3,
@@ -58,9 +62,11 @@
     "discount": 25,
     "stock": 65,
     "destacado": "on",
-    "images1": "JDM003main.png",
-    "images2": "JDM003secondary1.png",
-    "images3": "JDM003secondary2.png"
+    "images": [
+      "JDM003main.png",
+      "JDM003secondary1.png",
+      "JDM003secondary2.png"
+    ]
   },
   {
     "id": 4,
@@ -79,9 +85,11 @@
     "discount": 19,
     "stock": 25,
     "destacado": "on",
-    "images1": "FAC004main.png",
-    "images2": "FAC004secondary1.png",
-    "images3": "FAC004secondary2.png"
+    "images": [
+      "FAC004main.png",
+      "FAC004secondary1.png",
+      "FAC004secondary2.png"
+    ]
   },
   {
     "id": 5,
@@ -100,9 +108,11 @@
     "discount": 20,
     "stock": 0,
     "destacado": "on",
-    "images1": "JDM005main.png",
-    "images2": "JDM005secondary1.png",
-    "images3": "JDM005secondary2.png"
+    "images": [
+      "JDM005main.png",
+      "JDM005secondary1.png",
+      "JDM005secondary2.png"
+    ]
   },
   {
     "id": 6,
@@ -121,9 +131,11 @@
     "discount": 80,
     "stock": 30,
     "destacado": "on",
-    "images1": "VAC006main.png",
-    "images2": "VAC006secondary1.png",
-    "images3": "VAC006secondary2.png"
+    "images": [
+      "VAC006main.png",
+      "VAC006secondary1.png",
+      "VAC006secondary2.png"
+    ]
   },
   {
     "id": 7,
@@ -142,9 +154,11 @@
     "discount": 10,
     "stock": 30,
     "destacado": "on",
-    "images1": "VAC007main.png",
-    "images2": "VAC007secondary1.png",
-    "images3": "VAC007secondary2.png"
+    "images": [
+      "VAC007main.png",
+      "VAC007secondary1.png",
+      "VAC007secondary2.png"
+    ]
   },
   {
     "id": 8,
@@ -163,9 +177,11 @@
     "discount": 10,
     "stock": 30,
     "destacado": "on",
-    "images1": "DIZ008main.png",
-    "images2": "DIZ008secondary1.png",
-    "images3": "DIZ008secondary2.png"
+    "images": [
+      "DIZ008main.png",
+      "DIZ008secondary1.png",
+      "DIZ008secondary2.png"
+    ]
   },
   {
     "id": 9,
@@ -182,10 +198,12 @@
     },
     "price": 4600,
     "discount": 0,
-    "images1": "JDM009main.png",
-    "images2": "JDM009secondary1.png",
-    "images3": "JDM009secondary2.png",
-    "stock": 0
+    "stock": 0,
+    "images": [
+      "JDM009main.png",
+      "JDM009secondary1.png",
+      "JDM009secondary2.png"
+    ]
   },
   {
     "id": 10,
@@ -203,9 +221,11 @@
     "price": 3670,
     "discount": 0,
     "stock": 15,
-    "images1": "JDM010main.png",
-    "images2": "JDM010secondary1.png",
-    "images3": "JDM010secondary2.png"
+    "images": [
+      "JDM010main.png",
+      "JDM010secondary1.png",
+      "JDM010secondary2.png"
+    ]
   },
   {
     "id": 11,
@@ -223,9 +243,11 @@
     "price": 1990,
     "discount": 0,
     "stock": 50,
-    "images1": "DIZ011main.png",
-    "images2": "DIZ011secondary1.png",
-    "images3": "DIZ011secondary2.png"
+    "images": [
+      "DIZ011main.png",
+      "DIZ011secondary1.png",
+      "DIZ011secondary2.png"
+    ]
   },
   {
     "id": 12,
@@ -243,9 +265,11 @@
     "price": 1850,
     "discount": 0,
     "stock": 30,
-    "images1": "12bis.png",
-    "images2": "12bis2.png",
-    "images3": "12bis3.png"
+    "images": [
+      "12bis.png",
+      "12bis2.png",
+      "12bis3.png"
+    ]
   },
   {
     "id": 13,
@@ -263,9 +287,11 @@
     "price": 1500,
     "discount": 0,
     "stock": 10,
-    "images1": "Harly.jpg",
-    "images2": "Harly2.jpg",
-    "images3": "Harly3.jpg"
+    "images": [
+      "Harly.jpg",
+      "Harly2.jpg",
+      "Harly3.jpg"
+    ]
   },
   {
     "id": 14,
@@ -283,9 +309,11 @@
     "price": 4500,
     "discount": 0,
     "stock": 30,
-    "images1": "leonardo.jpg",
-    "images2": "Leonardo2.jpg",
-    "images3": "Leonardo3.jpg"
+    "images": [
+      "leonardo.jpg",
+      "Leonardo2.jpg",
+      "Leonardo3.jpg"
+    ]
   },
   {
     "id": 15,
@@ -304,15 +332,10 @@
     "discount": 0,
     "stock": 10,
     "images": [
-      {
-        "mainImg": "monopoly3.jpg",
-        "secondaryImg1": "monopoly2.jpg",
-        "secondaryImg2": "monopoly.jpg"
-      }
-    ],
-    "images1": "monopoly.jpg",
-    "images2": "monopoly2.jpg",
-    "images3": "monopoly3.jpg"
+      "monopoly.jpg",
+      "monopoly2.jpg",
+      "FAC001secondary2.jpg"
+    ]
   },
   {
     "id": 16,
@@ -330,8 +353,10 @@
     "price": 3500,
     "discount": 0,
     "stock": 20,
-    "images1": "Elsa.webp",
-    "images2": "Elsa2.jpg",
-    "images3": "Elsa3.jpg"
+    "images": [
+      "Elsa.webp",
+      "Elsa2.jpg",
+      "Elsa3.jpg"
+    ]
   }
 ]
