@@ -390,6 +390,29 @@
         "secondaryImg2": "Elsa3.jpg"
       }
     ]
+  },
+  {
+    "id": 17,
+    "sku": "JDM010",
+    "name": "Rompecabezas Universo",
+    "category": "Juegos de mesa",
+    "brand": "Mattel",
+    "age": "De 8 a 13 años",
+    "price": 2000,
+    "discount": 10,
+    "stock": 10,
+    "description": "Imagenes de la nebulosa ",
+    "details": {
+      "detail1": "colores lilas y azules",
+      "detail2": "",
+      "detail3": ""
+    },
+    "images": [
+      {
+        "mainImg": "fondo1.jpg",
+        "secondaryImg1": "fondoprueba.jpg",
+        "secondaryImg2": "fondoprueba3.png"
+      }
+    ]
   }
-  
 ]
