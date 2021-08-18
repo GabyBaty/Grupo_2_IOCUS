@@ -25,11 +25,15 @@ module.exports = {
         return res.render('products/add', { title: 'Agregar producto', productos });
     },
     save:(req,res) => {
-         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
-         let details = {detail1,detail2,detail3}
-         let imagesAOrdenar = [{mainImg: req.files[0].filename, secondaryImg1: req.files[1].filename, secondaryImg2: req.files[2].filename}]
-         let images= imagesAOrdenar.sort()
-         let producto = {
+        const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
+      let details = {detail1,detail2,detail3}
+     
+      if(req.files){
+        var imagenes = req.files.map(imagen => imagen.filename)
+    }
+
+    
+        let producto = {
         id:productos[productos.length - 1].id + 1,
         sku,
         name,
@@ -42,8 +46,14 @@ module.exports = {
         destacado,
         description,
         details,
-        images,
-    } //Agregando producto y guarda al final del Json//
+        images : req.files.length != 0 ? imagenes : ['default-image.jpg'],    
+       
+} 
+
+    
+ 
+  
+    //Agregando producto y guarda al final del Json//
     productos.push(producto);
     guardarJSON(productos);
     res.redirect('/products/filter');
@@ -60,8 +70,6 @@ module.exports = {
     },
     update: (req,res) => {
         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
-        let imagesAOrdenar = [{mainImg: req.files[0].filename, secondaryImg1: req.files[1].filename, secondaryImg2: req.files[2].filename}]
-        let images= imagesAOrdenar.sort()
         productos.forEach(producto => {
             if(producto.id == +req.params.id) {
                 producto.sku = sku
@@ -77,10 +85,11 @@ module.exports = {
                 producto.details.detail1 = detail1
                 producto.details.detail2 = detail2
                 producto.details.detail3 = detail3
-                producto.images[0].mainImg = images[0].mainImg
-                producto.images[0].secondaryImg1 = images[0].secondaryImg1
-                producto.images[0].secondaryImg2 = images[0].secondaryImg2
-                
+                producto.images[0] = (req.files[0]) ? req.files[0].filename : producto.images[0]
+                producto.images[1] = (req.files[1]) ? req.files[1].filename : producto.images[1]
+                producto.images[2] = (req.files[2]) ? req.files[2].filename : producto.images[2]
+               
+      
             }
         });
         

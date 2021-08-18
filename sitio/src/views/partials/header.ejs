@@ -6,13 +6,9 @@
         </div>
         <div class="nav-btn">
             <div class="search-input">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Buscar producto..."
-                        aria-label="Buscar producto..." aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
+                <form action="/search" method="GET" class="search-form">
+                    <div class="input-search-header"><input type="text" class="form-control" name="keywords" placeholder="Buscar productos..."><button class="btn btn-primary">Buscar</button></div>
+                </form>
             </div>
             <div class="login-cart">
                 <a href="/users/login"><i class="fas fa-user"></i> Ingresar</a>

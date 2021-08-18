@@ -18,12 +18,16 @@
                                   <div class="col-md-10 mt-4">
                                     <div class="row mt-5 mb-5">
                                       <div class="col-sm-12 d-flex flex-wrap">
-                                        <div class="productEdit-thumbnail-img p-1"><img src="/img/detalle/<%= producto.images[0].mainImg %>" class="img-thumbnail" alt="imageDetailProduct"></div>
-                                        <div class="productEdit-thumbnail-img p-1"><img src="/img/detalle/<%= producto.images[0].secondaryImg1 %>" class="img-thumbnail" alt="imageDetailProduct"></div>
-                                        <div class="productEdit-thumbnail-img p-1"><img src="/img/detalle/<%= producto.images[0].secondaryImg2 %>" class="img-thumbnail" alt="imageDetailProduct"></div>
+
+                                        <% producto.images.forEach(imagen => { %>
+                                          <div class="productEdit-thumbnail-img p-1"><img src="/img/detalle/<%= imagen %>" class="img-thumbnail" alt="imageDetailProduct"></div>
+                                        <% }) %>
+                                      
+                                       
                                       </div>
                                     </div>
-                                    <label for="formFileMultiple" class="form-label">Seleccione varias imagenes para subir</label>
+
+                                    <label for="formFileMultiple" class="form-label">Seleccione 3 imagenes para subir</label>
                                     <input class="form-control" type="file" name="imagesProductAdd" id="formFileMultiple" multiple/>
                                   </div>
                                   <div class="mb-3 mt-5">

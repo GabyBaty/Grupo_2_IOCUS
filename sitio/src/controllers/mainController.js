@@ -1,7 +1,7 @@
 const productos = require('../data/products_db');
-
 const toThousand = require('../utils/toThousand')
 const finalPrice = require('../utils/finalPrice')
+const busqueda = require('../utils/searchRelevance')
 
 module.exports = {
     index: (req,res) => {
@@ -20,5 +20,15 @@ module.exports = {
     about: (req,res) => {
         return res.render('about', { title: 'IOCUS-ABOUT'});
     },  
-    
+    search: (req, res) => {
+		let inputs = req.query.keywords.trim()
+		let resultados = busqueda(inputs)
+		return res.render('results', {
+            title: 'Resultados de búsqueda',
+			resultados,
+			busqueda: req.query.keywords,
+			toThousand,
+			finalPrice
+		})
+	}
 }
