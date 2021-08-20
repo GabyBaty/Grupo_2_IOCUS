@@ -7,7 +7,7 @@ var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const methodOverride = require('method-override')
-
+const session = require('express-session');
 
 var app = express();
 
@@ -21,6 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: "mi secreto"
+}));
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);

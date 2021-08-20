@@ -32,5 +32,12 @@
     "apellido": "Trajster",
     "correo": "damiantrajster@gmail.com",
     "password": "$2a$10$tSobOIlIqwCU6.dKDdUZLeB26OaWRJIZYzL9DomMlr/lSwxu/kZLe"
+  },
+  {
+    "id": 5,
+    "nombre": "euge",
+    "apellido": "amaya",
+    "correo": "euge@gmail.com",
+    "password": "$2a$10$UxzeSaVhTy1Stoy7yTpUPOb5PnbYmX8rDhC5bPyMoYusQOIr3vmYK"
   }
 ]

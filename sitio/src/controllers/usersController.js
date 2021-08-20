@@ -44,5 +44,26 @@ module.exports = {
         return res.render('users/profile', {
             title: 'Mi perfil'
         })
-    }
+    },
+    processLogin: (req,res) => {
+       let errores = validationResult(req);
+        let {nombre,correo,password} = req.body;
+
+        if (errors.isEmpty()) {
+            let usuario = usuarios.find(usuario => usuario.correo === correo )
+            req.session.userLogin = {
+                id:usuario.id,
+                nombre :usuario.nombre,
+                
+
+            }
+            return res.redirect('/')
+        } else {
+            return res.render('users/login',{
+                title:"Registro de Usuario",
+                 old : req.body,
+                 errores:errores.mapped()
+              })
+        
+    }}
 }
