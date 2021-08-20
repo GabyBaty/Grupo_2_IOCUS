@@ -3,28 +3,26 @@ const Usuarios = require('../data/users_db')
 
 module.exports = [
     check('nombre')
-    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .notEmpty().withMessage('El nombre es obligatorio')
     .isLength({
         min : 2,
         max : 50
-    }).withMessage('El nombre tiene que tener como mínimo 2 caracteres').bail()
+    }).withMessage('El nombre tiene que tener como mínimo 2 caracteres')
     .isAlpha().withMessage('El nombre debe contener solo letras'),
 
 
     check('apellido')
-    .notEmpty().withMessage('El apellido es obligatorio').bail()
+    .notEmpty().withMessage('El apellido es obligatorio')
     .isLength({
         min : 2,
         max : 50
-    }).withMessage('El apellido tiene que tener como mínimo 2 caracteres').bail()
+    }).withMessage('El apellido tiene que tener como mínimo 2 caracteres')
     .isAlpha().withMessage('El apellido debe contener solo letras'),
 
     body('correo')
     .isEmail().withMessage('Debes ingresar un email válido')
     .custom(function(value){
-       
-
-        let usuario = Usuarios.filter(user=>{
+       let usuario = Usuarios.filter(user=>{
             return user.correo == value 
         })
         if(usuario == false){ 
