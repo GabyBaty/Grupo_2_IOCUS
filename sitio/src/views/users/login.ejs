@@ -9,29 +9,25 @@
       <main>
         <div class="main-container">
           <div class="main-form-login">
-            <form action="" method="POST">
+            <form action="/users/login/logData" method="POST">
               <h3>Mi cuenta</h3>
               <h6>Si ya estas registrado, ingresa aquí.</h6>
               <div><label for="correo">Email</label>
-                <input class="controls" type="email" name="correo" id="correo" placeholder="">
-                <small class="alert-danger ">
-                  <%= locals.errores && locals.errores.correo ? errores.correo.msg : null %>
-                    %>
-                </small>
+                <input class="controls" type="email" name="correologin" id="correo" >
+                
               </div>
               <div><label for="password">Contraseña</label>
-                <input class="controls" type="password" name="password" id="password" placeholder="">
-                <small class="alert-danger ">
-                  <%= locals.errores && locals.errores.password ? errores.password.msg : null %>
-                    %>
-                </small>
+                <input class="controls" type="password" name="passwordlogin" id="password" >
+               
               </div>
               <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-              <input class="main-form-register-button" type="submit" value="Ingresar">
+              <button  class="main-form-register-button" type="submit" >Ingresar</button>
+              <span class="alert-danger"><%= locals.errores && errores.correologin ? errores.correologin.msg : null%> </span>
+
             </form>
           </div>
           <div class="main-form-register">
-            <form action="" method="POST">
+            <form action="/users/login/regData" method="POST">
               <h3>Registrate ahora</h3>
               <h6>Completa tu email y contraseña para registrarte.</h6>
               <div>
@@ -85,7 +81,7 @@
                 <%= locals.errores && locals.errores.acepta ? errores.acepta.msg : null %>
                   %>
               </small>
-              <input class="main-form-register-button" type="submit" value="Registrarse" />
+              <input  class="main-form-register-button" type="submit"/>
             </form>
           </div>
         </div>

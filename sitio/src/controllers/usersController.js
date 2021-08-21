@@ -11,8 +11,11 @@ let guardarJSON = (productos) =>{fs.writeFileSync(path.join(__dirname,"../data/u
 
 module.exports = {
     login: (req,res) => {
-        return res.render('users/login', { title: 'IOCUS-LOGIN' });
+        return res.render('users/login', { title: 'IOCUS-LOGIN',
+        usuario:req.session.usuario
+    });
     },
+  
     processRegister: (req,res) => {
         let errores = validationResult(req);
         let {nombre,apellido,correo,password} = req.body;
@@ -40,18 +43,17 @@ module.exports = {
         },
       
   
-    profile: (req,res) => {
-        return res.render('users/profile', {
-            title: 'Mi perfil'
-        })
-    },
+   
+    
+    
+
     processLogin: (req,res) => {
        let errores = validationResult(req);
-        let {nombre,correo,password} = req.body;
+        const {correologin} = req.body;
 
-        if (errors.isEmpty()) {
-            let usuario = usuarios.find(usuario => usuario.correo === correo )
-            req.session.userLogin = {
+        if (errores.isEmpty()) {
+            let usuario = usuarios.find(usuario => usuario.correo === correologin )
+            req.session.usuario = {
                 id:usuario.id,
                 nombre :usuario.nombre,
                 
@@ -60,10 +62,16 @@ module.exports = {
             return res.redirect('/')
         } else {
             return res.render('users/login',{
-                title:"Registro de Usuario",
-                 old : req.body,
-                 errores:errores.mapped()
+                title:"Login de Usuario",
+                errores:errores.mapped(),
+                usuario:req.session.usuario
               })
         
-    }}
+    }},
+
+    profile: (req,res) => {
+        return res.render('users/profile', {
+            title: 'Mi perfil'
+        })
+    }
 }

@@ -6,10 +6,14 @@ const registerValidations= require('../validations/registerValidation')
 
 const loginValidations= require('../validations/loginValidations')
 
+
+
+
+
 /* GET users listing. */
 router.get('/login', login);
-router.post('/login',registerValidations, processRegister);
+router.post('/login/regData',registerValidations, processRegister);
 router.get('/profile', profile);
-router.post('/login', loginValidations, processLogin);
+router.post('/login/logData', loginValidations, processLogin);
 
 module.exports = router;
