@@ -40,6 +40,7 @@
     "apellido": "amaya",
     "correo": "euge@gmail.com",
     "password": "$2a$10$UxzeSaVhTy1Stoy7yTpUPOb5PnbYmX8rDhC5bPyMoYusQOIr3vmYK",
-    "avatar": "default.png"
+    "avatar": "default.png",
+    "role":"admin"
   }
 ]
