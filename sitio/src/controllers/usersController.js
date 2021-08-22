@@ -47,9 +47,9 @@ module.exports = {
     },
     processLogin: (req,res) => {
        let errores = validationResult(req);
-        let {nombre,correo,password} = req.body;
+       let {correo} = req.body;
 
-        if (errors.isEmpty()) {
+        if (errores.isEmpty()) {
             let usuario = usuarios.find(usuario => usuario.correo === correo )
             req.session.userLogin = {
                 id:usuario.id,
@@ -60,9 +60,9 @@ module.exports = {
             return res.redirect('/')
         } else {
             return res.render('users/login',{
-                title:"Registro de Usuario",
+                title:"Login de Usuario",
                  old : req.body,
-                 errores:errores.mapped()
+                 errores: errores.mapped()
               })
         
     }}

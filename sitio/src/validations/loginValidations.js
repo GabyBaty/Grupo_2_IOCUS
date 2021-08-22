@@ -1,12 +1,13 @@
 const {check,body} = require('express-validator');
-const Usuarios = require('../data/users_db');
-const bcrypt = require('bcryptjs');
+/*   PARA CUANDO ENTRE EL TEMA DE LA BASE DE DATOS
+ const Usuarios = require('../data/users_db');
+const bcrypt = require('bcryptjs'); */   
 
 
 module.exports = [
-    check('correo')
-    .notEmpty().withMessage('El email es obligatorio'),
+    check('correolog')
+    .notEmpty().withMessage('AAAAAAAAAAAAAAAAAAAAAAAAAAA'),
 
-    check('password')
+    check('passwordlog')
     .notEmpty().withMessage('El password es obligatorio')
 ]
