@@ -9,7 +9,10 @@ var productsRouter = require('./routes/products');
 const methodOverride = require('method-override')
 const session = require('express-session');
 
-const localUserCheck=require('./middleware/localUserCheck')
+  /*  middelwares globales  */
+
+const localUserCheck=require('./middleware/localUserCheck');
+const cookiesCheck=require('./middleware/cookiesCheck');
 
 var app = express();
 
@@ -29,7 +32,8 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use(localUserCheck)
+app.use(localUserCheck);
+app.use(cookiesCheck);
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
