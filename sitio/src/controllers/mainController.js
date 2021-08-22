@@ -11,14 +11,16 @@ module.exports = {
             productos,
             destacados,
             toThousand, 
-            finalPrice
+            finalPrice,
+            usuario:req.session.usuario
         });
     },
     contacto: (req,res) => {
-        return res.render('contacto', { title: 'IOCUS-CONTACTO' });
+        return res.render('contacto', { title: 'IOCUS-CONTACTO',
+        usuario:req.session.usuario, });
     },
     about: (req,res) => {
-        return res.render('about', { title: 'IOCUS-ABOUT'});
+        return res.render('about', { title: 'IOCUS-ABOUT', usuario:req.session.usuario});
     },  
     search: (req, res) => {
 		let inputs = req.query.keywords.trim()
@@ -28,7 +30,9 @@ module.exports = {
 			resultados,
 			busqueda: req.query.keywords,
 			toThousand,
-			finalPrice
+			finalPrice,
+            usuario:req.session.usuario,
+            
 		})
 	}
 }

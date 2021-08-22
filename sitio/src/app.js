@@ -7,7 +7,12 @@ var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const methodOverride = require('method-override')
+const session = require('express-session');
 
+  /*  middelwares globales  */
+
+const localUserCheck=require('./middleware/localUserCheck');
+const cookiesCheck=require('./middleware/cookiesCheck');
 
 var app = express();
 
@@ -21,10 +26,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: "mi secreto",
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(localUserCheck);
+app.use(cookiesCheck);
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

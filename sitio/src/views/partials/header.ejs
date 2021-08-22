@@ -10,9 +10,20 @@
                     <div class="input-search-header"><input type="text" class="form-control" name="keywords" placeholder="Buscar productos..."><button class="btn btn-primary">Buscar</button></div>
                 </form>
             </div>
+
             <div class="login-cart">
+                <% if (locals.usuario) { %>
+                   <img src="/img/avatars/<%= locals.usuario.avatar  %> "width="40" style="border-radius: 100%;" >         
+                <a href="/users/profile"><%= locals.usuario.nombre  %> </a>
+                <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/users/logout">cerrar sesion</i></a>
+                   
+                        
+                <% }else{ %>
+               
                 <a href="/users/login"><i class="fas fa-user"></i> Ingresar</a>
                 <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                <% } %>
             </div>
             <div class="header-nav-links">
                 <ul>
