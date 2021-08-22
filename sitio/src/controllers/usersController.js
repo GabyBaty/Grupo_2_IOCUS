@@ -28,7 +28,6 @@ module.exports = {
                 apellido,
                 correo,
                 password:bcrypt.hashSync(password,10),
-                
             }
             usuarios.push(usuario);
             guardarJSON(usuarios);
