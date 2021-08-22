@@ -50,3 +50,8 @@ Teniendo en cuenta el sprint 3 se analizaron con el equipo los métodos y proced
 Link al starfish: https://jamboard.google.com/d/1fxwpzjzMaWq_xVZSEbaO6gIHZziOqOa_46m5DxmmIWw/edit?usp=sharing
 
 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
