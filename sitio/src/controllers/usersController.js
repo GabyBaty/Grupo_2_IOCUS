@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
-let usuarios= require('../data/users_db');
+let dbUsuarios= require('../data/users_db');
 const bcrypt = require('bcryptjs');
 
 
@@ -52,13 +52,17 @@ module.exports = {
         const {correologin} = req.body;
 
         if (errores.isEmpty()) {
-            let usuario = usuarios.find(usuario => usuario.correo === correologin )
-            req.session.usuario = {
-                id:usuario.id,
-                nombre :usuario.nombre,
-                
-
-            }
+            dbUsuarios.forEach(usuario => {
+                if(usuario.correo == correologin){
+                    req.session.usuario = {
+                        id:usuario.id,
+                        nombre:usuario.nombre,
+                        avatar:usuario.avatar,
+                        apellido: usuario.apellido,
+                        correo:usuario.correo
+                    }
+                }
+            });
             return res.redirect('/')
         } else {
             return res.render('users/login',{
@@ -71,7 +75,14 @@ module.exports = {
 
     profile: (req,res) => {
         return res.render('users/profile', {
-            title: 'Mi perfil'
+            title: 'Mi perfil',
+            usuario:req.session.usuario
         })
+    },
+
+    logout : (req,res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
+
 }

@@ -9,6 +9,8 @@ var productsRouter = require('./routes/products');
 const methodOverride = require('method-override')
 const session = require('express-session');
 
+const localUserCheck=require('./middleware/localUserCheck')
+
 var app = express();
 
 // view engine setup
@@ -22,12 +24,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
 app.use(session({
-  secret: "mi secreto"
+  secret: "mi secreto",
+  resave: false,
+  saveUninitialized: true
 }));
+
+app.use(localUserCheck)
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
