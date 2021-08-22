@@ -14,7 +14,9 @@ module.exports = {
             title: 'IOCUS-DETALLE' ,
             producto,
             toThousand,
-            finalPrice
+            finalPrice,
+            usuario:req.session.usuario,
+           
         
         });
     },
@@ -22,7 +24,7 @@ module.exports = {
         return res.render('products/cart', { title: 'IOCUS-CARRITO' });
     },
     add: (req,res) => {
-        return res.render('products/add', { title: 'Agregar producto', productos });
+        return res.render('products/add', { title: 'Agregar producto', productos,usuario:req.session.usuario, });
     },
     save:(req,res) => {
         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
@@ -65,7 +67,8 @@ module.exports = {
             return res.render('products/edit', { 
              title: 'Edición de producto',
              producto,
-             categorias
+             categorias,
+             usuario:req.session.usuario,
             });
     },
     update: (req,res) => {
@@ -109,7 +112,8 @@ module.exports = {
             title: 'IOCUS-LISTA',
             productos,
             toThousand,
-            finalPrice
+            finalPrice,
+            usuario:req.session.usuario,
          });
     },
 }

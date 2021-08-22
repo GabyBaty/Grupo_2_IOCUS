@@ -16,11 +16,11 @@
         </div>
         <div class="col-sm-6 p-5 bg-light shadow rounded">
           <label for="name-user-profile">Nombre de Usuario</label>
-          <p id="name-user-profile">JOHN</p>
+          <p id="name-user-profile"><%= locals.usuario.nombre  %> </p>
           <label for="lastname-user-profile">Apellido de Usuario</label>
-          <p id="lastname-user-profile">JOHNSON</p>
+          <p id="lastname-user-profile"><%= locals.usuario.apellido  %></p>
           <label for="email-user-profile">Email de contacto</label>
-          <p id="email-user-profile">johny2222@gmail.com</p>
+          <p id="email-user-profile"><%= locals.usuario.correo  %></p>
           <label for="role-user-profile">Rol</label>
           <p id="role-user-profile">Usuario</p>
         </div>

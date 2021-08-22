@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
-let usuarios= require('../data/users_db');
+let dbUsuarios= require('../data/users_db');
 const bcrypt = require('bcryptjs');
 
 
@@ -11,8 +11,11 @@ let guardarJSON = (productos) =>{fs.writeFileSync(path.join(__dirname,"../data/u
 
 module.exports = {
     login: (req,res) => {
-        return res.render('users/login', { title: 'IOCUS-LOGIN' });
+        return res.render('users/login', { title: 'IOCUS-LOGIN',
+        usuario:req.session.usuario
+    });
     },
+  
     processRegister: (req,res) => {
         let errores = validationResult(req);
         let {nombre,apellido,correo,password} = req.body;
@@ -40,30 +43,46 @@ module.exports = {
         },
       
   
-    profile: (req,res) => {
-        return res.render('users/profile', {
-            title: 'Mi perfil'
-        })
-    },
+   
+    
+    
+
     processLogin: (req,res) => {
        let errores = validationResult(req);
-       let {correo} = req.body;
+        const {correologin} = req.body;
 
         if (errores.isEmpty()) {
-            let usuario = usuarios.find(usuario => usuario.correo === correo )
-            req.session.userLogin = {
-                id:usuario.id,
-                nombre :usuario.nombre,
-                
-
-            }
+            dbUsuarios.forEach(usuario => {
+                if(usuario.correo == correologin){
+                    req.session.usuario = {
+                        id:usuario.id,
+                        nombre:usuario.nombre,
+                        avatar:usuario.avatar,
+                        apellido: usuario.apellido,
+                        correo:usuario.correo
+                    }
+                }
+            });
             return res.redirect('/')
         } else {
             return res.render('users/login',{
                 title:"Login de Usuario",
-                 old : req.body,
-                 errores: errores.mapped()
+                errores:errores.mapped(),
+                usuario:req.session.usuario
               })
         
-    }}
+    }},
+
+    profile: (req,res) => {
+        return res.render('users/profile', {
+            title: 'Mi perfil',
+            usuario:req.session.usuario
+        })
+    },
+
+    logout : (req,res) => {
+        req.session.destroy();
+        return res.redirect('/')
+    }
+
 }
