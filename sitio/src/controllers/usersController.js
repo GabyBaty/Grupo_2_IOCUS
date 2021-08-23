@@ -29,6 +29,7 @@ module.exports = {
                 apellido,
                 correo,
                 password:bcrypt.hashSync(password,10),
+                role:"user"
             }
             usuarios.push(usuario);
             guardarJSON(usuarios);
@@ -55,7 +56,8 @@ processLogin: (req, res) => {
                         nombre: usuario.nombre,
                         avatar: usuario.avatar,
                         apellido: usuario.apellido,
-                        correo: usuario.correo
+                        correo: usuario.correo,
+                        role:usuario.role
                     }
                 }
             });
