@@ -43,12 +43,7 @@ module.exports = {
         }
     },
 
-
-
-
-
-
-    processLogin: (req, res) => {
+processLogin: (req, res) => {
         let errores = validationResult(req);
         const { correologin, recordar} = req.body;
 
