@@ -28,11 +28,12 @@
   },
   {
     "id": 4,
-    "nombre": "Damian",
+    "nombre": "Damian1",
     "apellido": "Trajster",
     "correo": "damiantrajster@gmail.com",
-    "password": "$2a$10$tSobOIlIqwCU6.dKDdUZLeB26OaWRJIZYzL9DomMlr/lSwxu/kZLe",
-    "avatar": "default.png"
+    "password": "$2a$10$llHZQ2Vub42hJMUAx/1BXOa3hBRkIQ7WKeJpHQL3TzYeLOqGikvnq",
+    "avatar": "fotoUsuario-1629842349045.png",
+    "role": "admin"
   },
   {
     "id": 5,

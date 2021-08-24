@@ -98,23 +98,30 @@ processLogin: (req, res) => {
     
     updateProfile: (req,res) => {
         const {profileUserEditNombre,profileUserEditApellido,profileUserEditPassword,avatar} = req.body
+        let hashiada = bcrypt.hashSync(profileUserEditPassword,10)
+
         dbUsuarios.forEach(user =>{
             if(user.id == +req.params.id) {   
                     user.nombre =profileUserEditNombre,
                     user.apellido = profileUserEditApellido,
-                    user.avatar = (req.files) ? req.files.filename : user.avatar
+                    user.avatar = req.file ? req.file.filename : user.avatar,
+                    user.password= profileUserEditPassword ? hashiada  : user.password ,
                     
-                    user.password=bcrypt.hashSync(profileUserEditPassword,10),
                     req.session.usuario = {
                         nombre: profileUserEditNombre,
                         apellido:profileUserEditApellido,
-                        password:bcrypt.hashSync(profileUserEditPassword,10),
-                        avatar:(req.files) ? req.files.filename : user.avatar
+                        password:profileUserEditPassword ? hashiada  : user.password ,
+                        avatar:(req.file) ? req.file.filename : user.avatar,
+                        
                     }
                 }
         })
+
+
         guardarJSON(dbUsuarios)
+       
         return res.redirect('/users/profile')
+       
     },
 
 
