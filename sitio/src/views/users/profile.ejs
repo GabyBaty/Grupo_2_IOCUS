@@ -22,7 +22,7 @@
           <label for="email-user-profile">Email de contacto</label>
           <p id="email-user-profile"><%= locals.usuario.correo  %></p>
           <label for="role-user-profile">Rol</label>
-          <p id="role-user-profile">Usuario</p>
+          <p id="role-user-profile"><%= locals.usuario.role %></p>
         </div>
         <% if (locals.usuario && locals.usuario.role ==="admin") { %>
           <div class="col-sm-4 mt-5">

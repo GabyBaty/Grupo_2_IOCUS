@@ -1,44 +1,12 @@
 [
   {
-    "id": 1,
-    "nombre": "moncholo",
-    "apellido": "fulanazo",
-    "correo": "eladminmasloco@holahola.org.ar.net",
-    "password": "m4ss3cr3t01mp0s1bl3",
-    "role": "user",
-    "avatar": ""
-  },
-  {
-    "id": 2,
-    "name": "example",
-    "apellido": "another example",
-    "correo": "pirulin@chauchau.org",
-    "password": "supersecreto123",
-    "role": "user",
-    "avatar": ""
-  },
-  {
-    "id": 3,
-    "nombre": "Eric",
-    "apellido": "Mena",
-    "correo": "ericmena@gmail.com",
-    "password": "123123",
-    "role": "admin",
-    "avatar": ""
-  },
-  {
     "id": 4,
-    "nombre": "Damian1",
+    "nombre": "Damian",
     "apellido": "Trajster",
     "correo": "damiantrajster@gmail.com",
-    "password": "$2a$10$llHZQ2Vub42hJMUAx/1BXOa3hBRkIQ7WKeJpHQL3TzYeLOqGikvnq",
-    "avatar": "fotoUsuario-1629842349045.png",
-    "role": "admin"
-  },
-  {
-    "id": 5,
-    "avatar": "default.png",
-    "role": "admin"
+    "password": "$2a$10$uHMHg0mnxv5iUG.GChAoSOb0tY9KxPFh8E4sTWGj/TxlIxXgJE2a.",
+    "avatar": "fotoUsuario-1629847915227.png",
+    "role": "user"
   },
   {
     "id": 6,
@@ -48,5 +16,14 @@
     "password": "$2a$10$fY1hzmOSPQw6KW1sybnYpeETRys/srqm6.SzMi.qU8YmlqWwCb7fy",
     "role": "user",
     "avatar": "fotoUsuario-1629837603472.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Eric",
+    "apellido": "Mena",
+    "correo": "ericmena@gmail.com",
+    "password": "$2a$10$AcCEDKiloB0v6ulVv8JRfurr2NpIWMjiMYBsmX/6rBy/IJ16FrjH2",
+    "role": "admin",
+    "avatar": "fotoUsuario-1629848332398.jfif"
   }
 ]

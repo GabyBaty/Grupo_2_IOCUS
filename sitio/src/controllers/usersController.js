@@ -119,7 +119,6 @@ processLogin: (req, res) => {
 
 
         guardarJSON(dbUsuarios)
-       
         return res.redirect('/users/profile')
        
     },
