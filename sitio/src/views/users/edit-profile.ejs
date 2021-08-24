@@ -13,8 +13,8 @@
         <div class="col-sm-4 p-5 bg-light shadow rounded">
           <form action="/users/edit-profile/<%= locals.usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="d-flex justify-content-center flex-column  align-items-center ">
-              <img src="/img/users/avatar/<%= locals.usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
-              <input type="file" name="foto-usuario" id="selectedFile" style="display: none;"  accept=".jpg, .png, .jpeg">
+              <img src="/img/avatars/<%= locals.usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
+              <input type="file" name="fotoUsuario" id="selectedFile" style="display: none;"  accept=".jpg, .png, .jpeg">
               <input class="mt-5 w-50 " type="button" value="Seleccionar imágen" onclick="document.getElementById('selectedFile').click();"> 
           </div>
           </div>
@@ -24,13 +24,13 @@
           <label for="lastname-user-profile">Apellido de Usuario</label>
           <input type="text" name="profileUserEditApellido" id="lastname-user-profile" value="<%= user.apellido%>">
           <label for="email-user-profile">Email de contacto</label>
-          <input type="email" name="profileUserEditCorreo" id="email-user-profile" value="<%= user.correo%>">
+          <p class="text-danger" id="email-user-profile"><%= user.correo  %></p>
           <label for="password-user-profile">Nueva contraseña</label>
-          <input type="password" name="userPassword" id="password-user-profile" placeholder="Ingrese su nueva contraseña">
+          <input type="password" name="profileUserEditPassword" id="password-user-profile" placeholder="Ingrese su nueva contraseña">
           <label for="verify-password-user-profile">Confirmar contraseña</label>
-          <input type="password" name="profileUserEditPassword" id="verify-password-user-profile" placeholder="Confirme su nueva contraseña">
+          <input type="password" name="confirmeEditPassword" id="verify-password-user-profile" placeholder="Confirme su nueva contraseña">
           <label for="role-user-profile">Rol</label>
-          <p id="role-user-profile">Usuario</p>
+          <p class="text-danger" id="role-user-profile">Usuario</p>
           <button type="submit" class="btn btn-primary " style="font-size: 2rem;" >Guardar cambios</button>
         </div>
         </form>

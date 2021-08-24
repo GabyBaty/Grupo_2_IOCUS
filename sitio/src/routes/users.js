@@ -24,6 +24,6 @@ router.post('/login/logData', loginValidations, processLogin);
 router.get('/logout',logout);
 /*Edicion de Usuario*/
 router.get('/edit-profile/:id',editProfile)
-router.put('/edit-profile/:id',updateProfile)
+router.put('/edit-profile/:id',multerAvatar.single('fotoUsuario'),updateProfile)
 
 module.exports = router;

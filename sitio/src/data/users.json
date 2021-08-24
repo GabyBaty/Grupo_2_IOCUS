@@ -41,11 +41,11 @@
   },
   {
     "id": 6,
-    "nombre": "Gabriel",
+    "nombre": "Gabriel89",
     "apellido": "Carrizo",
     "correo": "baty@gmail.com",
-    "password": "$2a$10$ihFG6HciIWoRNaDz18lc/eS0lDpINhj8dtJ.La8SMJUdsmH92.dNa",
+    "password": "$2a$10$fY1hzmOSPQw6KW1sybnYpeETRys/srqm6.SzMi.qU8YmlqWwCb7fy",
     "role": "user",
-    "avatar": "default.png"
+    "avatar": "fotoUsuario-1629837603472.jpg"
   }
 ]
