@@ -10,31 +10,30 @@
   <main>
     <div class="container-sm">
       <div class="row mt-5 d-flex justify-content-center">
-        <div class="col-sm-3 p-5 bg-light shadow rounded">
-          <form action="/user/edit/<%= locals.usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div class="d-flex justify-content-center"><img src="/img/users/avatar/<%= locals.usuario.avatar%> " alt="user-profile-img" class=" rounded-circle"></div>
-            <input type="file" name="foto-usuario" id="" accept=".jpg, .png, .jpeg" >
-        </div>
-        <div class="col-sm-6 p-5 bg-light shadow rounded">
+        <div class="col-sm-4 p-5 bg-light shadow rounded">
+          <form action="/users/edit-profile/<%= locals.usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="d-flex justify-content-center flex-column  align-items-center ">
+              <img src="/img/users/avatar/<%= locals.usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
+              <input type="file" name="foto-usuario" id="selectedFile" style="display: none;"  accept=".jpg, .png, .jpeg">
+              <input class="mt-5 w-50 " type="button" value="Seleccionar imágen" onclick="document.getElementById('selectedFile').click();"> 
+          </div>
+          </div>
+        <div class="col-sm-6 p-5 bg-light shadow rounded d-flex flex-column ">
           <label for="name-user-profile">Nombre de Usuario</label>
-          <input type="text" name="profile-user-edit-nombre" id="name-user-profile" value="<%= locals.usuario.nombre%>">
+          <input type="text" name="profileUserEditNombre" id="name-user-profile" value="<%= user.nombre%>">
           <label for="lastname-user-profile">Apellido de Usuario</label>
-          <input type="text" name="profile-user-edit-apellido" id="lastname-user-profile" value="<%= locals.usuario.apellido%>">
+          <input type="text" name="profileUserEditApellido" id="lastname-user-profile" value="<%= user.apellido%>">
           <label for="email-user-profile">Email de contacto</label>
-          <input type="email" name="profile-user-edit-correo" id="email-user-profile" value="<%= locals.usuario.correo%>">
+          <input type="email" name="profileUserEditCorreo" id="email-user-profile" value="<%= user.correo%>">
           <label for="password-user-profile">Nueva contraseña</label>
-          <input type="password" name="profile-user-edit-new-password" id="password-user-profile" placeholder="Ingrese su nueva contraseña">
+          <input type="password" name="userPassword" id="password-user-profile" placeholder="Ingrese su nueva contraseña">
           <label for="verify-password-user-profile">Confirmar contraseña</label>
-          <input type="password" name="profile-user-edit-verify-new-password" id="verify-password-user-profile" placeholder="Confirme su nueva contraseña">
+          <input type="password" name="profileUserEditPassword" id="verify-password-user-profile" placeholder="Confirme su nueva contraseña">
           <label for="role-user-profile">Rol</label>
           <p id="role-user-profile">Usuario</p>
+          <button type="submit" class="btn btn-primary " style="font-size: 2rem;" >Guardar cambios</button>
         </div>
-        <% if (locals.usuario && locals.usuario.role ==="admin") { %>
-          <div class="col-sm-4 mt-5">
-            <button class="btn btn-warning"><a href="/products/add" style="font-size: 3rem;">AGREGAR UN PRODUCTO</a></button>
-          </div>
-        <% } %>
-       
+        </form>
       </div>
     </div>
   </main>

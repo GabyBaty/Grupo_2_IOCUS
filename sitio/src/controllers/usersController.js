@@ -5,7 +5,7 @@ let dbUsuarios = require('../data/users_db');
 const bcrypt = require('bcryptjs');
 
 
-let guardarJSON = (productos) => { fs.writeFileSync(path.join(__dirname, "../data/users.json"), JSON.stringify(productos, null, 2), 'utf-8') }
+let guardarJSON = (usuarios) => { fs.writeFileSync(path.join(__dirname, "../data/users.json"), JSON.stringify(usuarios, null, 2), 'utf-8') }
 
 
 
@@ -24,15 +24,16 @@ module.exports = {
 
         if (errores.isEmpty()) {
             let usuario = {
-                id: usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1,
+                id: dbUsuarios.length > 0 ? dbUsuarios[dbUsuarios.length - 1].id + 1 : 1,
                 nombre,
                 apellido,
                 correo,
                 password:bcrypt.hashSync(password,10),
-                role:"user"
+                role:"user",
+                avatar:"default.png"
             }
-            usuarios.push(usuario);
-            guardarJSON(usuarios);
+            dbUsuarios.push(usuario);
+            guardarJSON(dbUsuarios);
             res.redirect('/');
         } else {
             return res.render('users/login', {
@@ -88,6 +89,33 @@ module.exports = {
             usuario: req.session.usuario
         })
     },
+    
+    editProfile: (req,res) => {
+        let usuario = req.session.usuario
+        let user = dbUsuarios.find(user=>user.id === +req.params.id)
+        return res.render('users/edit-profile', {
+          title: 'Editar Mi Perfil',
+          usuario,
+          user
+        })
+    },
+    
+    
+    updateProfile: (req,res) => {
+        const {profileUserEditNombre,profileUserEditApellido,profileUserEditCorreo,profileUserEditPassword} = req.body
+        dbUsuarios.forEach(user =>{
+            if(user.id == +req.params.id) {   
+                    user.nombre =profileUserEditNombre,
+                    user.apellido = profileUserEditApellido,
+                    user.correo=profileUserEditCorreo,
+                    user.password= profileUserEditPassword
+                }
+        })
+        guardarJSON(dbUsuarios)
+        return res.redirect('/users/profile')
+    },
+
+
 
     logout: (req, res) => {
         req.session.destroy(); 

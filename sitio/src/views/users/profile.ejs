@@ -12,8 +12,8 @@
       <div class="row mt-5 d-flex justify-content-center">
         <div class="col-sm-3 p-5 bg-light shadow rounded">
             <div class="d-flex justify-content-center"><img src="/img/users/avatar/default.png" alt="user-profile-img" class=" rounded-circle"></div>
-            <div class="d-flex justify-content-center mt-3"><button class="btn-lg btn-primary">Editar perfil</button></div>
-        </div>
+            <div class="d-flex justify-content-center mt-3"><button class="btn-lg btn-primary" onclick="location.href='/users/edit-profile/<%= locals.usuario.id %>';" >Editar perfil</button></div>
+          </div>
         <div class="col-sm-6 p-5 bg-light shadow rounded">
           <label for="name-user-profile">Nombre de Usuario</label>
           <p id="name-user-profile"><%= locals.usuario.nombre  %> </p>
