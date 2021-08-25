@@ -6,24 +6,33 @@
     "correo": "damiantrajster@gmail.com",
     "password": "$2a$10$uHMHg0mnxv5iUG.GChAoSOb0tY9KxPFh8E4sTWGj/TxlIxXgJE2a.",
     "avatar": "fotoUsuario-1629847915227.png",
-    "role": "user"
+    "role": "Usuario"
   },
   {
     "id": 6,
-    "nombre": "Gabriel89",
+    "nombre": "gaby",
     "apellido": "Carrizo",
     "correo": "baty@gmail.com",
-    "password": "$2a$10$fY1hzmOSPQw6KW1sybnYpeETRys/srqm6.SzMi.qU8YmlqWwCb7fy",
-    "role": "user",
-    "avatar": "fotoUsuario-1629837603472.jpg"
+    "password": "$2a$10$Gqo8XX7JE0mw6GfTmTnll.Scs.3IXML5y/QK/e66P30TRbMAB6uM2",
+    "role": "Usuario",
+    "avatar": "fotoUsuario-1629853376271.png"
   },
   {
     "id": 7,
     "nombre": "Eric",
     "apellido": "Mena",
     "correo": "ericmena@gmail.com",
-    "password": "$2a$10$AcCEDKiloB0v6ulVv8JRfurr2NpIWMjiMYBsmX/6rBy/IJ16FrjH2",
-    "role": "admin",
+    "password": "$2a$10$p2oWmpg0indMAQ8J8SPHaedBRltoQV03ghj2Nh/MWhanwZt3Mzy2O",
+    "role": "Administrador",
     "avatar": "fotoUsuario-1629848332398.jfif"
+  },
+  {
+    "id": 8,
+    "nombre": "Euge",
+    "apellido": "Amaya",
+    "correo": "perritopanzon@gmail.com",
+    "password": "$2a$10$xGcnYw/81odTVHjXuVvQAOITLqiu0H/oXKen27kSto4IGhhCuOYlq",
+    "role": "Usuario",
+    "avatar": "fotoUsuario-1629933195692.png"
   }
 ]

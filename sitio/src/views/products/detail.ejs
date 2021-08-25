@@ -14,7 +14,7 @@
           <div class="col-md-6">
             <p><a href="/products/filter">Categoria </a>> <a href="#"><%= producto.category %></a> > <a href="#"><%= producto.age %> </a></p>
           </div>
-          <% if (locals.usuario && locals.usuario.role === "admin") { %>
+          <% if (locals.usuario && locals.usuario.role === "Administrador") { %>
             <div class="col-md-6 d-flex justify-content-end align-items-center">
             <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
             <form action="/products/delete/<%= producto.id %>?_method=DELETE"
