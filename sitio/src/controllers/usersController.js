@@ -108,10 +108,13 @@ processLogin: (req, res) => {
                     user.password= profileUserEditPassword ? hashiada  : user.password ,
                     
                     req.session.usuario = {
+                        id: user.id,
                         nombre: profileUserEditNombre,
                         apellido:profileUserEditApellido,
                         password:profileUserEditPassword ? hashiada  : user.password ,
                         avatar:(req.file) ? req.file.filename : user.avatar,
+                        correo: user.correo,
+                        role: user.role
                         
                     }
                 }

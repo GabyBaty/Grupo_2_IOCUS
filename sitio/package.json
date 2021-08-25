@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node ./src/bin/www"
   },
+  "nodemonConfig": {
+    "ext": "(js,mjs)"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bootstrap-fileinput": "^5.2.3",

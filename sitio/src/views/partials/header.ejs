@@ -13,12 +13,12 @@
 
             <div class="login-cart">
                 <% if (locals.usuario) { %>
-                   <img src="/img/avatars/<%= locals.usuario.avatar  %> "width="40" style="border-radius: 100%;" >         
-                <a href="/users/profile"><%= locals.usuario.nombre  %> </a>
-                <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                
+                <img src="/img/avatars/<%= locals.usuario.avatar  %> "width="40" style="border-radius: 100%;" >         
+                <a href="/users/profile" class="header-nav-link"><%= locals.usuario.nombre  %> <i class="fas fa-caret-down"></i></a>
                 <a href="/users/logout">cerrar sesion</i></a>
-                   
-                        
+                <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                                    
                 <% }else{ %>
                
                 <a href="/users/login"><i class="fas fa-user"></i> Ingresar</a>
