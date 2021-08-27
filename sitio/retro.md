@@ -77,5 +77,6 @@ Diagrama StarFish
 •	¡Desvirtuar las reuniones!
 
 *Seguir haciendo:
-•	Realizar las reuniones de trabajo conjuntas
-•	Mantener y Fomentar la excelente comunicación del equipo
+  Realizar las reuniones de trabajo conjuntas.
+  Mantener una buena comunicación.
+  Reuniones constantes.

@@ -14,12 +14,15 @@
           <div class="col-md-6">
             <p><a href="/products/filter">Categoria </a>> <a href="#"><%= producto.category %></a> > <a href="#"><%= producto.age %> </a></p>
           </div>
-          <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <% if (locals.usuario && locals.usuario.role === "Administrador") { %>
+            <div class="col-md-6 d-flex justify-content-end align-items-center">
             <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
             <form action="/products/delete/<%= producto.id %>?_method=DELETE"
               method="POST"><button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button></form>
             
-          </div>
+            </div>
+              <% } %>
+      
         </div>
         <div class="card">
           <div class="row g-0">

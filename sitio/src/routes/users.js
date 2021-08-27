@@ -1,6 +1,6 @@
 const express = require('express');
 var router = express.Router();
-const {login,processRegister,profile, processLogin,logout} = require('../controllers/usersController')
+const {login,processRegister,profile, processLogin,logout,editProfile, updateProfile} = require('../controllers/usersController')
 
 const registerValidations= require('../validations/registerValidation')
 
@@ -22,6 +22,8 @@ router.post('/login/regData',registerValidations, processRegister);
 router.get('/profile',multerAvatar.any(),profileUserCheck, profile);
 router.post('/login/logData', loginValidations, processLogin);
 router.get('/logout',logout);
-
+/*Edicion de Usuario*/
+router.get('/edit-profile/:id',editProfile)
+router.put('/edit-profile/:id',multerAvatar.single('fotoUsuario'),updateProfile)
 
 module.exports = router;
