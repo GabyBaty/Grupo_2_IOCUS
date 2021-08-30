@@ -87,15 +87,16 @@ function changeImage(element) {
   
   }
   /*Afecta al button para mostrar contraseña*/
-  document.querySelector('.campo span').addEventListener('click', e => {
+  document.querySelector('.campo span i').addEventListener('click', e => {
     const passwordInput = document.querySelector('#password');
+    
     if (e.target.classList.contains('show')) {
         e.target.classList.remove('show');
-        e.target.textContent = 'Ocultar';
+        document.getElementById('eyeToggle').style.color='#808080'
         passwordInput.type = 'text';
     } else {
         e.target.classList.add('show');
-        e.target.textContent = 'Mostrar';
+        document.getElementById('eyeToggle').style.color='#000'
         passwordInput.type = 'password';
     }
 });

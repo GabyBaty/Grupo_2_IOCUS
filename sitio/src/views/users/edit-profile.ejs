@@ -26,8 +26,11 @@
           <input type="text" name="profileUserEditApellido" id="lastname-user-profile" value="<%= user.apellido%>">
           <label for="email-user-profile">Email de contacto</label>
           <p class="text-danger" id="email-user-profile"><%= user.correo  %></p>
-          <label for="password-user-profile">Nueva contraseña</label>
-          <input type="password" name="profileUserEditPassword" id="password-user-profile" placeholder="Ingrese su nueva contraseña">
+          <div class="campo">
+            <label for="password">Nueva contraseña</label>
+            <input type="password" name="profileUserEditPassword" id="password" placeholder="Ingrese su nueva contraseña">
+            <span><i class="fas fa-eye show" id="eyeToggle"></i></span>
+          </div>
           <label for="verify-password-user-profile">Confirmar contraseña</label>
           <input type="password" name="confirmeEditPassword" id="verify-password-user-profile" placeholder="Confirme su nueva contraseña">
           <label for="role-user-profile">Rol</label>
