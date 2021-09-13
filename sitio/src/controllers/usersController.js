@@ -97,12 +97,15 @@ processLogin: (req, res) => {
     
     
     updateProfile: (req,res) => {
+        let errores = validationResult(req)
         const {profileUserEditNombre,profileUserEditApellido,profileUserEditPassword,avatar} = req.body
         let hashiada = bcrypt.hashSync(profileUserEditPassword,10)
-
-        dbUsuarios.forEach(user =>{
+        
+        
+        dbUsuarios.forEach(user =>{ 
             if(user.id == +req.params.id) {   
-                    user.nombre =profileUserEditNombre,
+                if(errores.isEmpty()) {
+                user.nombre =profileUserEditNombre,
                     user.apellido = profileUserEditApellido,
                     user.avatar = req.file ? req.file.filename : user.avatar,
                     user.password= profileUserEditPassword ? hashiada  : user.password ,
@@ -116,17 +119,24 @@ processLogin: (req, res) => {
                         correo: user.correo,
                         role: user.role
                     }
-                    
-                }
+        
+                    guardarJSON(dbUsuarios)
+                    res.cookie('iocusForever', req.session.usuario)
+                    return res.redirect('/users/profile')
                 
-        })
+                }else {
+                        return res.render('users/edit-profile', {
+                        title: "Editar mi Perfil",
+                        errores: errores.mapped(),
+                        usuario: req.session.usuario,
+                        user
+                    })
+        }
+    }
 
 
-        guardarJSON(dbUsuarios)
-        res.cookie('iocusForever', req.session.usuario)
-        return res.redirect('/users/profile')
        
-    },
+    })},
 
 
 

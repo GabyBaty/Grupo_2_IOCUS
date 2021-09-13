@@ -5,6 +5,7 @@ const {login,processRegister,profile, processLogin,logout,editProfile, updatePro
 const registerValidations= require('../validations/registerValidation')
 
 const loginValidations= require('../validations/loginValidations')
+const editUserValidations = require ('../validations/editUserValidations')
 
 
 //middleware de sesiones
@@ -24,6 +25,6 @@ router.post('/login/logData', loginValidations, processLogin);
 router.get('/logout',logout);
 /*Edicion de Usuario*/
 router.get('/edit-profile/:id',editProfile)
-router.put('/edit-profile/:id',multerAvatar.single('fotoUsuario'),updateProfile)
+router.put('/edit-profile/:id',multerAvatar.single('fotoUsuario'),editUserValidations,updateProfile)
 
 module.exports = router;

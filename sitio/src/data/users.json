@@ -34,5 +34,23 @@
     "password": "$2a$10$xGcnYw/81odTVHjXuVvQAOITLqiu0H/oXKen27kSto4IGhhCuOYlq",
     "role": "Usuario",
     "avatar": "fotoUsuario-1629933195692.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Fernando",
+    "apellido": "Ojeda",
+    "correo": "coolassemail@gmail.com",
+    "password": "",
+    "role": "Usuario",
+    "avatar": "fotoUsuario-1631488298192.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Fernando",
+    "apellido": "Ojeda",
+    "correo": "email@coso.com",
+    "password": "$2a$10$UZGIga8WPtKM0KGqxHcWN.xK03ukF3dxZc7OW5obrLP7BxU2pMqJG",
+    "role": "Usuario",
+    "avatar": "default.png"
   }
 ]
