@@ -18,18 +18,4 @@ module.exports = [
     }).withMessage('El apellido tiene que tener como mínimo 2 caracteres')
     .isAlpha().withMessage('El apellido debe contener solo letras'),
     
-    check('profileUserEditPassword')
-    .isLength({
-        min : 6,
-        max : 12
-    }).withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
-
-    check('confirmEditPassword')
-    .custom((value,{req}) => {
-        if(value !== req.body.profileUserEditPassword){
-            return false
-        }
-        return true
-    }).withMessage('Las contraseñas no coinciden'),
-  
 ]

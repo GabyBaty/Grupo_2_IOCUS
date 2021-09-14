@@ -22,7 +22,7 @@
     "nombre": "Eric",
     "apellido": "Mena",
     "correo": "ericmena@gmail.com",
-    "password": "$2a$10$p2oWmpg0indMAQ8J8SPHaedBRltoQV03ghj2Nh/MWhanwZt3Mzy2O",
+    "password": "$2a$10$vkwD7gxhkaZzasROZHbudOF5xHADDQizUYmJIsrjloxmVeA64ivW2",
     "role": "Administrador",
     "avatar": "fotoUsuario-1629848332398.jfif"
   },
@@ -49,7 +49,7 @@
     "nombre": "Fernando",
     "apellido": "Ojeda",
     "correo": "email@coso.com",
-    "password": "$2a$10$UZGIga8WPtKM0KGqxHcWN.xK03ukF3dxZc7OW5obrLP7BxU2pMqJG",
+    "password": "$2a$10$J2xQKv28BsnBahzYYnSuBeIpLBXITCQ/atGbu4oBbR31nGCZvGTEu",
     "role": "Usuario",
     "avatar": "default.png"
   }
