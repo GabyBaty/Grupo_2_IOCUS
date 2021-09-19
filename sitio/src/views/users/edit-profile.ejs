@@ -13,7 +13,9 @@
         <div class="col-sm-4 p-5 bg-light shadow rounded">
           <form action="/users/edit-profile/<%= locals.usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="d-flex justify-content-center flex-column  align-items-center ">
+              
               <img src="/img/avatars/<%= locals.usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
+              <p class="text-danger mt-3" id="role-user-profile"><%= locals.usuario.role %></p>
               <input type="file" name="fotoUsuario" id="selectedFile" style="display: none;"  accept=".jpg, .png, .jpeg">
               <input class="mt-5 w-50 btn btn-primary "style="font-size: 1.5rem;" type="button" value="Seleccionar imágen" onclick="document.getElementById('selectedFile').click();"> 
               <a href="https://www.creartuavatar.com/" target="_blank"><input class="mt-5 w-150 px-5 btn btn-primary " style="font-size: 1.5rem;" type="button"  value="Crea tu avatar" ></a> 
@@ -32,22 +34,8 @@
           </small>
           <label for="email-user-profile">Email de contacto</label>
           <p class="text-danger" id="email-user-profile"><%= locals.usuario.correo  %></p>
-          <div class="campo">
-            <label for="password">Nueva contraseña</label>
-            <input type="password" name="profileUserEditPassword" id="password" placeholder="Ingrese su nueva contraseña">
-            <span><i class="fas fa-eye show" id="eyeToggle"></i></span>
-          </div>
-          <small class="alert-danger">
-            <%= locals.errores && locals.errores.profileUserEditPassword ? errores.profileUserEditPassword.msg : null %>
-          </small>
-          <label for="verify-password-user-profile">Confirmar contraseña</label>
-          <input type="password" name="confirmEditPassword" id="verify-password-user-profile" placeholder="Confirme su nueva contraseña">
-          <small class="alert-danger">
-            <%= locals.errores && locals.errores.confirmEditPassword ? errores.confirmEditPassword.msg : null %>
-          </small>
-          <label for="role-user-profile">Rol</label>
-          <p class="text-danger" id="role-user-profile"><%= locals.usuario.role %></p>
-          <button type="submit" class="btn btn-primary " style="font-size: 2rem;" >Guardar cambios</button>
+          <a href="/users/edit-password/<%= locals.usuario.id %>" class="btn btn-danger mt-3" style="font-size: 2rem;color: white;">Cambiar contraseña</a>
+          <button type="submit" class="btn btn-primary mt-5" style="font-size: 2rem;" >Guardar cambios</button>
         </div>
         </form>
       </div>
