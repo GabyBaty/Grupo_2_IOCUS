@@ -11,14 +11,14 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      desciption: {
+      description: {
         type: Sequelize.STRING
       },
       price: {
         type: Sequelize.DECIMAL
       },
       discount: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.INTEGER
       },
       sku: {
         type: Sequelize.STRING
@@ -30,13 +30,31 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       brandsId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Brands'
+          },
+          key : 'id'
+        }
       },
       agesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Ages'
+          },
+          key : 'id'
+        }
       },
       categoriesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Categories'
+          },
+          key : 'id'
+        }
       },
       createdAt: {
         allowNull: false,

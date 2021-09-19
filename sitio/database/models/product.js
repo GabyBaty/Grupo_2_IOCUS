@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     /**
-     * Helper method for defining associations.
+     * Helper method for defining associations. :)
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   };
   Product.init({
     name: DataTypes.STRING,
-    desciption: DataTypes.STRING,
+    description: DataTypes.STRING,
     price: DataTypes.DECIMAL,
-    discount: DataTypes.DECIMAL,
+    discount: DataTypes.INTEGER,
     sku: DataTypes.STRING,
     destacado: DataTypes.BOOLEAN,
     stock: DataTypes.INTEGER,
