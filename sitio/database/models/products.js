@@ -40,9 +40,12 @@ module.exports = (sequelize, DataTypes) => {
         products.belongsTo(models.categories, {
           as: "categories",
           foreignKey: "categoriesId"
-        });   
-      }  
-
+        });  
+        products.hasMany(models.images, {
+          as:"images",
+          foreignKey: "productsId"
+      })  
+      }
   
     
     return products;
