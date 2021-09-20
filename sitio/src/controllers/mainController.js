@@ -1,19 +1,45 @@
+const fs = require('fs');
+const path = require('path');
 const productos = require('../data/products_db');
 const toThousand = require('../utils/toThousand')
 const finalPrice = require('../utils/finalPrice')
 const busqueda = require('../utils/searchRelevance')
+let db= require(path.join(__dirname,'../../database/models'));
+
+
 
 module.exports = {
     index: (req,res) => {
-        let destacados = productos.filter(producto => producto.destacado === 'on')
+     
+      let products = db.products.findAll(
+        {
+            where:{
+                destacado:true
+            },
+            include:[
+              {
+                association:'categories'             
+               }
+            ]
+        }
+        
+      )
+      
+      .then(destacados=>{
+     
         return res.render('index', { 
             title: 'IOCUS-INDEX',
-            productos,
+            products,
             destacados,
             toThousand, 
             finalPrice,
             usuario:req.session.usuario
-        });
+        }).catch(error => console.log(error))
+      }
+
+
+      )
+      
     },
     contacto: (req,res) => {
         return res.render('contacto', { title: 'IOCUS-CONTACTO',

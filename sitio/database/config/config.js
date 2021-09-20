@@ -1,10 +1,11 @@
 module.exports={
   "development": {
     username: "root",
-    password: " ",
+    password: "root",
     database: "iocus_db",
     host: "127.0.0.1",
     dialect: "mysql",
+    port:5000
  
   },
   "test": {

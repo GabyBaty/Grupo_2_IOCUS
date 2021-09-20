@@ -51,7 +51,7 @@
           <div class="col-12 col-sm-6 col-lg-3">
           <div class=" producto">
             <a href="/products/detail/<%= destacado.id %>">
-              <div class="index-product-img-wrapper"><img class="producto__imagen p-3" style="height: 220px;" src="/img/detalle/<%= destacado.images[0] %>" alt="imagen-producto"/></div>
+              <div class="index-product-img-wrapper"><img class="producto__imagen p-3" style="height: 220px;" src="/img/detalle/<%= /* destacado.images[0] */ %>" alt="imagen-producto"/></div>
               <div class="producto__informacion">
                 <p class="producto__nombre"><%= destacado.name %> </p>
                 <% if(destacado.discount !== 0) { %> 
@@ -59,6 +59,7 @@
                   <span><%= destacado.price %></span>
                   /
                   <b><%= destacado.discount %>% OFF</b>
+                  
                 </p>
                 <p class="producto__precios">
                   $<%=toThousand(finalPrice(destacado.price,destacado.discount)) %>

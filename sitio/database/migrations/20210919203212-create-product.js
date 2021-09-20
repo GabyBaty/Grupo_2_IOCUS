@@ -31,30 +31,16 @@ module.exports = {
       },
       brandsId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Brands'
-          },
-          key : 'id'
-        }
+        
       },
       agesId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Ages'
-          },
-          key : 'id'
-        }
+       
       },
       categoriesId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Categories'
-          },
-          key : 'id'
-        }
+        
+        
       },
       createdAt: {
         allowNull: false,
@@ -67,6 +53,9 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
+
+
+    
     await queryInterface.dropTable('Products');
   }
 };

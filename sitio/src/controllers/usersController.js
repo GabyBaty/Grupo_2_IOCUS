@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-let dbUsuarios = require('../data/users_db');
+let db= require(path.join(__dirname,'../../database/models'));
 const bcrypt = require('bcryptjs');
 
 
@@ -15,6 +15,16 @@ module.exports = {
             title: 'IOCUS-LOGIN',
             usuario: req.session.usuario
         });
+    },
+
+    test:async(req,res)=>{
+      let users = await  db.users.destroy({
+         where:{
+              id:1
+          }
+      })
+      /*   console.log(users); */
+        return res.render('hola')
     },
 
     processRegister: (req, res) => {

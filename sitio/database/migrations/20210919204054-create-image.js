@@ -13,12 +13,7 @@ module.exports = {
       },
       productsId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Products'
-          },
-          key : 'id'
-        }
+       
       },
       createdAt: {
         allowNull: false,

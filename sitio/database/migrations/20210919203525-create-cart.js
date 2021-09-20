@@ -16,30 +16,15 @@ module.exports = {
       },
       usersId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Users'
-          },
-          key : 'id'
-        }
+       
       },
       productsId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Products'
-          },
-          key : 'id'
-        }
+       
       },
       paymentsId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Payments'
-          },
-          key : 'id'
-        }
+       
       },
       createdAt: {
         allowNull: false,
