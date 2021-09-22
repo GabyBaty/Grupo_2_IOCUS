@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING(500)
       },
       price: {
-        type: Sequelize.DECIMAL(8,2)
+        type: Sequelize.DECIMAL(8,0)
       },
       discount: {
         type: Sequelize.INTEGER

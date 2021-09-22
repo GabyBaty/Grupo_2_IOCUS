@@ -95,43 +95,42 @@ module.exports = {
 
 
 
-    edit: (req,res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id);
-        let categorias = producto.category
-            return res.render('products/edit', { 
-             title: 'Edición de producto',
-             producto,
-             categorias,
-             usuario:req.session.usuario,
-            });
+    edit : (req,res) => {
+        let categorias = db.Category.findAll();
+        let producto = db.Product.findByPk(req.params.id,{
+            include : [
+                {association : 'images'},
+                {association : 'category'},
+                {association : 'age'}
+            ]
+        });
+        Promise.all([categorias,producto])
+        .then(([categorias,producto]) => {
+            return res.render('products/edit',{
+                title:'Edicicón de producto',
+                categorias,
+                producto
+            })
+        })
+      
     },
     update: (req,res) => {
         const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
-        productos.forEach(producto => {
-            if(producto.id == +req.params.id) {
-                producto.sku = sku
-                producto.name = name
-                producto.category = category
-                producto.brand = brand
-                producto.age = age
-                producto.price = +price
-                producto.discount = +discount
-                producto.stock = +stock
-                producto.destacado = destacado
-                producto.description = description
-                producto.details.detail1 = detail1
-                producto.details.detail2 = detail2
-                producto.details.detail3 = detail3
-                producto.images[0] = (req.files[0]) ? req.files[0].filename : producto.images[0]
-                producto.images[1] = (req.files[1]) ? req.files[1].filename : producto.images[1]
-                producto.images[2] = (req.files[2]) ? req.files[2].filename : producto.images[2]
-               
-      
-            }
-        });
         
-        guardarJSON(productos)
-        return res.redirect('/')
+        db.Product.update(
+            {
+                ...req.body,
+                name : name.trim(),
+                description : description.trim(),
+                
+            },
+            {
+                where : {
+                    id : req.params.id
+                }
+            }
+        ).then( () =>   res.redirect('/'))
+        .catch(error => console.log(error))
     },
     borrar: (req,res) =>{
         productos=productos.filter(producto =>producto.id !== +req.params.id);

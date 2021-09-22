@@ -28,6 +28,9 @@ module.exports = {
                 req.session.usuario = {
                     id : user.id,
                     nombre: user.nombre,
+                    apellido: user.apellido,
+                    correo: user.correo,
+                    avatar: user.avatar,
                     role : user.role
                 }
                 return res.redirect('/')
