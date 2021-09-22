@@ -1,5 +1,5 @@
 const {check,body} = require('express-validator');
-const Usuarios = require('../data/users_db')   //no pasa naranja con estos. Ta to' peola
+const db = require('../../database/models');   //no pasa naranja con estos. Ta to' peola
 
 module.exports = [
     check('profileUserEditNombre')

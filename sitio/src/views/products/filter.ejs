@@ -2,7 +2,7 @@
 
 <body class="filtro">
  <%- include('../partials/header.ejs')%>
-  <main>
+  <main >
     <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
       class="fas fa-arrow-up"></i></button>
 
@@ -152,7 +152,7 @@
           <div class="col-12 col-sm-6 col-lg-4">
           <div class="producto">
             <a href="/products/detail/<%= producto.id %>">
-              <div class="index-product-img-wrapper"><img class="producto__imagen p-3" style="height: 220px;" src="/img/detalle/<%= producto.images[0]%>" alt="producto1" /></div>
+              <div class="index-product-img-wrapper"><img class="producto__imagen p-3" style="height: 220px;" src="/img/detalle/<%= producto.images[0].file %>" alt="producto1" /></div>
               <div class="producto__informacion">
                 <p class="producto__nombre"><%= producto.name %></p>
                 <% if(producto.discount !== 0) { %> 
@@ -167,9 +167,9 @@
                   </p>
                   <p class="precio__oculto">-</p>
                   <p class="producto__precios">
-                    $<%= toThousand(producto.price) %>
+                    $<%= toThousand(producto.price)%>
                     <% } %>
-                <p class="producto__marca"><%= producto.brand %></p>
+                <p class="producto__marca"><%= producto.brand.name%></p>
               </div>
             </a>
             

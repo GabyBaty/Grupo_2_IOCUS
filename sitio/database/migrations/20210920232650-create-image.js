@@ -11,9 +11,15 @@ module.exports = {
       file: {
         type: Sequelize.STRING
       },
-      productsId: {
+      productId: {
         type: Sequelize.INTEGER,
-       
+        references : {
+          model : {
+            tableName : 'Products'
+          },
+          key : 'id'
+        },
+        onDelete : 'cascade'
       },
       createdAt: {
         allowNull: false,

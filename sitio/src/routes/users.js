@@ -1,6 +1,6 @@
 const express = require('express');
 var router = express.Router();
-const {login,processRegister,profile, processLogin,logout,editProfile, updateProfile,editPassword,updatePassword,test} = require('../controllers/usersController')
+const {login,processRegister,profile, processLogin,logout,editProfile, updateProfile,editPassword,updatePassword} = require('../controllers/usersController')
 
 const registerValidations= require('../validations/registerValidation')
 
@@ -29,5 +29,5 @@ router.put('/edit-profile/:id',multerAvatar.single('fotoUsuario'),editUserValida
 router.get('/edit-password/:id', editPassword)
 router.put('/edit-password/:id',editPasswordValidations,updatePassword)
 
-router.get('/test',test)
+
 module.exports = router;

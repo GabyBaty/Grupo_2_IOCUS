@@ -5,10 +5,6 @@ let db= require(path.join(__dirname,'../../database/models'));
 const bcrypt = require('bcryptjs');
 
 
-let guardarJSON = (usuarios) => { fs.writeFileSync(path.join(__dirname, "../data/users.json"), JSON.stringify(usuarios, null, 2), 'utf-8') }
-
-
-
 module.exports = {
     login: (req, res) => {
         return res.render('users/login', {
@@ -17,34 +13,25 @@ module.exports = {
         });
     },
 
-    test:async(req,res)=>{
-      let users = await  db.users.destroy({
-         where:{
-              id:1
-          }
-      })
-      /*   console.log(users); */
-        return res.render('hola')
-    },
-
     processRegister: (req, res) => {
         let errores = validationResult(req);
         let { nombre, apellido, correo, password} = req.body;
-
-
         if (errores.isEmpty()) {
-            let usuario = {
-                id: dbUsuarios.length > 0 ? dbUsuarios[dbUsuarios.length - 1].id + 1 : 1,
-                nombre,
-                apellido,
-                correo,
-                password:bcrypt.hashSync(password,10),
-                role:"Usuario",
-                avatar:"default.png"
-            }
-            dbUsuarios.push(usuario);
-            guardarJSON(dbUsuarios);
-            res.redirect('/');
+            db.User.create({
+                nombre: nombre.trim(),
+                apellido : apellido.trim(),
+                correo: correo.trim(),
+                password : bcrypt.hashSync(password,10),
+                avatar : 'default.png',
+                role : 'Usuario'
+            }).then(user => {
+                req.session.usuario = {
+                    id : user.id,
+                    nombre: user.nombre,
+                    role : user.role
+                }
+                return res.redirect('/')
+            }).catch(error => console.log(error))
         } else {
             return res.render('users/login', {
                 title: "Registro de Usuario",
@@ -57,26 +44,26 @@ module.exports = {
 
 processLogin: (req, res) => {
         let errores = validationResult(req);
-        const { correologin, recordar} = req.body;
+        const { correo, recordar} = req.body;
 
         if (errores.isEmpty()) {
-            dbUsuarios.forEach(usuario => {
-                if (usuario.correo == correologin) {
-                    req.session.usuario = {
-                        id: usuario.id,
-                        nombre: usuario.nombre,
-                        avatar: usuario.avatar,
-                        apellido: usuario.apellido,
-                        correo: usuario.correo,
-                        role:usuario.role
-                    }
+            db.User.findOne({
+                where : {
+                  correo
                 }
-            });
-
-            if (recordar) {
-                res.cookie('iocusForever', req.session.usuario, { maxAge: 1000 * 60 *60})
-            }
-            return res.redirect('/')
+            }).then(user => {
+                req.session.usuario = {
+                    id : user.id,
+                    nombre : user.nombre,
+                    apellido : user.apellido,
+                    correo:user.correo,
+                    role : user.role,
+                    avatar : user.avatar
+                }
+                recordar && res.cookie('iocusForever',req.session.userLogin,{maxAge: 1000 * 60})
+                return res.redirect('/')
+            })
+           
         } else {
             return res.render('users/login', {
                 title: "Login de Usuario",

@@ -1,66 +1,100 @@
 let productos = require('../data/products_db');
 const toThousand = require('../utils/toThousand')
 const finalPrice = require('../utils/finalPrice')
+const { validationResult } = require('express-validator');
 const fs = require('fs')
 const path = require('path')
-
-let guardarJSON = (productos) =>{fs.writeFileSync(path.join(__dirname,"../data/products.json"),JSON.stringify(productos,null,2),'utf-8')}
+let db= require(path.join(__dirname,'../../database/models'));
 
 module.exports = {
-    
-    detail: (req,res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id);
-        return res.render('products/detail', { 
-            title: 'IOCUS-DETALLE' ,
-            producto,
-            toThousand,
-            finalPrice,
-            usuario:req.session.usuario,
-           
-        
-        });
+    detail : (req,res) => {
+     db.Product.findOne({
+            where : {
+                id : req.params.id
+            },
+            include : [
+                {association : 'images'},
+                {association : 'category'},
+                {association : 'age'}
+            ]
+        }).then(producto => {
+            db.Category.findOne({
+                where : {
+                    id : producto.categoryId
+                },
+                include : [
+                    {
+                        association : 'products',
+                        include : [
+                            {association : 'images'}
+                        ]
+                    }
+                ]
+            }).then(category =>{
+                return res.render('products/detail',{
+                    title: 'IOCUS-DETALLE' ,
+                    producto,
+                    toThousand,
+                    finalPrice,
+                    usuario:req.session.usuario,
+                   
+                })
+            })
+        }).catch(error => console.log(error))
+
     },
+    
+    
     cart: (req,res) => {
         return res.render('products/cart', { title: 'IOCUS-CARRITO' });
     },
     add: (req,res) => {
         return res.render('products/add', { title: 'Agregar producto', productos,usuario:req.session.usuario, });
     },
-    save:(req,res) => {
-        const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
-      let details = {detail1,detail2,detail3}
-     
-      if(req.files){
-        var imagenes = req.files.map(imagen => imagen.filename)
-    }
+    save: async (req, res) =>{
+        try {
+            let errores = validationResult(req);
+            
+            if (!errores.isEmpty()) {
+                res.render('products/add', { 
+                    title:'carga de productos',
+                    errores : errores.mapped(),
+                    old : req.body
+                })
+            } 
 
-    
-        let producto = {
-        id:productos[productos.length - 1].id + 1,
-        sku,
-        name,
-        category,
-        brand,
-        age,
-        price,
-        discount,
-        stock,
-        destacado,
-        description,
-        details,
-        images : req.files.length != 0 ? imagenes : ['default-image.jpg'],    
-       
-} 
+            const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
+            let producto = await db.Product.create({
+                ...req.body,
+                name : name.trim(),
+                description : description.trim(),
+                categoryId: +req.body.category,
+                brandId: +req.body.brand,
+                ageId: +req.body.age,
+                destacado: +req.body.destacado
+            })            
+            let images = req.files;
+            if(images.length > 0){ 
+                await images.forEach(img => {
+                    db.Image.create({
+                        file: img.filename,
+                        productId : producto.id
+                    })
+                }
+            )} else { 
+                await db.Image.create({
+                        file: "default-image.jpg",
+                        productId : producto.id
+                    })
+            }
+            //console.log("aaaa",images);
+            res.redirect ('/')
+        }
+        catch (error) { console.log(error) }
+    },
 
-    
- 
-  
-    //Agregando producto y guarda al final del Json//
-    productos.push(producto);
-    guardarJSON(productos);
-    res.redirect('/products/filter');
 
-        },
+
     edit: (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
         let categorias = producto.category
@@ -108,12 +142,21 @@ module.exports = {
 
 
     filter: (req,res) => {
-        return res.render('products/filter', { 
-            title: 'IOCUS-LISTA',
-            productos,
-            toThousand,
-            finalPrice,
-            usuario:req.session.usuario,
-         });
+         db.Product.findAll({
+            include : [
+                {association : 'images'},
+                {association : 'brand'}
+            ]
+         })
+        .then(productos => {
+            return res.render('products/filter', { 
+                title: 'IOCUS-LISTA',
+                productos,
+                toThousand,
+                finalPrice,
+                usuario:req.session.usuario,
+             });
+        })
+        
     },
 }

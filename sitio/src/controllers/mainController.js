@@ -5,20 +5,20 @@ const toThousand = require('../utils/toThousand')
 const finalPrice = require('../utils/finalPrice')
 const busqueda = require('../utils/searchRelevance')
 let db= require(path.join(__dirname,'../../database/models'));
-
+const {Op} = require('sequelize');
 
 
 module.exports = {
     index: (req,res) => {
      
-      let products = db.products.findAll(
+      let Product = db.Product.findAll(
         {
             where:{
                 destacado:true
             },
             include:[
               {
-                association:'categories'             
+                association:'images'             
                }
             ]
         }
@@ -29,7 +29,7 @@ module.exports = {
      
         return res.render('index', { 
             title: 'IOCUS-INDEX',
-            products,
+            Product,
             destacados,
             toThousand, 
             finalPrice,
@@ -48,17 +48,35 @@ module.exports = {
     about: (req,res) => {
         return res.render('about', { title: 'IOCUS-ABOUT', usuario:req.session.usuario});
     },  
-    search: (req, res) => {
-		let inputs = req.query.keywords.trim()
-		let resultados = busqueda(inputs)
-		return res.render('results', {
-            title: 'Resultados de búsqueda',
-			resultados,
-			busqueda: req.query.keywords,
-			toThousand,
-			finalPrice,
-            usuario:req.session.usuario,
-            
-		})
-	}
+    search : (req,res) => {
+      db.Product.findAll({
+          where : {
+              [Op.or] : [
+                  {
+                      name :  {
+                          [Op.substring] : req.query.keywords
+                      }
+                  },
+                  {
+                     description: {
+                          [Op.substring] : req.query.keywords
+                      }
+                  }
+              ]
+          },
+          include:[
+            { association:'images' },
+             {association : 'brand'}
+          ]
+          
+      }).then(productos=> res.render('products/filter',{
+          title:'busqueda',
+          productos,
+          toThousand, 
+          finalPrice,
+          usuario:req.session.usuario,
+          busqueda : req.query.keywords
+      })).catch(error => console.log(error))
+
+  },
 }

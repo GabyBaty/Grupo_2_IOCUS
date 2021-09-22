@@ -11,20 +11,35 @@ module.exports = {
       quantity: {
         type: Sequelize.INTEGER
       },
+      productId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Products'
+          },
+          key : 'id'
+        }
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Users'
+          },
+          key : 'id'
+        }
+      },
+      paymentId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Payments'
+          },
+          key : 'id'
+        }
+      },
       total: {
-        type: Sequelize.DECIMAL
-      },
-      usersId: {
-        type: Sequelize.INTEGER,
-       
-      },
-      productsId: {
-        type: Sequelize.INTEGER,
-       
-      },
-      paymentsId: {
-        type: Sequelize.INTEGER,
-       
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

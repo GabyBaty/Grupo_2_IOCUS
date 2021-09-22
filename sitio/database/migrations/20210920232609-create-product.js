@@ -12,10 +12,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(500)
       },
       price: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(8,2)
       },
       discount: {
         type: Sequelize.INTEGER
@@ -29,18 +29,32 @@ module.exports = {
       stock: {
         type: Sequelize.INTEGER
       },
-      brandsId: {
+      categoryId: {
         type: Sequelize.INTEGER,
-        
+        references : {
+          model : {
+            tableName : 'Categories'
+          },
+          key : 'id'
+        }
       },
-      agesId: {
+      brandId: {
         type: Sequelize.INTEGER,
-       
+        references : {
+          model : {
+            tableName : 'Brands'
+          },
+          key : 'id'
+        }
       },
-      categoriesId: {
+      ageId: {
         type: Sequelize.INTEGER,
-        
-        
+        references : {
+          model : {
+            tableName : 'Ages'
+          },
+          key : 'id',
+        }
       },
       createdAt: {
         allowNull: false,
@@ -53,9 +67,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-
-
-    
     await queryInterface.dropTable('Products');
   }
 };
