@@ -87,7 +87,7 @@ module.exports = {
                         productId : producto.id
                     })
             }
-            //console.log("aaaa",images);
+        
             res.redirect ('/')
         }
         catch (error) { console.log(error) }
