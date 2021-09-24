@@ -87,7 +87,7 @@ module.exports = {
                         productId : producto.id
                     })
             }
-            //console.log("aaaa",images);
+            
             res.redirect ('/')
         }
         catch (error) { console.log(error) }
@@ -114,30 +114,56 @@ module.exports = {
         })
       
     },
-    update: (req,res) => {
-        const {sku,name,category,brand,age,price,discount,stock,destacado,description,detail1,detail2,detail3} = req.body
-        
-        db.Product.update(
+    update: async (req,res) => {
+        const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body
+   
+      
+       let producto=   await db.Product.update(
             {
                 ...req.body,
                 name : name.trim(),
                 description : description.trim(),
-                
+               
             },
             {
                 where : {
                     id : req.params.id
                 }
-            }
-        ).then( () =>   res.redirect('/'))
+            },
+            ) 
+
+            let images = req.files;
+            if(images.length > 0){ 
+                await images.forEach(img => {
+                    db.Image.update({
+                        file: img.filename,
+                       
+                    },
+                    {
+                        where :{
+                            id : req.params.id
+                            }
+                     }
+                )
+                }
+            )} else { 
+                await db.Image.update({
+                        file: "default-image.jpg",
+                        productId : producto.id
+                    })
+                    
+                }
+      
+        res.redirect('/')
         .catch(error => console.log(error))
     },
+
+
     borrar: (req,res) =>{
         productos=productos.filter(producto =>producto.id !== +req.params.id);
         guardarJSON(productos);
         return res.redirect('/products/filter')
     },
-
 
 
     filter: (req,res) => {
