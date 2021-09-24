@@ -107,7 +107,7 @@ module.exports = {
         Promise.all([categorias,producto])
         .then(([categorias,producto]) => {
             return res.render('products/edit',{
-                title:'Edicicón de producto',
+                title:'Edición de producto',
                 categorias,
                 producto
             })
@@ -158,14 +158,15 @@ module.exports = {
         .catch(error => console.log(error))
     },
 
-
-    borrar: (req,res) =>{
-        productos=productos.filter(producto =>producto.id !== +req.params.id);
-        guardarJSON(productos);
-        return res.redirect('/products/filter')
+    remove : (req,res) => {
+        db.Product.destroy({
+            where : {
+                id : req.params.id
+            }
+        }).then( () => res.redirect('/'))
+        .catch(error => console.log(error))
     },
-
-
+    
     filter: (req,res) => {
          db.Product.findAll({
             include : [
