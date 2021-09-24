@@ -64,21 +64,7 @@ module.exports = {
                 });
             }
 
-            const {
-                sku,
-                name,
-                category,
-                brand,
-                age,
-                price,
-                discount,
-                stock,
-                destacado,
-                description,
-                detail1,
-                detail2,
-                detail3,
-            } = req.body;
+            const {name,description} = req.body
             let producto = await db.Product.create({
                 ...req.body,
                 name: name.trim(),
@@ -111,96 +97,77 @@ module.exports = {
 
     edit: (req, res) => {
         let categorias = db.Category.findAll();
-        let producto = db.Product.findByPk(req.params.id, {
-            include: [
-                { association: "images" },
-                { association: "category" },
-                { association: "age" },
-            ],
+        let marcas = db.Brand.findAll();
+        let edades = db.Age.findAll();
+        let producto = db.Product.findByPk(req.params.id,{
+            include : [
+                {association : 'images'},
+                {association : 'category'},
+                {association : 'age'},
+                {association : 'brand'}
+            ]
         });
-        Promise.all([categorias, producto]).then(([categorias, producto]) => {
-            return res.render("products/edit", {
-                title: "Edición de producto",
+        Promise.all([categorias,marcas,edades,producto])
+        .then(([categorias,marcas,edades,producto]) => {
+            return res.render('products/edit',{
+                title:'Edición de producto',
                 categorias,
-                producto,
-            });
-        });
+                marcas,
+                edades,
+                producto
+            })
+        })
+      
     },
-    update: (req, res) => {
-        const {
-            sku,
-            name,
-            category,
-            brand,
-            age,
-            price,
-            discount,
-            stock,
-            destacado,
-            description,
-            producto,
-            image,
-        } = req.body;
-        db.Product.update(
+    update: async (req,res) => {
+        const {name,description} = req.body
+        
+      try{
+        let producto = await db.Product.update(
             {
                 ...req.body,
-                name: name.trim(),
-                description: description.trim(),
-                category,
+                name : name.trim(),
+                description : description.trim(),
+                categoryId: +req.body.category,
+                brandId: +req.body.brand,
+                ageId: +req.body.age,
+                destacado: +req.body.destacado
+               
             },
             {
-                where: {
-                    id: req.params.id,
-                },
+                where : {
+                    id : req.params.id
+                }
+            },
+        )  
+
+    
+
+            console.log(req.files);
+            if(req.files.length > 0) {
+            let dbImages = await db.Image.findAll({where : {productId : req.params.id}})
+            
+            let resultado = [];
+            
+            for (let i = 1; i <= 3; i++) {
+                if(i > req.files.length){
+                    resultado.push(dbImages[i-1].file)
+                }else{
+                    resultado.push(req.files[i-1].filename)
+                }
             }
-        ).then(
-            db.Image.update()
-
-
-
-        ).catch(error => res.send(error))
-
-        /*     await db.Product.update(
-                {
-                    ...req.body,
-                    name : name.trim(),
-                    description : description.trim(),
-                    category,
-                   
-                },
-                {
-                    where : {
-                        id : req.params.id
-                    }
-                },
-                ) 
-    
-                let images = req.files;
-                
-                if(images.length > 0){ 
-                    await images.forEach(image=> {
-                        db.Image.update({
-                            file: image.file,
-                            productId : producto
-                        },{
-                            where :{
-                                id: req.params.id
-                            }
-                        }
-                        )
-                    }
-                )} else { 
-                    await db.Image.update({
-                            file: "default-image.jpg",
-                            productId : producto.id
-                        }); 
-    
-                        
-                    }
-    
-            res.redirect('/')
-            .catch(error => console.log(error))
-        }, */
+            
+            await db.Image.update({file: resultado[0]}, {where: {id : dbImages[0].id}}) 
+            await db.Image.update({file: resultado[1]}, {where: {id : dbImages[1].id}})
+            await db.Image.update({file: resultado[2]}, {where: {id : dbImages[2].id}}) 
+            
+        }
+        setTimeout(()=> {res.redirect('/')},2000)
+    }catch (error) {
+        console.log(error)
+    }
+       
+   
     },
 
     remove: (req, res) => {

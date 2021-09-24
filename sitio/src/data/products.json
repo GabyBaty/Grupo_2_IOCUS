@@ -286,49 +286,5 @@
       "Elsa2.jpg",
       "Elsa3.jpg"
     ]
-  },
-  {
-    "id": 17,
-    "sku": "1dasf",
-    "name": "zapatillas",
-    "category": "Figuras de acción",
-    "brand": "Disney",
-    "age": "De 0 a 24 meses",
-    "price": "5000",
-    "discount": "5",
-    "stock": "12",
-    "description": "sdadsa",
-    "details": {
-      "detail1": "",
-      "detail2": "",
-      "detail3": ""
-    },
-    "images": [
-      "imagen_1.jpg",
-      "imagen_2.jpg",
-      "imagen_3.jpg"
-    ]
-  },
-  {
-    "id": 18,
-    "sku": "1dasf",
-    "name": "zapatillas",
-    "category": "Figuras de acción",
-    "brand": "Disney",
-    "age": "De 0 a 24 meses",
-    "price": "5000",
-    "discount": "5",
-    "stock": "12",
-    "description": "sdadsa",
-    "details": {
-      "detail1": "",
-      "detail2": "",
-      "detail3": ""
-    },
-    "images": [
-      "imagen_1.jpg",
-      "imagen_2.jpg",
-      "imagen_3.jpg"
-    ]
   }
 ]
