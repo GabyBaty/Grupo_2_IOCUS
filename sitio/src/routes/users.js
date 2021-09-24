@@ -20,13 +20,13 @@ const multerAvatar = require('../middleware/multerAvatar')
 /* GET users listing. */
 router.get('/login',loginUserCheck, login);
 router.post('/login/regData',registerValidations, processRegister);
-router.get('/profile',multerAvatar.any(),profileUserCheck, profile);
+router.get('/profile',profileUserCheck, profile);
 router.post('/login/logData', loginValidations, processLogin);
 router.get('/logout',logout);
 /*Edicion de Usuario*/
-router.get('/edit-profile/:id',editProfile)
+router.get('/edit-profile/',editProfile)
 router.put('/edit-profile/:id',multerAvatar.single('fotoUsuario'),editUserValidations,updateProfile)
-router.get('/edit-password/:id', editPassword)
+router.get('/edit-password/', editPassword)
 router.put('/edit-password/:id',editPasswordValidations,updatePassword)
 
 

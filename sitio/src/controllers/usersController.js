@@ -3,6 +3,7 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 let db= require(path.join(__dirname,'../../database/models'));
 const bcrypt = require('bcryptjs');
+const { profile } = require('console');
 
 
 module.exports = {
@@ -47,23 +48,23 @@ module.exports = {
 
 processLogin: (req, res) => {
         let errores = validationResult(req);
-        const { correo, recordar} = req.body;
+        const { correoLogin, recordar} = req.body;
 
         if (errores.isEmpty()) {
             db.User.findOne({
                 where : {
-                  correo
+                  correo : correoLogin
                 }
             }).then(user => {
                 req.session.usuario = {
                     id : user.id,
                     nombre : user.nombre,
                     apellido : user.apellido,
-                    correo:user.correo,
+                    correo: user.correo,
                     role : user.role,
                     avatar : user.avatar
                 }
-                recordar && res.cookie('iocusForever',req.session.userLogin,{maxAge: 1000 * 60})
+                recordar && res.cookie('iocusForever',req.session.usuario,{maxAge: 1000 * 60})
                 return res.redirect('/')
             })
            
@@ -79,64 +80,76 @@ processLogin: (req, res) => {
     },
 
     profile: (req, res) => {
-        return res.render('users/profile', {
-            title: 'Mi perfil',
-            usuario: req.session.usuario
+        db.User.findByPk(req.session.usuario.id)
+        .then(usuario=>{
+
+            return res.render('users/profile', {
+                title: 'Mi perfil',
+                usuario,
+                
+            })
+            
         })
     },
     
     editProfile: (req,res) => {
-        let usuario = req.session.usuario
-        let user = dbUsuarios.find(user=>user.id === +req.params.id)
-        return res.render('users/edit-profile', {
-          title: 'Editar Mi Perfil',
-          usuario,
-          user
+        
+        db.User.findByPk(req.session.usuario.id)
+        .then(usuario =>{
+            return res.render('users/edit-profile', {
+              title: 'Editar mi Perfil',
+              usuario,
+              
+
         })
+        })
+        
     },
     
     
     updateProfile: (req,res) => {
         let errores = validationResult(req)
-        const {profileUserEditNombre,profileUserEditApellido,avatar} = req.body
-        
-        
-        
-        dbUsuarios.forEach(user =>{ 
-            if(user.id == +req.params.id) { 
-                if(errores.isEmpty()) {
-                    
-                    user.nombre =profileUserEditNombre,
-                    user.apellido = profileUserEditApellido,
-                    user.avatar = req.file ? req.file.filename : user.avatar,
-                    
-                    
-                    req.session.usuario = {
-                        id: user.id,
-                        nombre: profileUserEditNombre,
-                        apellido:profileUserEditApellido,
-                        avatar:(req.file) ? req.file.filename : user.avatar,
-                        correo: user.correo,
-                        role: user.role
-                    }
-        
-                    guardarJSON(dbUsuarios)
-                    res.cookie('iocusForever', req.session.usuario)
-                    return res.redirect('/users/profile')
-                
-                }else {
-                        return res.render('users/edit-profile', {
-                        title: "Editar mi Perfil",
-                        errores: errores.mapped(),
-                        usuario: req.session.usuario,
-                        user
-                    })
+        const {profileUserEditNombre,profileUserEditApellido,avatar} = req.body;
+    
+        if (errores.isEmpty()) {
+        db.User.update(
+            {
+                nombre : profileUserEditNombre.trim(),
+                apellido: profileUserEditApellido.trim(),
+                avatar : req.file ? req.file.filename : req.session.usuario.avatar
+            },
+            {
+                where : {
+                    id : req.params.id
+                },
+            })
+            
+            .then( result  => {
+                if (result){
+                req.session.usuario = {
+                    id: req.session.usuario.id,
+                    nombre:profileUserEditNombre,
+                    apellido:profileUserEditApellido,
+                    avatar : req.file ? req.file.filename : req.session.usuario.avatar,
+                    correo: req.session.usuario.correo,
+                    role: req.session.usuario.role
+                }
+            }
+           /*  res.cookie('iocusForever', req.session.usuario), */
+            res.redirect('/')
+        })
+        } else {
+            return res.render('users/edit-profile', {
+                title: "Login de Usuario",
+                errores: errores.mapped(),
+                usuario: req.session.usuario,
+                user,
+                role: user.role
+            })
+
+
         }
-    }
-
-
-       
-    })},
+    },
 
 
 
@@ -148,12 +161,15 @@ processLogin: (req, res) => {
     },
 
     editPassword: (req,res) => {
-        let usuario = req.session.usuario
-        let user = dbUsuarios.find(user=>user.id === +req.params.id)
-        return res.render('users/edit-password', {
-          title: 'Editar mi contraseña',
-          usuario,
-          user
+       
+         db.User.findByPk(req.session.usuario.id)
+        .then(usuario =>{
+            return res.render('users/edit-password', {
+              title: 'Editar mi contraseña',
+              usuario,
+               
+
+        })
         })
     },
 
@@ -164,36 +180,45 @@ processLogin: (req, res) => {
         let hashiada = bcrypt.hashSync(profileUserEditPassword,10)
         
         
-        dbUsuarios.forEach(user =>{ 
-            if(user.id == +req.params.id) {   
-                if(errores.isEmpty()) {
-                    user.password= profileUserEditPassword ? hashiada  : user.password ,
-                    
-                    req.session.usuario = {
-                        id: user.id,
-                        nombre: user.nombre,
-                        apellido:user.apellido,
-                        password:profileUserEditPassword ? hashiada  : user.password ,
-                        avatar:(req.file) ? req.file.filename : user.avatar,
-                        correo: user.correo,
-                        role: user.role
-                    }
+        if (errores.isEmpty()) {
+        db.User.update(
+            {
+               password: profileUserEditPassword ? hashiada  : req.session.usuario.password ,
+
+               avatar : req.file ? req.file.filename : req.session.usuario.avatar,
+            },
+            {
+                where : {
+                    id : req.params.id
         
-                    guardarJSON(dbUsuarios)
-                    res.cookie('iocusForever', req.session.usuario)
-                    return res.redirect('/users/profile')
-                
-                }else {
-                        return res.render('users/edit-password', {
-                        title: "Editar mi contraseña",
-                        errores: errores.mapped(),
-                        usuario: req.session.usuario,
-                        user
-                    })
-        }
+           
+                    }
+                }
+            )
+            .then( result  => {
+                if (result){
+                req.session.usuario = {
+                    id: req.session.usuario.id,
+                    nombre:req.session.usuario.nombre,
+                    apellido:req.session.usuario.apellido,
+                    avatar : req.file ? req.file.filename : req.session.usuario.avatar,
+                    correo: req.session.usuario.correo,
+                    role: req.session.usuario.role
+                }
+            }
+          
+            res.redirect('/')
+        })
+        
+    } else {
+        return res.render('users/edit-password', {
+            title: "Login de Usuario",
+            errores: errores.mapped(),
+            usuario: req.session.usuario.id,
+            user,
+            role: user.role
+        })
     }
+}
 
-
-       
-    })},
 }

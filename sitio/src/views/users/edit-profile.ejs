@@ -11,11 +11,11 @@
     <div class="container-sm">
       <div class="row mt-5 d-flex justify-content-center">
         <div class="col-sm-4 p-5 bg-light shadow rounded">
-          <form action="/users/edit-profile/<%= locals.usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div class="d-flex justify-content-center flex-column  align-items-center ">
+          <form action="/users/edit-profile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="d-flex justify-content-center flex-column  align-items-center">
               
-              <img src="/img/avatars/<%= locals.usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
-              <p class="text-danger mt-3" id="role-user-profile"><%= locals.usuario.role %></p>
+              <img src="/img/avatars/<%= usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
+              <p class="text-danger mt-3" id="role-user-profile"><%= usuario.role %></p>
               <input type="file" name="fotoUsuario" id="selectedFile" style="display: none;"  accept=".jpg, .png, .jpeg">
               <input class="mt-5 w-50 btn btn-primary "style="font-size: 1.5rem;" type="button" value="Seleccionar imágen" onclick="document.getElementById('selectedFile').click();"> 
               <a href="https://www.creartuavatar.com/" target="_blank"><input class="mt-5 w-150 px-5 btn btn-primary " style="font-size: 1.5rem;" type="button"  value="Crea tu avatar" ></a> 
@@ -23,18 +23,18 @@
           </div>
         <div class="col-sm-6 p-5 bg-light shadow rounded d-flex flex-column ">
           <label for="name-user-profile">Nombre de Usuario</label>
-          <input type="text" name="profileUserEditNombre" id="name-user-profile" maxlength="16" value="<%= locals.usuario.nombre%>">
+          <input type="text" name="profileUserEditNombre" id="name-user-profile" maxlength="16" value="<%= usuario.nombre%>">
           <small class="alert-danger">
             <%= locals.errores && locals.errores.profileUserEditNombre ? errores.profileUserEditNombre.msg : null %>
           </small>
           <label for="lastname-user-profile">Apellido de Usuario</label>
-          <input type="text" name="profileUserEditApellido" id="lastname-user-profile" value="<%= locals.usuario.apellido%>">
+          <input type="text" name="profileUserEditApellido" id="lastname-user-profile" value="<%= usuario.apellido%>">
           <small class="alert-danger">
             <%= locals.errores && locals.errores.profileUserEditApellido ? errores.profileUserEditApellido.msg : null %>
           </small>
           <label for="email-user-profile">Email de contacto</label>
-          <p class="text-danger" id="email-user-profile"><%= locals.usuario.correo  %></p>
-          <a href="/users/edit-password/<%= locals.usuario.id %>" class="btn btn-danger mt-3" style="font-size: 2rem;color: white;">Cambiar contraseña</a>
+          <p class="text-danger" id="email-user-profile"><%= usuario.correo  %></p>
+          <a href="/users/edit-password" class="btn btn-danger mt-3" style="font-size: 2rem;color: white;">Cambiar contraseña</a>
           <button type="submit" class="btn btn-primary mt-5" style="font-size: 2rem;" >Guardar cambios</button>
         </div>
         </form>

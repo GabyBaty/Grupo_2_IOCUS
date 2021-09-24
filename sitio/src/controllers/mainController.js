@@ -29,11 +29,10 @@ module.exports = {
      
         return res.render('index', { 
             title: 'IOCUS-INDEX',
-            Product,
             destacados,
             toThousand, 
             finalPrice,
-            usuario:req.session.usuario
+        
         }).catch(error => console.log(error))
       }
 

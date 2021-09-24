@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const db = require('../../database/models');
 
 module.exports = [
-    body('correo')
+    body('correoLogin')
     .custom((value,{req}) => {
         console.log(req.body)
         return db.User.findOne({
@@ -11,7 +11,7 @@ module.exports = [
                correo : value
             }
         }).then(user => {
-            if(!user || !bcrypt.compareSync(req.body.password,user.password)){
+            if(!user || !bcrypt.compareSync(req.body.passwordLogin,user.password)){
                 return Promise.reject()
             }
         }).catch( () => Promise.reject('Credenciales inválidas'))
