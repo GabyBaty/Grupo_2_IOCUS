@@ -52,39 +52,30 @@
                             <div class="row mt-5">
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category">
-                                    <option value="Seleccione una categoría">Seleccione una categoría</option>
-                                    <option value="Figuras de acción" <%= producto.category === "Figuras de acción" ? 'selected' : null %>>Figuras de acción</option>
-                                    <option value="Vehículos" <%= producto.category === "Vehículos" ? 'selected' : null %>>Vehículos</option>
-                                    <option value="Disfraces" <%= producto.category === "Disfraces" ? 'selected' : null %>>Disfraces</option>
-                                    <option value="Juegos de mesa" <%= producto.category === "Juegos de mesa" ? 'selected' : null %>>Juegos de mesa</option>
-                                  </select>
+                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category"  name="category" >
+                                  <% categorias.forEach(categoria => { %>
+                                      <option value="<%= categoria.id %>" <%= categoria.id == producto.categoryId ? 'selected' : null %> ><%= categoria.name %></option>
+                                     <% }) %>
+                                 </select>
                                   <label for="floatingSelect">Categoría</label>
                                 </div>                                
                               </div>
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
                                   <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand">
-                                    <option value="Seleccione una categoría">Seleccione una marca</option>
-                                    <option value="Disney" <%= producto.brand === "Disney" ? 'selected' : null %>>Disney</option>
-                                    <option value="Mattel" <%= producto.brand === "Mattel" ? 'selected' : null %>>Mattel</option>
-                                    <option value="Playmates" <%= producto.brand === "Playmates" ? 'selected' : null %>>Playmates</option>
-                                    <option value="Hasbro" <%= producto.brand === "Hasbro" ? 'selected' : null %>>Hasbro</option>
-                                    <option value="Lego" <%= producto.brand === "Lego" ? 'selected' : null %>>Lego</option>
-                                    <option value="Marvel" <%= producto.brand === "Marvel" ? 'selected' : null %>>Marvel</option>
-                                  </select>
+                                    <% marcas.forEach(marca=> { %>
+                                      <option value="<%= marca.id %>" <%= marca.id == producto.BrandId ? 'selected' : null %> ><%= marca.name %></option>
+                                     <% }) %>
+                                   </select>
                                   <label for="floatingSelect2">Marca</label>
                                 </div>
                               </div>
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
                                   <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age">
-                                    <option value="Seleccione una categoría">Seleccione un rango de edad</option>
-                                    <option value="De 0 a 24 meses" <%= producto.age === "De 0 a 24 meses" ? 'selected' : null %>>De 0 a 24 meses</option>
-                                    <option value="De 2 a 4 años" <%= producto.age === "De 2 a 4 años" ? 'selected' : null %>>De 2 a 4 años</option>
-                                    <option value="De 5 a 7 años" <%= producto.age === "De 5 a 7 años" ? 'selected' : null %>>De 5 a 7 años</option>
-                                    <option value="De 8 a 13 años" <%= producto.age === "De 8 a 13 años" ? 'selected' : null %>>De 8 a 13 años</option>
-                                    <option value="De 14 años y Mayores" <%= producto.age === "De 14 años y Mayores" ? 'selected' : null %>>De 14 años y Mayores</option>
+                                    <% edades.forEach(edad=> { %>
+                                      <option value="<%= edad.id %>" <%= edad.id == producto.AgeiD ? 'selected' : null %> ><%= edad.name %></option>
+                                     <% }) %>
                                   </select>
                                   <label for="floatingSelect3">Edades</label>
                                 </div>                     
@@ -108,7 +99,7 @@
                                 <input value="<%= producto.discount %>" class="w-100" type="text"  id="product-add-discount-input" maxlength="2" name="discount">
                               </div>
                               <div class="col-sm-2 mb-3 form-check form-switch d-flex align-items-center justify-content-evenly">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" <%= producto.destacado === "on" ? 'checked' : null %> name="destacado">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"  value="<%= producto.destacado === 1 ?  0  : 1 %>"   <%= producto.destacado  ? 'checked' : null%> name="destacado">
                                 <label class="form-check-label" for="flexSwitchCheckChecked">Producto Destacado</label>
                               </div>
                             </div>
