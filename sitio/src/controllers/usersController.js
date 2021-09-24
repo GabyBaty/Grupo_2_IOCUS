@@ -87,7 +87,7 @@ processLogin: (req, res) => {
     
     editProfile: (req,res) => {
         let usuario = req.session.usuario
-        let user = dbUsuarios.find(user=>user.id === +req.params.id)
+        
         return res.render('users/edit-profile', {
           title: 'Editar Mi Perfil',
           usuario,
