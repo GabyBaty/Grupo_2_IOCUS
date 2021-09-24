@@ -118,7 +118,7 @@ module.exports = {
         const {sku,name,category,brand,age,price,discount,stock,destacado,description} = req.body
    
       
-       let producto=   await db.Product.update(
+       let producto= await db.Product.update(
             {
                 ...req.body,
                 name : name.trim(),
@@ -130,32 +130,29 @@ module.exports = {
                     id : req.params.id
                 }
             },
-            ) 
-
-            let images = req.files;
-            if(images.length > 0){ 
-                await images.forEach(img => {
-                    db.Image.update({
-                        file: img.filename,
-                       
-                    },
-                    {
-                        where :{
-                            id : req.params.id
-                            }
-                     }
-                )
+        )  
+            console.log(req.files);
+            if(req.files.length > 0) {
+            let dbImages = await db.Image.findAll({where : {productId : req.params.id}})
+            
+            let resultado = [];
+            
+            for (let i = 1; i <= 3; i++) {
+                if(i > req.files.length){
+                    resultado.push(dbImages[i-1].file)
+                }else{
+                    resultado.push(req.files[i-1].filename)
                 }
-            )} else { 
-                await db.Image.update({
-                        file: "default-image.jpg",
-                        productId : producto.id
-                    })
-                    
-                }
-      
-        res.redirect('/')
-        .catch(error => console.log(error))
+            }
+            
+            await db.Image.update({file: resultado[0]}, {where: {id : dbImages[0].id}}) 
+            await db.Image.update({file: resultado[1]}, {where: {id : dbImages[1].id}})
+            await db.Image.update({file: resultado[2]}, {where: {id : dbImages[2].id}}) 
+            
+        }
+       
+        setTimeout(()=> {res.redirect('/')},2000)
+        
     },
 
     remove : (req,res) => {
