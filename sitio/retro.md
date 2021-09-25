@@ -49,6 +49,8 @@ Teniendo en cuenta el sprint 3 se analizaron con el equipo los métodos y proced
 
 Link al starfish: https://jamboard.google.com/d/1fxwpzjzMaWq_xVZSEbaO6gIHZziOqOa_46m5DxmmIWw/edit?usp=sharing
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Retrospectiva Sprint 4
 
@@ -80,3 +82,38 @@ Diagrama StarFish
   Realizar las reuniones de trabajo conjuntas.
   Mantener una buena comunicación.
   Reuniones constantes.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Retrospectiva Sprint 5
+
+Teniendo en cuenta el sprint 5; se analiza con el equipo los métodos y procedimientos que se emplearon durante el mismo:
+
+En este sprint, no presentamos inconvenientes en la creación de middlewares y autentificación debido a la buena comunicación entre los integrantes del equipo y con el profesor Eric.
+Continuamos con el trabajo en conjunto ya que confirmamos que logramos optimizar la resolución de problemas que van surgiendo durante el desarrollo.
+
+
+Diagrama StarFish
+
+*Hacer más:
+•	Optimizar tiempos de reuniones
+•	Organizarnos con los horarios de reuniones
+•	Pedir ayuda a los profes
+
+
+*Comenzar a hacer:
+•	Implementar mayor organizacion de las reuniones
+•	Repasar conceptos visto en clases antes de las reuniones
+
+*Dejar de hacer:
+•	Repartir las tareas de manera individual
+•	Tener reuniones muy tarde
+
+*Hacer menos:
+•	Reunirse todos los dias
+
+*Seguir haciendo:
+  • Realizar las reuniones de trabajo conjuntas.
+  • Mantener una buena comunicación.
+
