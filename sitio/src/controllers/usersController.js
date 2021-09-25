@@ -64,7 +64,13 @@ processLogin: (req, res) => {
                     role : user.role,
                     avatar : user.avatar
                 }
-                recordar && res.cookie('iocusForever',req.session.usuario,{maxAge: 1000 * 60})
+
+                if (recordar) {
+                    res.cookie('iocusForever', req.session.usuario, {
+                        maxAge: 1000 * 60 * 60 * 24,
+                    })
+                }
+                
                 return res.redirect('/')
             })
            
@@ -135,16 +141,15 @@ processLogin: (req, res) => {
                     role: req.session.usuario.role
                 }
             }
-           /*  res.cookie('iocusForever', req.session.usuario), */
+            /* res.cookie('iocusForever', req.session.usuario) */
             res.redirect('/')
         })
         } else {
             return res.render('users/edit-profile', {
                 title: "Login de Usuario",
                 errores: errores.mapped(),
-                usuario: req.session.usuario,
-                user,
-                role: user.role
+                usuario: req.session.usuario
+               
             })
 
 
@@ -166,7 +171,7 @@ processLogin: (req, res) => {
         .then(usuario =>{
             return res.render('users/edit-password', {
               title: 'Editar mi contraseña',
-              usuario,
+              usuario: req.session.usuario
                
 
         })

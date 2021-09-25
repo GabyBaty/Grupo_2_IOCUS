@@ -32,6 +32,7 @@ module.exports = {
             destacados,
             toThousand, 
             finalPrice,
+          
         
         }).catch(error => console.log(error))
       }
