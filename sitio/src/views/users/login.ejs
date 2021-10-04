@@ -9,13 +9,12 @@
       <main>
         <div class="main-container">
           <div class="main-form-login">
-            <form action="/users/login/logData" method="POST">
+            <form  action="/users/login/logData" method="POST">
               <h3>Mi cuenta</h3>
               <h6>Si ya estas registrado, ingresa aquí.</h6>
               <div><label for="correo">Email</label>
                 <input class="controls" type="email" name="correoLogin" id="correo" >
-                
-              </div>
+                </div>
               <div class="campo">
                 <label for="password">Contraseña</label>
                 <input class="controls" type="password" name="passwordLogin" id="password">
@@ -35,17 +34,20 @@
             </form>
           </div>
           <div class="main-form-register">
-            <form action="/users/login/regData" method="POST">
+            <form class="needs-validation" action="/users/login/regData" method="POST" novalidate>
               <h3>Registrate ahora</h3>
               <h6>Completa tu email y contraseña para registrarte.</h6>
               <div>
                 <label for="nombre">Nombre</label>
-                <input class="controls" type="text" name="nombre" id="nombre"
-                  value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
+                <input class="controls form-control" type="text" name="nombre" id="nombre"
+                  value="<%= locals.old && locals.old.nombre ? old.nombre : null%>" required>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.nombre ? errores.nombre.msg : null %>
                     %>
                 </small>
+                <div class="invalid-feedback">
+                  Nombre requerido
+                </div>
               </div>
               <div>
                 <label for="apellido">Apellido</label>
