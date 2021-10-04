@@ -143,26 +143,42 @@ module.exports = {
 
     
 
-            console.log(req.files);
+            
             if(req.files.length > 0) {
             let dbImages = await db.Image.findAll({where : {productId : req.params.id}})
             
-            let resultado = [];
+            let match_db_file = [];
             
-            for (let i = 1; i <= 3; i++) {
-                if(i > req.files.length){
-                    resultado.push(dbImages[i-1].file)
-                }else{
-                    resultado.push(req.files[i-1].filename)
+            for (let i = 0; i < dbImages.length; i++) {
+                
+                    /* resultado.push(dbImages[i-1].file) */
+                    /* resultado.push(false) */
+                
+                    match_db_file.push( {
+                        file: req.files[i].filename,
+                        pk: dbImages[i].id
+                        })
                 }
+            if (req.files.length > dbImages.length) {
+                let excess = []
+                for (let i = dbImages.length + 1; i < req.files.length; i++) {   //esto va desde el final de dbImages hasta el final de req.files.length
+                excess.push()
+                
             }
             
-            await db.Image.update({file: resultado[0]}, {where: {id : dbImages[0].id}}) 
+            match_db_file.map(e => {
+                db.Image.update({file:e.file}, {where:{id: e.pk}})
+                
+            }
+            )   /* console.log(e); */
+            }
+            /* await db.Image.update({file: resultado[0]}, {where: {id : dbImages[0].id}}) 
             await db.Image.update({file: resultado[1]}, {where: {id : dbImages[1].id}})
-            await db.Image.update({file: resultado[2]}, {where: {id : dbImages[2].id}}) 
+            await db.Image.update({file: resultado[2]}, {where: {id : dbImages[2].id}})  */
             
         }
-        setTimeout(()=> {res.redirect('/')},2000)
+        /* setTimeout(()=> {res.redirect('/')},2000) */
+        res.send('hola wachin')
     }catch (error) {
         console.log(error)
     }

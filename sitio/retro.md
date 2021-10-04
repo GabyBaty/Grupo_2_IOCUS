@@ -117,3 +117,32 @@ Diagrama StarFish
   • Realizar las reuniones de trabajo conjuntas.
   • Mantener una buena comunicación.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Retrospectiva Sprint 6
+
+Considerando el sprint 6; se analiza con el equipo los métodos y procedimientos que se emplearon durante el mismo:
+
+En este sprint, hubo inconvenientes durante la implementación de la base de datos y sequelize. Principalmente en el formulario de edición de producto,
+donde al momento de cargar nuevas imagenes no se almacenaban correctamente en la base de datos. Gracias a la ayuda del profesor, se pudo solucionar.
+
+Diagrama StarFish
+
+*Hacer más:
+•	Optimizar tiempos de reuniones.
+•	Organizarnos con los horarios de reuniones.
+•	Pedir ayuda a los profesores.
+
+*Comenzar a hacer:
+•	Repasar conceptos visto en clases antes de las reuniones
+
+*Dejar de hacer:
+•	Repartir las tareas de manera individual
+•	Reunirse todos los dias
+
+*Hacer menos:
+•	Tener reuniones muy tarde.
+
+*Seguir haciendo:
+  • Realizar las reuniones de trabajo conjuntas.
+  • Mantener una buena comunicación.
