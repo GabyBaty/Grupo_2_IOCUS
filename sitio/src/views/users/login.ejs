@@ -56,50 +56,60 @@
               </div>
               <div>
                 <label for="apellido">Apellido</label>
-                <input class="form-control controls" type="text" name="apellido" id="apellido"
+                <input class="controls form-control" type="text" name="apellido" id="apellido"
                   value="<%= locals.old && locals.old.apellido ? old.apellido : null%>" required>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.apellido ? errores.apellido.msg : null %>
-                    %>
+                   
                 </small>
                 <div class="invalid-feedback">
-                  El apellido es requerido
+                  Apellido requerido
                 </div>
               </div>
               <div>
                 <label for="correo">Email</label>
-                <input class="controls" type="email" name="correo" id="correo"
-                  value="<%= locals.old && locals.old.correo ? old.correo : null%>">
+                <input class="controls form-control" type="email" name="correo" id="correo"
+                  value="<%= locals.old && locals.old.correo ? old.correo : null%>" required>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.correo ? errores.correo.msg : null %>
-                    %>
+                 
                 </small>
+                <div class="invalid-feedback">
+                  Email requerido
+                </div>
               </div>
               <label for="password">Contraseña</label>
-              <input class="controls" type="password" name="password" id="password">
+              <input class="controls form-control" type="password" name="password" id="password" required>
               <small class="alert-danger ">
                 <%= locals.errores && locals.errores.password ? errores.password.msg : null %>
-                  %>
+              
               </small>
+              <div class="invalid-feedback">
+                Contraseña requerido
+              </div>
               <label>Repita contraseña</label>
               <input class="controls" type="password" name="password2" id="contraseña" placeholder="">
               <div>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.password ? errores.password.msg : null %>
-                    %>
+                
                 </small> <br>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.password2 ? errores.password2.msg : null %>
-                    %>
+        
                 </small>
               </div>
-              <p><input name="acepta" class="checkbox" type="checkbox"><a href="#"> Acepto los Terminos y
-                  Condiciones.</a></p>
-              <small class="alert-danger ">
+            <div class="form-check">
+              <input name="acepta" class="form-check-input" id="invalidCheck" type="checkbox" required><label class="form-check-label" for="invalidCheck"> Acepto los Terminos y
+                  Condiciones.</label>
+              <small class="alert-danger">
                 <%= locals.errores && locals.errores.acepta ? errores.acepta.msg : null %>
-                  %>
               </small>
-              <input  class="main-form-register-button" type="submit"/>
+              <div class="invalid-feedback">
+                Terminos y Condiciones requeridos
+              </div>
+            </div>
+              <input  class="main-form-register-button" value="Registrarse" type="submit"/>
             </form>
           </div>
         </div>
