@@ -9,27 +9,32 @@
       <main>
         <div class="main-container">
           <div class="main-form-login">
-            <form  action="/users/login/logData" method="POST">
+            <form  action="/users/login/logData" method="POST" id="form">
               <h3>Mi cuenta</h3>
               <h6>Si ya estas registrado, ingresa aquí.</h6>
               <div><label for="correo">Email</label>
-                <input class="controls" type="email" name="correoLogin" id="correo" >
+                <input class="controls form-control" type="email" name="correoLogin" id="correo" >
+               <p class="span"><span id="errorEmail" class="text-danger"></span></p>
                 </div>
               <div class="campo">
-                <label for="password">Contraseña</label>
-                <input class="controls" type="password" name="passwordLogin" id="password">
-                <span><i class="fas fa-eye show" id="eyeToggle"></i></span>
+                <label>Contraseña</label>
+                <div class="d-flex input-group-lg">
+                  <input class="controls form-control" type="password" name="passwordLogin" id="password">
+                  <span class="input-group-text ojito"><i class="fas fa-eye show" id="eyeToggle"></i></span>
+                </div>
+                <p class="span"><span id= errorPass class="text-danger"></span></p>
               </div>
                 
               <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-              <div class="d-flex justify-content-end">
-                <div class="mb-3 form-check">
+              
+                <div class="mb-3 form-check d-flex justify-content-end">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="recordar" value="1" >
                     <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                   </div>
-            </div>
-              <button  class="main-form-register-button" type="submit" >Ingresar</button>
+           
+              <button  class="main-form-register-button" type="submit"  >Ingresar</button>
               <span class="alert-danger"><%= locals.errores && errores.correoLogin ? errores.correoLogin.msg : null%> </span>
+              <p class="span"><span id="msgError" class="text-danger"></span></p>
 
             </form>
           </div>
@@ -46,52 +51,65 @@
                     %>
                 </small>
                 <div class="invalid-feedback">
-                  Nombre requerido
+                  El nombre es requerido
                 </div>
               </div>
               <div>
                 <label for="apellido">Apellido</label>
-                <input class="controls" type="text" name="apellido" id="apellido"
-                  value="<%= locals.old && locals.old.apellido ? old.apellido : null%>">
+                <input class="controls form-control" type="text" name="apellido" id="apellido"
+                  value="<%= locals.old && locals.old.apellido ? old.apellido : null%>" required>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.apellido ? errores.apellido.msg : null %>
-                    %>
+                   
                 </small>
+                <div class="invalid-feedback">
+                  Apellido requerido
+                </div>
               </div>
               <div>
                 <label for="correo">Email</label>
-                <input class="controls" type="email" name="correo" id="correo"
-                  value="<%= locals.old && locals.old.correo ? old.correo : null%>">
+                <input class="controls form-control" type="email" name="correo" id="correo"
+                  value="<%= locals.old && locals.old.correo ? old.correo : null%>" required>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.correo ? errores.correo.msg : null %>
-                    %>
+                 
                 </small>
+                <div class="invalid-feedback">
+                  Email requerido
+                </div>
               </div>
               <label for="password">Contraseña</label>
-              <input class="controls" type="password" name="password" id="password">
+              <input class="controls form-control" type="password" name="password" id="password" required>
               <small class="alert-danger ">
                 <%= locals.errores && locals.errores.password ? errores.password.msg : null %>
-                  %>
+              
               </small>
+              <div class="invalid-feedback">
+                Contraseña requerido
+              </div>
               <label>Repita contraseña</label>
               <input class="controls" type="password" name="password2" id="contraseña" placeholder="">
               <div>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.password ? errores.password.msg : null %>
-                    %>
+                
                 </small> <br>
                 <small class="alert-danger ">
                   <%= locals.errores && locals.errores.password2 ? errores.password2.msg : null %>
-                    %>
+        
                 </small>
               </div>
-              <p><input name="acepta" class="checkbox" type="checkbox"><a href="#"> Acepto los Terminos y
-                  Condiciones.</a></p>
-              <small class="alert-danger ">
+            <div class="form-check">
+              <input name="acepta" class="form-check-input" id="invalidCheck" type="checkbox" required><label class="form-check-label" for="invalidCheck"> Acepto los Terminos y
+                  Condiciones.</label>
+              <small class="alert-danger">
                 <%= locals.errores && locals.errores.acepta ? errores.acepta.msg : null %>
-                  %>
               </small>
-              <input  class="main-form-register-button" type="submit"/>
+              <div class="invalid-feedback">
+                Terminos y Condiciones requeridos
+              </div>
+            </div>
+              <input  class="main-form-register-button" value="Registrarse" type="submit"/>
             </form>
           </div>
         </div>
@@ -102,7 +120,9 @@
         <!-- Footer -->
 
         <!-- MAIN SCRIPTS-->
+        <script src="/js/loginValidation.js"></script>
         <%- include('../partials/scripts.ejs')%>
+     
   </body>
 
   </html>

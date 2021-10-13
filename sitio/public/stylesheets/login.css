@@ -2,7 +2,7 @@
 body.login .main-container{
   display: flex;
   flex-flow: row wrap;
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
@@ -97,7 +97,7 @@ body.login .main-container h6 {
   height: 1.8rem;
   
 }
-.campo span {
+/* .campo span {
   position: relative;
   color: black;
 }
@@ -107,7 +107,7 @@ body.login .main-container h6 {
   top: 0;
   cursor: pointer;
   padding: 2px 10px;
-}
+} */
 @media (min-width: 1280px) {
   .main-form-login {
     width: 30%;
@@ -115,19 +115,23 @@ body.login .main-container h6 {
 .main-form-register {
   width: 30%;
 }
-.campo {
+/* .campo {
   position: relative;
 }
+ */
 
-label {
+
+}
+
+.main-form-login > form {
   width: 100%;
 }
 
-input {
-  width: 100%;
-  padding: 7px;
-}
+.main-form-login .ojito{
+  background: none;
+  border:0 ;
+ }
 
-
-}
-
+ .main-form-login .ojito i{
+   padding-bottom: 1.7rem;
+ }
