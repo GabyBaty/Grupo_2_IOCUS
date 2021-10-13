@@ -23,7 +23,7 @@
     "morgan": "~1.9.1",
     "multer": "^1.4.3",
     "mysql2": "^2.3.0",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.13",
     "sequelize": "^6.6.5"
   }
 }
