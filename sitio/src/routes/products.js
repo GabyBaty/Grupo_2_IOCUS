@@ -14,7 +14,7 @@ const adminUserCheck=require('../middleware/adminUserCheck')
 router.get('/detail/:id', detail);
 router.get('/cart/', cart);
 router.get('/add',adminUserCheck, add);
-router.post('/add',uploadFile.any('imagesProductAdd'), addProductValidator ,save);
+router.post('/add',uploadFile.any('imagesProductAdd'),addProductValidator,save);
 
 
 

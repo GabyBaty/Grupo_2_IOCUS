@@ -1,4 +1,4 @@
-let productos = require("../data/products_db");
+let productos = require("../../database/models/product");
 const toThousand = require("../utils/toThousand");
 const finalPrice = require("../utils/finalPrice");
 const { validationResult } = require("express-validator");
@@ -56,11 +56,11 @@ module.exports = {
         try {
             let errores = validationResult(req);
 
-            if (!errores.isEmpty()) {
+            if (errores.isEmpty()) {
                 res.render("products/add", {
-                    title: "carga de productos",
+                    title: "Agregar un Producto",
                     errores: errores.mapped(),
-                    old: req.body,
+                    productos
                 });
             }
 
@@ -88,8 +88,8 @@ module.exports = {
                     productId: producto.id,
                 });
             }
-            //console.log("aaaa",images);
-            res.redirect("/");
+            
+            res.redirect('/');
         } catch (error) {
             console.log(error);
         }
@@ -177,8 +177,8 @@ module.exports = {
             await db.Image.update({file: resultado[2]}, {where: {id : dbImages[2].id}})  */
             
         }
-        /* setTimeout(()=> {res.redirect('/')},2000) */
-        res.send('hola wachin')
+        setTimeout(()=> {res.redirect('/')},1000)
+        
     }catch (error) {
         console.log(error)
     }
@@ -192,7 +192,7 @@ module.exports = {
                 id: req.params.id,
             },
         })
-            .then(() => res.redirect("/"))
+            .then(() => res.redirect("/products/filter"))
             .catch((error) => console.log(error));
     },
 

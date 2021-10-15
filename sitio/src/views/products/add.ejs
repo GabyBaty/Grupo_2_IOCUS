@@ -9,52 +9,53 @@
 
                     <main class="products-editor-page">
                         <div class="container mt-5 p-5">
-                          <form action="/products/add" method="POST" enctype="multipart/form-data">
+                          <form action="/products/add" method="POST" enctype="multipart/form-data" class="needs-validation" id="formAddProduct" novalidate>
                             <div class="row">
                               <h1 class="display-6">Agregar un producto</h1>
                                   <div class="mb-3">
-                                    <input type="text" class="form-control" id="formInputProductName"  maxlength="40" name="name">
+                                    <label for="formInputProductName">Ingrese el nombre del producto nuevo</label>
+                                    <input type="text" class="form-control" id="formInputProductName"  maxlength="40" name="name" required>
+                                    <span class="alert-danger"><%= locals.errores && errores.name ? errores.name.msg : null%> </span>
+                                    <div class="invalid-feedback">
+                                      El campo no puede estar vacío.
+                                    </div>
                                   </div>
                                   <div class="col-md-10 mt-4">
                                     <label for="formFileMultiple" class="form-label">Seleccione 3 imagenes para subir</label>
-                                    <input class="form-control" type="file" name="imagesProductAdd" value="save" id="formFileMultiple" multiple/>
+                                    <input class="form-control" type="file" name="imagesProductAdd" value="save" id="formFileMultiple" multiple required/>
+                                    <span class="alert-danger"><%= locals.errores && errores.imagesProductAdd ? errores.imagesProductAdd.msg : null%> </span>
+                                    <div class="invalid-feedback">
+                                      El campo no puede estar vacío.
+                                    </div>
                                   </div>
                                   <div class="mb-3 mt-5">
                                     <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
-                                    <textarea rows="6"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="400" name="description"></textarea>
+                                    <textarea rows="6"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="400" name="description" required></textarea>
+                                    <span class="alert-danger"><%= locals.errores && errores.description ? errores.description.msg : null%> </span>
+                                    <div class="invalid-feedback">
+                                      El campo no puede estar vacío.
+                                    </div>
                                   </div>
-                         <!--    </div>
-                            <div class="row mt-5 d-flex justify-content-center">
-                              <div class="col-sm-3">
-                                
-                                <label class="bg-light w-100 border" for="formInputProductDetail1">Detalle 1</label>
-                                <textarea rows="3"class="form-control" id="formInputProductDetail1" aria-label="textarea" maxlength="160" name="detail1"></textarea>
-                              </div>
-                              <div class="col-sm-3">
-                                <label class="bg-light w-100 border" for="formInputProductDetail2">Detalle 2</label>
-                                <textarea rows="3"class="form-control" id="formInputProductDetail2" aria-label="textarea" maxlength="160" name="detail2"></textarea>
-                              </div>
-                              <div class="col-sm-3">
-                                <label class="bg-light w-100 border" for="formInputProductDetail3">Detalle 3</label>
-                                <textarea rows="3"class="form-control" id="formInputProductDetail3" aria-label="textarea" maxlength="160" name="detail3"></textarea>
-                              </div>
-                            </div> -->
                             <div class="row mt-5">
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category">
-                                    <option value="Seleccione una categoría" hidden>Seleccione una categoria</option>
+                                  <select class="form-select" id="floatingSelect" aria-label="Floating label select category" name="category" required>
+                                    <option value="" disabled selected hidden>Seleccione una categoria</option>
                                       <option value="1" >Disfraces</option>
                                       <option value="2" >Figuras de Acción</option>
                                       <option value="3" >Juegos de Mesa</option>
                                       <option value="4" >Vehiculos</option>
                                  </select>
                                   <label for="floatingSelect">Categoría</label>
-                                </div>                                
+                                  <span class="alert-danger"><%= locals.errores && errores.category? errores.category.msg : null%> </span>
+                                  <div class="invalid-feedback">
+                                    Seleccione una catagoría.
+                                  </div>
+                                </div>                               
                               </div>
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand">
+                                  <select class="form-select" id="floatingSelect2" aria-label="Floating label select brand" name="brand" required>
                                     <option value="" hidden>Seleccione una marca</option>
                                     <option value="1"  >Hasbro</option>
                                     <option value="2" >Marvell</option>
@@ -64,11 +65,15 @@
                                     <option value="6">Playmates</option>
                                   </select>
                                   <label for="floatingSelect2">Marca</label>
+                                  <span class="alert-danger"><%= locals.errores && errores.brand ? errores.brand.msg : null%> </span>
+                                  <div class="invalid-feedback">
+                                    Seleccione una marca.
+                                  </div>
                                 </div>
                               </div>
                               <div class="col-sm-4 mb-3">
                                 <div class="form-floating">
-                                  <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age">
+                                  <select class="form-select" id="floatingSelect3" aria-label="Floating label select age" name="age" required>
                                     <option value="" hidden>Seleccione un rango de edad</option>
                                     <option value="1">De 0 a 24 meses</option>
                                     <option value="2">De 2 a 4 años</option>
@@ -77,33 +82,53 @@
                                     <option value="5" >De 14 años y Mayores</option>
                                   </select>
                                   <label for="floatingSelect3">Edades</label>
+                                  <span class="alert-danger"><%= locals.errores && errores.age ? errores.age.msg : null%> </span>
+                                  <div class="invalid-feedback">
+                                    Seleccione un rango de edad.
+                                  </div>
                                 </div>                     
                               </div>
                             </div>
                             <div class="row d-flex justify-content-center">
                               <div class="col-sm-2 mb-3">
                                 <label for="product-add-SKU-input" class="bg-light border border-secondary w-100 text-center">SKU</label>
-                                <input  class="w-100" type="text"  id="product-add-SKU-input" maxlength="9" name="sku">
+                                <input  class="w-100 form-control" type="text"  id="product-add-SKU-input" maxlength="9" name="sku" required>
+                                <span class="alert-danger"><%= locals.errores && errores.sku ? errores.sku.msg : null%> </span>
+                                <div class="invalid-feedback">
+                                  El campo no puede estar vacío
+                                </div>
                               </div>
                               <div class="col-sm-2 mb-3">
                                 <label for="product-add-price-input" class="bg-light border border-secondary w-100 text-center">Precio</label>
-                                <input  class="w-100" type="text"  id="product-add-price-input" maxlength="9" name="price">
+                                <input  class="w-100 form-control" type="text"  id="product-add-price-input" maxlength="9" name="price" required>
+                                <span class="alert-danger"><%= locals.errores && errores.price ? errores.price.msg : null%> </span>
+                                <div class="invalid-feedback">
+                                  El campo no puede estar vacío
+                                </div>
                               </div>
                               <div class="col-sm-2 mb-3">
                                 <label for="product-add-stock-input" class="bg-light border border-secondary w-100 text-center">Stock</label>
-                                <input  class="w-100" type="text"  id="product-add-stock-input" maxlength="9" name="stock">
+                                <input  class="w-100 form-control" type="text"  id="product-add-stock-input" maxlength="9" name="stock" required>
+                                <span class="alert-danger"><%= locals.errores && errores.stock ? errores.stock.msg : null%> </span>
+                                <div class="invalid-feedback">
+                                  El campo no puede estar vacío
+                                </div>
                               </div>
                               <div class="col-sm-2 mb-3">
                                 <label for="product-add-discount-input" class="bg-light border border-secondary w-100 text-center">Descuento</label>
-                                <input  class="w-100" type="text"  id="product-add-discount-input" maxlength="2" name="discount">
+                                <input  class="w-100 form-control" type="text"  id="product-add-discount-input" maxlength="2" name="discount" required>
+                                <span class="alert-danger"><%= locals.errores && errores.discount ? errores.discount.msg : null%> </span>
+                                <div class="invalid-feedback">
+                                  El campo no puede estar vacío
+                                </div>
                               </div>
                               <div class="col-sm-2 mb-3 form-check form-switch d-flex align-items-center justify-content-evenly">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="destacado" value="<%= productos.destacado === 1 ?  0  : 1 %>" >
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="destacado" value="<%= productos.destacado === 1 ?  0  : 1 %>">
                                 <label class="form-check-label" for="flexSwitchCheckChecked">Destacado</label>
                               </div>
                             </div>
                     <div class="row mt-5 justify-content-evenly">
-                      <button type="submit" class="btn-primary mb-3 col-sm-3">Añadir producto</button>
+                      <button type="submit" class="btn-primary mb-3 col-sm-3 submit">Añadir producto</button>
                       <button type="reset" class="btn-danger mb-3 col-sm-3">Vaciar campos</button>
                     </div>
                   </form>
