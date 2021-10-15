@@ -219,9 +219,8 @@ processLogin: (req, res) => {
         return res.render('users/edit-password', {
             title: "Login de Usuario",
             errores: errores.mapped(),
-            usuario: req.session.usuario.id,
-            user,
-            role: user.role
+            usuario: req.session.usuario
+            
         })
     }
 }
