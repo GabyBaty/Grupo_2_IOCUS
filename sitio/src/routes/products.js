@@ -20,7 +20,7 @@ router.post('/add',uploadFile.any('imagesProductAdd'),addProductValidator,save);
 
 /* EDITAR UN PRODUCTO Y GUARDAR LOS CAMBIOS */
 router.get('/edit/:id',adminUserCheck, edit);
-router.put('/edit/:id',uploadFile.any('imagesProductAdd'),update);
+router.put('/edit/:id',uploadFile.any('imagesProductAdd',3),update);
 router.delete('/delete/:id',adminUserCheck, remove);
 router.get('/filter',filter);
 

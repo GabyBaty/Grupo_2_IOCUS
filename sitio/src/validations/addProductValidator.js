@@ -1,4 +1,5 @@
 const {check,body} = require('express-validator');
+const path = require('path');
 
 
 
@@ -16,16 +17,22 @@ module.exports = [
     }).withMessage('La descripción debe tener como máximo 450 caracteres'),
 
     
-    body('imagesProductAdd')
-    /* .notEmpty().withMessage('Debe seleccionar 3 imagenes') */
-    .custom((value,{req}) => {
-        if(req.files.length !== 1) {
-            return true
-        } else {
-            return false
-        }
-    }).withMessage('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-    ,
+    body("imagesProductAdd").custom((value,{req})=>{
+      let extensions = [".jpg",".jpeg",".gif",".png",".webp"]
+        if(req.files.length <3 || req.files.length >3 ){
+            throw new Error('solo puede cargar 3 imagenes');
+          
+      }else{
+          for (let i=0;i< req.files.length; i++) {
+              if(!extensions.includes(path.extname(req.files[i].originalname))){
+                  throw new Error(`las extensiones permitidas son ${extensions.join(", ")}`);
+              }
+          }
+
+          return true
+      }
+  }),
+
 
 
     check('category')

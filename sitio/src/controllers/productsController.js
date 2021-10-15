@@ -4,6 +4,7 @@ const finalPrice = require("../utils/finalPrice");
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
+const { dirname } = require("path");
 let db = require(path.join(__dirname, "../../database/models"));
 
 module.exports = {
@@ -55,13 +56,21 @@ module.exports = {
     save: async (req, res) => {
         try {
             let errores = validationResult(req);
-
-            if (errores.isEmpty()) {
+              
+            if (!errores.isEmpty()) {
+                let images = req.files;
+                images.forEach(img => {
+                    if(fs.existsSync(path.join(__dirname, '../../public/img/detalle/' + img.filename))){
+                        fs.unlinkSync(path.join(__dirname, '../../public/img/detalle/' + img.filename))
+                    }
+                });
                 res.render("products/add", {
                     title: "Agregar un Producto",
                     errores: errores.mapped(),
                     productos
+                    
                 });
+
             }
 
             const {name,description} = req.body

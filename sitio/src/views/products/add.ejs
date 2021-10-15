@@ -22,7 +22,7 @@
                                   </div>
                                   <div class="col-md-10 mt-4">
                                     <label for="formFileMultiple" class="form-label">Seleccione 3 imagenes para subir</label>
-                                    <input class="form-control" type="file" name="imagesProductAdd" value="save" id="formFileMultiple" multiple required/>
+                                    <input class="form-control" type="file" name="imagesProductAdd" value="save" id="formFileMultiple" multiple required  accept=".jpg, .png, .jpeg"  max="3" maxfile="3"/>
                                     <span class="alert-danger"><%= locals.errores && errores.imagesProductAdd ? errores.imagesProductAdd.msg : null%> </span>
                                     <div class="invalid-feedback">
                                       El campo no puede estar vacío.
