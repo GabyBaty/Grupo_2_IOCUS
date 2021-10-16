@@ -58,3 +58,9 @@ Se implementan reuniones diarias donde se trabaja en conjunto con la resolución
 22/09 Se realiza Reunión para Comenzar con CRUD de productos y usuarios. Se Realiza reunión para solucionar UpDate Imágenes
 23/09 Se Realiza reunión para solucionar UpDate Imágenes
 24/09 Se realiza Wekly, en la cual se expone el trabajo realizado por los integrantes en la semana, se prepara la entrega del Sprint
+
+
+###WEEKLY Sprint 7-  
+Semana 1: A saber: 01/10-08/10 validaciones de Back-End. 
+Se implementan reuniones diarias donde se trabaja en conjunto con la resolución de problemas 
+Semana 2:  Se implementan reuniones diarias donde se trabaja en conjunto con la resolución de problemas 11/10-15/10 Validaciones del Front-End
