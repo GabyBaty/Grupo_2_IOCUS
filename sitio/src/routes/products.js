@@ -7,7 +7,8 @@ const {detail, cart, add, edit, filter, update, save, remove} = require('../cont
 
 const addProductValidator = require('../validations/addProductValidator')
 
-const adminUserCheck=require('../middleware/adminUserCheck')
+const adminUserCheck=require('../middleware/adminUserCheck');
+const editProductValidator = require('../validations/editProductValidator');
 
 
 /* GET products page. */
@@ -20,7 +21,7 @@ router.post('/add',uploadFile.any('imagesProductAdd'),addProductValidator,save);
 
 /* EDITAR UN PRODUCTO Y GUARDAR LOS CAMBIOS */
 router.get('/edit/:id',adminUserCheck, edit);
-router.put('/edit/:id',uploadFile.any('imagesProductAdd',3),update);
+router.put('/edit/:id',uploadFile.any('imagesProductAdd',3),editProductValidator,update);
 router.delete('/delete/:id',adminUserCheck, remove);
 router.get('/filter',filter);
 

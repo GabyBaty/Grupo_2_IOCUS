@@ -33,12 +33,12 @@ module.exports = {
             toThousand, 
             finalPrice,
           
+        })
         
-        }).catch(error => console.log(error))
-      }
+        }
+        
 
-
-      )
+      ).catch(error => console.log(error))
       
     },
     contacto: (req,res) => {

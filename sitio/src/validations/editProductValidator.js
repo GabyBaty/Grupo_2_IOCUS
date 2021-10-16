@@ -33,8 +33,6 @@ module.exports = [
       }
   }),
 
-
-
     check('category')
     .notEmpty().withMessage('Seleccione una categoría'),
 

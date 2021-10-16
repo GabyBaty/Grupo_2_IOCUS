@@ -98,7 +98,8 @@ module.exports = {
                 });
             }
             
-            res.redirect('/');
+            
+            res.redirect('/')
         } catch (error) {
             console.log(error);
         }
@@ -129,10 +130,44 @@ module.exports = {
       
     },
     update: async (req,res) => {
-        const {name,description} = req.body
         
-      try{
-        let producto = await db.Product.update(
+        const {name,description} = req.body
+        try{
+          let errores = validationResult(req);
+          
+
+        if (!errores.isEmpty()) {
+            let images = req.files;
+            images.forEach(img => {
+                if(fs.existsSync(path.join(__dirname, '../../public/img/detalle/' + img.filename))){
+                    fs.unlinkSync(path.join(__dirname, '../../public/img/detalle/' + img.filename))
+                }
+            });
+            let producto = await db.Product.findByPk(req.params.id,{
+                include : [
+                    {association : 'images'},
+                    {association : 'category'},
+                    {association : 'age'},
+                    {association : 'brand'}
+                ]
+            });
+            let categorias = await db.Category.findAll();
+            let marcas = await db.Brand.findAll();
+            let edades = await db.Age.findAll();
+            
+            res.render('products/edit',{
+                    title:'Edición de producto',
+                    errores: errores.mapped(),
+                    categorias,
+                    marcas,
+                    edades,
+                    producto
+                })
+            
+
+        }
+
+           db.Product.update(
             {
                 ...req.body,
                 name : name.trim(),
@@ -160,9 +195,7 @@ module.exports = {
             
             for (let i = 0; i < dbImages.length; i++) {
                 
-                    /* resultado.push(dbImages[i-1].file) */
-                    /* resultado.push(false) */
-                
+                                   
                     match_db_file.push( {
                         file: req.files[i].filename,
                         pk: dbImages[i].id
@@ -179,12 +212,9 @@ module.exports = {
                 db.Image.update({file:e.file}, {where:{id: e.pk}})
                 
             }
-            )   /* console.log(e); */
+            )   
             }
-            /* await db.Image.update({file: resultado[0]}, {where: {id : dbImages[0].id}}) 
-            await db.Image.update({file: resultado[1]}, {where: {id : dbImages[1].id}})
-            await db.Image.update({file: resultado[2]}, {where: {id : dbImages[2].id}})  */
-            
+                       
         }
         setTimeout(()=> {res.redirect('/')},1000)
         
