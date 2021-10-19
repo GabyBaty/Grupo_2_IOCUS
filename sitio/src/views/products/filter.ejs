@@ -2,7 +2,7 @@
 
 <body class="filtro">
  <%- include('../partials/header.ejs')%>
-  <main >
+  <main>
     <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
       class="fas fa-arrow-up"></i></button>
 
@@ -148,6 +148,7 @@
         
        <!--  PRODUCTOS INDIVIDUALES -->
       <div class="flex Produtos-destacados ">
+        <%if(productos.length > 0) {%>
         <% productos.forEach(producto => { %>
           <div class="col-12 col-sm-6 col-lg-4">
           <div class="producto">
@@ -177,6 +178,11 @@
           <!-- .producto -->
         </div>
         <% }) %>
+        <% } else { %>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <h2 class="warning">No hay productos que coincidan con esa búsqueda</h2>
+          </div>
+          <% } %> 
       
          
       </div>

@@ -1,4 +1,5 @@
 const {check,body} = require('express-validator');
+const { readFileSync } = require('fs');
 const path = require('path');
 
 
@@ -18,20 +19,27 @@ module.exports = [
 
     
     body("imagesProductAdd").custom((value,{req})=>{
-      let extensions = [".jpg",".jpeg",".gif",".png",".webp"]
-        if(req.files.length <3 || req.files.length >3 ){
-            throw new Error('Solo puede cargar 3 imagenes');
-          
-      }else{
-          for (let i=0;i< req.files.length; i++) {
-              if(!extensions.includes(path.extname(req.files[i].originalname))){
-                  throw new Error(`Las extensiones permitidas son ${extensions.join(", ")}`);
-              }
-          }
-
-          return true
+      let extensions = [".jpg",".jpeg",".png"]
+      
+      switch (req.files.length) {                                                       // Si no hay files no hagas nada, si hay 3 verifica extensiones, otro caso "solo se pueden cargar 3 imagenes" 
+          case 0:
+              return true
+              
+          case 3: 
+            for (let i=0;i< req.files.length; i++) 
+                {
+                    if(!extensions.includes(path.extname(req.files[i].originalname)))
+                    {
+                        throw new Error(`Las extensiones permitidas son ${extensions.join(", ")}`);
+                    }
+                }
+                return true
+          default: 
+                throw new Error('Solo debe cargar excatamente 3 imagenes');
+              
       }
-  }),
+      
+      }),
 
     check('category')
     .notEmpty().withMessage('Seleccione una categoría'),

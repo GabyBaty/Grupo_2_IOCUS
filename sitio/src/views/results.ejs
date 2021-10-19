@@ -6,7 +6,7 @@
   <main>
     <section class="container-sm">
       <div class="row">
-        <%if(resultados.length > 0) {%>
+        
           <% resultados.forEach(producto => { %>
             <div class="col-12 col-sm-6 col-lg-4">
             <div class="producto">
@@ -36,11 +36,7 @@
             <!-- .producto -->
           </div>
           <% }) %>
-          <% } else { %>
-            <div class="col-12 col-sm-6 col-lg-4">
-              <h2 class="warning">No hay productos que coincidan con esa búsqueda</h2>
-            </div>
-            <% } %> 
+          
         </div>
     </section>
   </main>
