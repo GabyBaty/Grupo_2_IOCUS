@@ -5,6 +5,7 @@ const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
 const { dirname } = require("path");
+const { IncomingMessage } = require("http");
 let db = require(path.join(__dirname, "../../database/models"));
 
 module.exports = {
@@ -99,7 +100,7 @@ module.exports = {
             }
             
             
-            res.redirect('/')
+            setTimeout(()=> {res.redirect('/')},1000)
         } catch (error) {
             console.log(error);
         }
@@ -184,38 +185,25 @@ module.exports = {
                 }
             },
         )  
-
-    
-
-            
-            if(req.files.length > 0) {
-            let dbImages = await db.Image.findAll({where : {productId : req.params.id}})
-            
-            let match_db_file = [];
-            
-            for (let i = 0; i < dbImages.length; i++) {
+             
+        if(req.files.length > 0) {
+                let uploadImages = req.files.map(img => img.filename)
                 
-                                   
-                    match_db_file.push( {
-                        file: req.files[i].filename,
-                        pk: dbImages[i].id
-                        })
-                }
-            if (req.files.length > dbImages.length) {
-                let excess = []
-                for (let i = dbImages.length + 1; i < req.files.length; i++) {   //esto va desde el final de dbImages hasta el final de req.files.length
-                excess.push()
+                 for (let i = 0; i < uploadImages.length; i++) {
+                      
+                    db.Image.update({
+                        file: uploadImages[i],
+                        
+                    },
+                    {
+                        where: {
+                            productId: req.params.id
+                        }
+                    })
+                     
+                 }              
                 
             }
-            
-            match_db_file.map(e => {
-                db.Image.update({file:e.file}, {where:{id: e.pk}})
-                
-            }
-            )   
-            }
-                       
-        }
         setTimeout(()=> {res.redirect('/')},1000)
         
     }catch (error) {

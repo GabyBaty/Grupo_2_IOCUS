@@ -11,7 +11,7 @@ const {Op} = require('sequelize');
 module.exports = {
     index: (req,res) => {
      
-      let Product = db.Product.findAll(
+      let destacados = db.Product.findAll(
         {
             where:{
                 destacado:true
@@ -21,24 +21,18 @@ module.exports = {
                 association:'images'             
                }
             ]
-        }
-        
-      )
+        });
+    Promise.all([destacados])
+    .then(([destacados]) => { 
       
-      .then(destacados=>{
-     
-        return res.render('index', { 
-            title: 'IOCUS-INDEX',
-            destacados,
-            toThousand, 
-            finalPrice,
-          
+      return res.render('index', { 
+        title: 'IOCUS-INDEX',
+        destacados,
+        toThousand, 
+        finalPrice,
+        
         })
-        
-        }
-        
-
-      ).catch(error => console.log(error))
+    }).catch(error => console.log(error))
       
     },
     contacto: (req,res) => {
