@@ -187,40 +187,24 @@ module.exports = {
         )  
              
         if(req.files.length > 0) {
-                let uploadImages = req.files.map(img => img.filename)
+                let uploadImages = req.files.map(img => img.filename)   //Se crea un array de la propiedad "filename" basado en req.files
                 
-                let productImages = await db.Image.findAll({where: {productId: req.params.id}})
-                
-                    await db.Image.update({
-                        file: uploadImages[0]
+                let productImages = await db.Image.findAll({where: {productId: req.params.id}})   //Se crea un array de la base de datos 
+
+                for (let i = 0; i < productImages.length; i++) {                        // Se realiza el update de cada img en la db
+                     db.Image.update({
+                        file: uploadImages[i]
                     },
                     {
                         where:{
-                        id: productImages[0].id
+                        id: productImages[i].id
                     }})
-
-
-                    await db.Image.update({
-                        file: uploadImages[1]
-                    },
-                    {
-                        where:{
-                        id: productImages[1].id
-                    }})
-
-                    await db.Image.update({
-                        file: uploadImages[2]
-                    },
-                    {
-                        where:{
-                        id: productImages[2].id
-                    }})
-
-                /* for (let i = 0; i < productImages.length; i++) {
-                    productImages[i].file = uploadImages[i]
-                    
                 }
-                console.log(productImages); */
+
+                for (const oldImage of productImages) {
+                    
+                    fs.unlinkSync(path.join(__dirname, '../../public/img/detalle/' + oldImage.file))  // Se eliminan los datos antigüos
+                }
             }
         setTimeout(()=> {res.redirect('/')},1000)
         
