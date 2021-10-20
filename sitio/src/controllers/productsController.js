@@ -189,20 +189,38 @@ module.exports = {
         if(req.files.length > 0) {
                 let uploadImages = req.files.map(img => img.filename)
                 
-                 for (let i = 0; i < uploadImages.length; i++) {
-                      
-                    db.Image.update({
-                        file: uploadImages[i],
-                        
+                let productImages = await db.Image.findAll({where: {productId: req.params.id}})
+                
+                    await db.Image.update({
+                        file: uploadImages[0]
                     },
                     {
-                        where: {
-                            productId: req.params.id
-                        }
-                    })
-                     
-                 }              
-                
+                        where:{
+                        id: productImages[0].id
+                    }})
+
+
+                    await db.Image.update({
+                        file: uploadImages[1]
+                    },
+                    {
+                        where:{
+                        id: productImages[1].id
+                    }})
+
+                    await db.Image.update({
+                        file: uploadImages[2]
+                    },
+                    {
+                        where:{
+                        id: productImages[2].id
+                    }})
+
+                /* for (let i = 0; i < productImages.length; i++) {
+                    productImages[i].file = uploadImages[i]
+                    
+                }
+                console.log(productImages); */
             }
         setTimeout(()=> {res.redirect('/')},1000)
         
