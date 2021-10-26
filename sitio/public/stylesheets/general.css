@@ -379,6 +379,12 @@ header {
 /* ---------------FOOTER--------------------- */
 
 
+.footer-fixed-bottom{
+  height: 200px; 
+  width:100%; 
+  
+}
+
 .footer-container, .copyright-footer {
   background-color: var(--color-celeste);
   color: #000;

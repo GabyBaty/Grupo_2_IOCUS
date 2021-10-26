@@ -7,8 +7,8 @@
   <!--Botón ir hacia arriba-->
   <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
       class="fas fa-arrow-up"></i></button>
-  <main>
-    <div class="container-sm">
+  <main style="min-height: calc(100vh - 200px);">
+    <div class="container-sm" style="margin-top: 150px;">
       <div class="row mt-5 d-flex justify-content-center">
         <div class="col-sm-3 p-5 bg-light shadow rounded">
             <div class="d-flex justify-content-center"><img src="/img/avatars/<%= usuario.avatar  %> " alt="user-profile-img" class=" rounded-circle"></div>
@@ -34,6 +34,7 @@
     </div>
   </main>
   <!-- Footer -->
+  <div class="footer-fixed-bottom" ></div>
   <%- include('../partials/footer.ejs')%>
   <!-- Footer -->
 
