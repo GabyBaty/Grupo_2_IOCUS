@@ -17,8 +17,8 @@
           <% if (locals.usuario && locals.usuario.role === "Administrador") { %>
             <div class="col-md-6 d-flex justify-content-end align-items-center">
             <a href="/products/edit/<%= producto.id %>"><button class="btn btn-warning btn-lg p-3 mb-3">Editar</button></a>
-            <form action="/products/delete/<%= producto.id %>?_method=DELETE"
-              method="POST"><button class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button></form>
+            <form  action="/products/delete/<%= producto.id %>?_method=DELETE"
+               method="POST"><button  onclick="confirmar('<%=producto.id%>')" type="submit" class="btn btn-danger btn-lg p-3 ms-4 mb-3">Borrar</button></form>
             
             </div>
               <% } %>
@@ -127,8 +127,34 @@
   <%- include('../partials/footer.ejs')%>
   <!-- Footer -->
 
+
+
   <!-- SCRIPT -->
   <%- include('../partials/scripts.ejs')%>
+
+  <!-- alerta de eliminar producto -->
+<script>
+ function confirmar(id) {
+   event.preventDefault();
+   var form= event.target.form
+    Swal.fire ({
+        title: '¿Confirma eliminar el producto?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Confirmar'
+      }).then((result) => {
+        if (result.isConfirmed) {   
+          form.submit()                          
+        }
+    });
+  };
+    
+
+
+</script>
+
 
 </body>
 

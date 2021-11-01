@@ -7,6 +7,7 @@ const path = require("path");
 const { dirname } = require("path");
 const { IncomingMessage } = require("http");
 let db = require(path.join(__dirname, "../../database/models"));
+const {Op} = require('sequelize');
 
 module.exports = {
     detail: (req, res) => {
@@ -191,7 +192,7 @@ module.exports = {
                 
                 let productImages = await db.Image.findAll({where: {productId: req.params.id}})   //Se crea un array de la base de datos 
 
-                for (let i = 0; i < productImages.length; i++) {                        // Se realiza el update de cada img en la db
+                for (let i = 0; i < productImages.length; i++) {   // Se realiza el update de cada img en la db
                      db.Image.update({
                         file: uploadImages[i]
                     },
@@ -221,21 +222,58 @@ module.exports = {
                 id: req.params.id,
             },
         })
+            
             .then(() => res.redirect("/products/filter"))
             .catch((error) => console.log(error));
     },
 
     filter: (req, res) => {
-        db.Product.findAll({
-            include: [{ association: "images" }, { association: "brand" }],
-        }).then((productos) => {
+       let marcas = db.Brand.findAll();
+       let categorias =  db.Category.findAll();
+       let edades = db.Age.findAll();
+
+        let productos= db.Product.findAll({
+            include: [
+                { association: "images"}, 
+
+                {association : 'category',
+                where:{
+                    id: {
+                        [Op.substring] : req.query.categoryId  ? req.query.categoryId  : ''
+                    }
+                }
+                },
+                
+                { association: "brand",
+                where:{
+                    id: {
+                        [Op.substring] : req.query.brandId ? req.query.brandId : ''
+                    }
+                }
+            
+            }
+            
+            ],
+        
+        })
+      
+        Promise.all([productos,marcas,categorias,edades])
+        .then(([productos,marcas,categorias,edades]) => {
             return res.render("products/filter", {
                 title: "IOCUS-LISTA",
                 productos,
                 toThousand,
                 finalPrice,
+                marcas,
+                categorias,
+                edades,
+                categoryId :req.query.categoryId,
+                brandId: req.query.brandId,
                 usuario: req.session.usuario,
             });
         });
+
     },
+
+
 };

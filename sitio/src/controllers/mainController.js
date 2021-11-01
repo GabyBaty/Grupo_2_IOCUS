@@ -6,6 +6,7 @@ const finalPrice = require('../utils/finalPrice')
 const busqueda = require('../utils/searchRelevance')
 let db= require(path.join(__dirname,'../../database/models'));
 const {Op} = require('sequelize');
+const { query } = require('express');
 
 
 module.exports = {
@@ -22,6 +23,7 @@ module.exports = {
                }
             ]
         });
+      
     Promise.all([destacados])
     .then(([destacados]) => { 
       
@@ -43,7 +45,10 @@ module.exports = {
         return res.render('about', { title: 'IOCUS-ABOUT', usuario:req.session.usuario});
     },  
     search : (req,res) => {
-      db.Product.findAll({
+       let marcas = db.Brand.findAll();
+       let categorias =  db.Category.findAll();
+       let edades = db.Age.findAll();
+      let productos= db.Product.findAll({
           where : {
               [Op.or] : [
                   {
@@ -58,16 +63,40 @@ module.exports = {
                   }
               ]
           },
-          include:[
-            { association:'images' },
-             {association : 'brand'}
-          ]
-          
-      }).then(productos=> res.render('products/filter',{
+          include: [
+            { association: "images"}, 
+
+            {association : 'category',
+            where:{
+                id: {
+                    [Op.substring] : req.query.categoryId  ? req.query.categoryId  : ''
+                }
+            }
+            },
+            
+            { association: "brand",
+            where:{
+                id: {
+                    [Op.substring] : req.query.brandId ? req.query.brandId : ''
+                }
+            }
+        
+        }
+        
+        ],
+           
+      })
+      Promise.all([productos,marcas,categorias,edades]) 
+      .then(([productos,marcas,categorias,edades]) => res.render('products/filter',{
           title:'busqueda',
           productos,
           toThousand, 
           finalPrice,
+          marcas,
+          categorias,
+          edades,
+          categoryId :req.query.categoryId,
+          brandId: req.query.brandId,
           usuario:req.session.usuario,
           busqueda : req.query.keywords
       })).catch(error => console.log(error))
