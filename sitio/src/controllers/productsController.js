@@ -215,12 +215,15 @@ module.exports = {
 
     remove: (req, res) => {
         db.Product.destroy({
+            
             where: {
                 id: req.params.id,
             },
+            
         })
             .then(() => res.redirect("/products/filter"))
-            .catch((error) => console.log(error));
+            .catch((error) => console.log(error)); 
+
     },
 
     filter: (req, res) => {
