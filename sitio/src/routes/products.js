@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 const uploadFile = require('../middleware/multerMiddleware')
-const {detail, cart, add, edit, filter, update, save, remove} = require('../controllers/productsController');
+const {detail, cart, add, edit, filter, update, save, remove,filtrado} = require('../controllers/productsController');
 
 
 const addProductValidator = require('../validations/addProductValidator')
@@ -24,5 +24,6 @@ router.get('/edit/:id',adminUserCheck, edit);
 router.put('/edit/:id',uploadFile.any('imagesProductAdd',3),editProductValidator,update);
 router.delete('/delete/:id',adminUserCheck, remove);
 router.get('/filter',filter);
+
 
 module.exports = router;

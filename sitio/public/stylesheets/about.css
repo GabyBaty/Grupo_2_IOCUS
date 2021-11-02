@@ -1,0 +1,38 @@
+.about .tarjetas {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #efefef;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.about .tarjeta {
+  width: 40%;
+  margin: 30px 30px 30px 30px;
+  background-color: #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+.about .tarjeta h2 {
+  font-size: 3rem;
+  color: #191a19;
+  margin-top: 10px;
+}
+
+.about .gerente {
+  color: red;
+  text-transform: uppercase;
+}
+
+.about .descripcion {
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .about .tarjeta {
+    width: 90%;
+  }
+}
