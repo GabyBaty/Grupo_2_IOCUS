@@ -29,6 +29,16 @@ module.exports = {
           key : 'id'
         }
       },
+      orderId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Orders'
+          },
+          key : 'id'
+        },
+        onDelete : "cascade"
+      },
       paymentId: {
         type: Sequelize.INTEGER,
         references : {

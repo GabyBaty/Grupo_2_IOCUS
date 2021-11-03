@@ -46,7 +46,7 @@ module.exports = {
     },
 
     cart: (req, res) => {
-        return res.render("products/cart", { title: "IOCUS-CARRITO" });
+        return res.render("products/cart", { title: "IOCUS-CARRITO" }); 
     },
     add: (req, res) => {
         return res.render("products/add", {

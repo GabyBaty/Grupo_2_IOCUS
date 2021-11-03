@@ -1,12 +1,15 @@
 require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+
 const methodOverride = require('method-override')
 const session = require('express-session');
 
@@ -39,6 +42,8 @@ app.use(cookiesCheck);
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
+app.use('/api/carts',require('./routes/api/carts'));
 
 
 // catch 404 and forward to error handler
