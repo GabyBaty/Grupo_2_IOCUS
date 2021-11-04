@@ -254,7 +254,14 @@ module.exports = {
                     }
                 }
             
+            },
+            {association : 'age',
+            where:{
+                id: {
+                    [Op.substring] : req.query.ageId ? req.query.ageId : ''
+                }
             }
+            },
             
             ],
         
@@ -272,6 +279,7 @@ module.exports = {
                 edades,
                 categoryId :req.query.categoryId,
                 brandId: req.query.brandId,
+                ageId: req.query.ageId,
                 usuario: req.session.usuario,
             });
         });

@@ -48,7 +48,7 @@ module.exports = {
        let marcas = db.Brand.findAll();
        let categorias =  db.Category.findAll();
        let edades = db.Age.findAll();
-      let productos= db.Product.findAll({
+    let productos= db.Product.findAll({
           where : {
               [Op.or] : [
                   {
