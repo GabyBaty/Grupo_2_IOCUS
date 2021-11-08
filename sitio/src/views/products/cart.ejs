@@ -7,144 +7,89 @@
   <!--Botón ir hacia arriba-->
   <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top"><i
       class="fas fa-arrow-up"></i></button>
-  <main class="product-cart-main">
-    <div class="product-cart-main-container">
-      <h2 id="order-summary">Resumen de pedido</h2>
-      <!--Section: Block Content-->
-      <section>
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-8">
-            <!-- Card -->
-            <div class="card wish-list mb-3">
-              <div class="card-body">
-                <div class="row mb-4">
-                  <div class="col-md-5 col-lg-3 col-xl-3">
-                    <div class="mb-3 mb-md-0">
-                      <img class="img-fluid w-100" src="/img/productos/1.png" alt="Sample">
-                    </div>
-                  </div>
-                  <div class="col-md-7 col-lg-9 col-xl-9">
-                    <div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <h5>Nombre producto</h5>
-                          <p class="mb-3 text-muted text-uppercase small"><small>Detalle 1: Texto</small></p>
-                          <p class="mb-2 text-muted text-uppercase small"><small>Detalle 2: Texto</small></p>
-                          <p class="mb-3 text-muted text-uppercase small"><small>Detalle 3: Texto</small></p>
+      <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+                    <form id="procesar-pago" action="#">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" required>
+                            </div>
                         </div>
-                        <div>
-                          <div class="def-number-input number-input safari_only mb-0 w-100">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                              class="minus"><i class="fas fa-arrow-down"></i></button>
-                            <input class="quantity" min="0" name="quantity" value="1" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                              class="plus"><i class="fas fa-arrow-up"></i></button>
-                          </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" required>
+                            </div>
                         </div>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                          <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
-                              class="fas fa-trash-alt mr-1"></i> Quitar producto </a>
+
+                        <div id="carrito" class="table-responsive">
+                            <table class="table" id="lista-compra">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IGV :</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="total"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
                         </div>
-                        <p class="mb-0"><span><strong>$5000</strong></span></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr class="mb-4">
-                <div class="row mb-4">
-                  <div class="col-md-5 col-lg-3 col-xl-3">
-                    <div class="mb-3 mb-md-0">
-                      <img class="img-fluid w-100" src="/img/productos/2.png" alt="Sample">
-                    </div>
-                  </div>
-                  <div class="col-md-7 col-lg-9 col-xl-9">
-                    <div>
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <h5>Nombre producto</h5>
-                          <p class="mb-3 text-muted text-uppercase small"><small>Detalle 1: Texto</small></p>
-                          <p class="mb-2 text-muted text-uppercase small"><small>Detalle 2: Texto</small></p>
-                          <p class="mb-3 text-muted text-uppercase small"><small>Detalle 3: Texto</small></p>
+
+                        <div class="row justify-content-center" id="loaders">
+                            <img id="cargando" src="img/cargando.gif" width="220">
                         </div>
-                        <div>
-                          <div class="def-number-input number-input safari_only mb-0 w-100">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                              class="minus"><i class="fas fa-arrow-down"></i></button>
-                            <input class="quantity" min="0" name="quantity" value="1" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                              class="plus"><i class="fas fa-arrow-up"></i></button>
-                          </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</a>
+                            </div>
                         </div>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                          <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
-                              class="fas fa-trash-alt mr-1"></i> Quitar producto </a>
-                        </div>
-                        <p class="mb-0"><span><strong>$2500</strong></span></p>
-                      </div>
-                    </div>
-                  </div>
+                    </form>
+
+
                 </div>
 
-              </div>
+
             </div>
-            <!-- Card -->
-          </div>
-          <!--Grid column-->
 
-          <!--Grid column-->
-          <div class="col-lg-4">
-
-            <!-- Card -->
-            <div class="card mb-3">
-              <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                    Subtotal
-                    <span>$7500</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                    Descuento
-                    <span>$0</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                    Costo envío
-                    <span>Gratis</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                    <div>
-                      <strong>
-                        <p class="mb-0">Total</p>
-                      </strong>
-                    </div>
-                    <span><strong>$7500</strong></span>
-                  </li>
-                </ul>
-                <div class="d-flex flex-column">
-                  <button id="shopping-cart-button" type="button"
-                    class="btn btn-warning btn-block waves-effect waves-light">Finalizar compra</button>
-                  <hr>
-                  <button id="shopping-cart-button" type="button"
-                    class="btn btn-primary btn-block waves-effect waves-light">Agregar más productos</button>
-                </div>
-              </div>
-            </div>
-            <!-- Card -->
-          </div>
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
-      </section>
-      <!--Section: Block Content-->
-
-    </div>
-
-  </main>
+    </main>
 
   <!-- Footer -->
   <%- include('../partials/footer.ejs')%>

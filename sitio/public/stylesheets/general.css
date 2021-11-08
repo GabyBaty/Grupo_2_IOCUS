@@ -77,6 +77,25 @@ header {
   position: relative;
 }
 
+header .btn-cart{
+  border: 0;
+  background: none;
+  margin-right: 15px;
+  position: relative;
+  
+}
+header .btn-cart i{
+  font-size: 40px;
+
+}
+header .btn-cart span{
+  font-size: 16px;
+  position: absolute;
+  top:2px;
+  right: -4px;
+  
+}
+
 .logo-container{
   flex-basis:20%;
   display: flex;
@@ -396,6 +415,8 @@ header {
 .social-media-icons {
   font-size: 2.5rem;
 }
+  
+
 
 /*-------------------- LOGIN USER DROPDOWN MENU */
 

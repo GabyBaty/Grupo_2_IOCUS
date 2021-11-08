@@ -42,9 +42,14 @@
                    
                    
                   </ul>
+                  <h6 class="me-5 d-flex justify-content-center">*imagen meramente ilustrativa</h6>
+                  <h5 class="mt-5 ms-5 mb-5 d-flex ">SKU: <%= producto.sku %></h5>
                 </div>
+                
               </div>
+              
             </div>
+            
             <div class="col-md-6">
               <div class="p-3 right-side">
                 <div class="d-flex justify-content-between align-items-center">
@@ -54,70 +59,67 @@
                   <p class="mb-5" id="info-productDetail">
                     <%= producto.description %>
                   </p>
-                  
+                  <div class="col p-5">
+                    <div class="d-flex align-items-center flex-column align-self-center">
+                      <% if(producto.discount !== 0) { %> 
+                        <p class="text-success">
+                          <span class="">$<%= producto.price %> </span>
+                          /
+                          <b><%= producto.discount %>% OFF</b>
+                        </p>
+                      
+                        <h2 class="product-detail-price display-2">
+                          $<%= toThousand(finalPrice(producto.price,producto.discount)) %> 
+                          <% }else{ %> 		
+                          </h2>
+                        <h2 class="product-detail-price display-2">
+                          $<%= toThousand(producto.price) %>
+                          <% } %> 	
+                        </h2>
+                   
+                      <h6><em>*Precio comprando por la web</em></h6>
+                    </div>
+                   
+                  </div>
                 </div>
             
 
-                <h6 class="me-5">*imagen meramente ilustrativa</h6>
+              
 
               </div>
-            </div>
-            <div class="col-md-6 border-end">
-              <div class="d-flex align-items-center flex-column align-self-center">
-                <% if(producto.discount !== 0) { %> 
-                  <p class="text-success">
-                    <span class="">$<%= producto.price %> </span>
-                    /
-                    <b><%= producto.discount %>% OFF</b>
-                  </p>
+              <div class="col d-flex justify-content-center align-items-center">
+               
                 
-                  <h2 class="product-detail-price display-2">
-                    $<%= toThousand(finalPrice(producto.price,producto.discount)) %> 
-                    <% }else{ %> 		
-                    </h2>
-                  <h2 class="product-detail-price display-2">
-                    $<%= toThousand(producto.price) %>
-                    <% } %> 	
-                  </h2>
-             
-                <h6><em>*Precio comprando por la web</em></h6>
-              </div>
-              <h5 class="mt-5 ms-5 mb-5">SKU: <%= producto.sku %></h5>
-            </div>
-            <div class="col-md-6 d-flex flex-column align-items-center ">
-              <% if (producto.stock === 0) { %>
-                <h5 class="mb-5 alert alert-danger"> No hay Stock Disponible </h5>
-              <% }else{ %>
-                <h5 class="mb-5 alert alert-success">Hay Stock Disponible </h5>
-
-                <% } %>
-              <div
-                class="def-number-input number-input safari_only w-100 d-flex flex-row mb-3 align-items-center justify-content-evenly">
-                <div>
+                <div class="def-number-input number-input safari_only w-100 d-flex flex-row mb-3 align-items-center justify-content-evenly">
                   <% if (producto.stock === 0) { %>
-                
-                    <button id="shopping-cart-button" type="button"
-                      class="btn btn-danger btn-block waves-effect waves-light" disabled="disabled">Sin Stock</button>
+                    <h5 class="mb-5 alert alert-danger mt-5"> No hay Stock Disponible </h5>
+                  <% }else{ %>
+                    <h5 class="mb-5 alert alert-success mt-5">Hay Stock Disponible </h5>
+    
+                    <% } %>
                   
-                    <% }else{ %>
-                      <a href="/products/cart"><button id="shopping-cart-button" type="button"
-                        class="btn btn-primary btn-block waves-effect waves-light">Añadir al Carrito</button></a>
+                      <% if (producto.stock === 0) { %>
+                  
+                        <button id="shopping-cart-button" type="button"
+                        class="btn btn-danger btn-block waves-effect waves-light" disabled="disabled">Sin Stock</button>
+                    
+                        <% }else{ %>
+                         <!--  <a href="/products/cart"><button id="shopping-cart-button" type="button"
+                          class="btn btn-primary btn-block waves-effect waves-light">Añadir al Carrito</button></a> -->
+                          <button class="btn btn-primary  p-3" onclick="agregarItem(event,'<%=producto.id%>')">Agregar al carrito</button> 
+                       
+                         <% } %>
                      
-                      <% } %>
-                </div>
-                <div>
-                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i
-                      class="fas fa-arrow-down"></i></button>
-                  <input class="quantity" min="0" name="quantity" value="1" type="number">
-                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i
-                      class="fas fa-arrow-up"></i></button>
-                </div>
-              </div>
-              <div class="d-flex flex-row align-items-center w-60 p-5 product-detail-info-delivery">
-                <i class="fas fa-truck"></i>
-                <p>Envio gratis a CABA y Gran Bs. As.</p>
-              </div>
+                 </div>
+                   
+           
             </div>
+             
+            <div class="d-flex flex-row align-items-center w-60 p-5 product-detail-info-delivery">
+              <i class="fas fa-truck"></i>
+              <p>Envio gratis a CABA y Gran Bs. As.</p>
+            </div>
+ 
           </div>
         </div>
       </div>

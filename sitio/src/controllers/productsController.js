@@ -46,7 +46,7 @@ module.exports = {
     },
 
     cart: (req, res) => {
-        return res.render("products/cart", { title: "IOCUS-CARRITO" });
+        return res.render("products/cart", { title: "IOCUS-CARRITO" }); 
     },
     add: (req, res) => {
         return res.render("products/add", {
@@ -193,13 +193,16 @@ module.exports = {
 
     remove: (req, res) => {
         db.Product.destroy({
+            
             where: {
                 id: req.params.id,
             },
+            
         })
             
             .then(() => res.redirect("/products/filter"))
-            .catch((error) => console.log(error));
+            .catch((error) => console.log(error)); 
+
     },
 
     filter: (req, res) => {
@@ -226,7 +229,14 @@ module.exports = {
                     }
                 }
             
+            },
+            {association : 'age',
+            where:{
+                id: {
+                    [Op.substring] : req.query.ageId ? req.query.ageId : ''
+                }
             }
+            },
             
             ],
         
@@ -244,6 +254,7 @@ module.exports = {
                 edades,
                 categoryId :req.query.categoryId,
                 brandId: req.query.brandId,
+                ageId: req.query.ageId,
                 usuario: req.session.usuario,
             });
         });

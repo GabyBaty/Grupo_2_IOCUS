@@ -6,5 +6,5 @@ const {index,about,contacto,search} = require('../controllers/mainController');
 router.get('/', index);
 router.get('/about', about);
 router.get('/contacto', contacto);
-router.get('/search', search)
+router.get('/search', search);
 module.exports = router;
