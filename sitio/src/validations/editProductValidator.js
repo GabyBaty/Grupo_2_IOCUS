@@ -18,29 +18,6 @@ module.exports = [
     }).withMessage('La descripción debe tener como máximo 450 caracteres'),
 
     
-    body("imagesProductAdd").custom((value,{req})=>{
-      let extensions = [".jpg",".jpeg",".png"]
-      
-      switch (req.files.length) {                                                       // Si no hay files no hagas nada, si hay 3 verifica extensiones, otro caso "solo se pueden cargar 3 imagenes" 
-          case 0:
-              return true
-              
-          case 3: 
-            for (let i=0;i< req.files.length; i++) 
-                {
-                    if(!extensions.includes(path.extname(req.files[i].originalname)))
-                    {
-                        throw new Error(`Las extensiones permitidas son ${extensions.join(", ")}`);
-                    }
-                }
-                return true
-          default: 
-                throw new Error('Solo debe cargar excatamente 3 imagenes');
-              
-      }
-      
-      }),
-
     check('category')
     .notEmpty().withMessage('Seleccione una categoría'),
 

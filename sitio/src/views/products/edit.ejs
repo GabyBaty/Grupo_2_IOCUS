@@ -19,25 +19,7 @@
                                       El campo no puede estar vacío.
                                     </div>
                                   </div>
-                                  <div class="col-md-10 mt-4">
-                                    <div class="row mt-5 mb-5">
-                                      <div class="col-sm-12 d-flex flex-wrap">
-
-                                        <% producto.images.forEach(imagen => { %>
-                                          <div class="productEdit-thumbnail-img p-1"><img src="/img/detalle/<%= imagen.file%>" class="img-thumbnail" alt="imageDetailProduct"></div>
-                                        <% }) %>
-                                      
-                                       
-                                      </div>
-                                    </div>
-
-                                    <label for="formFileMultiple" class="form-label">Seleccione 3 imagenes para subir</label>
-                                    <input class="form-control" type="file" name="imagesProductAdd" id="formFileMultiple" multiple/>
-                                    <span class="alert-danger"><%= locals.errores && errores.imagesProductAdd ? errores.imagesProductAdd.msg : null%> </span>
-                                    <div class="invalid-feedback">
-                                      El campo no puede estar vacío.
-                                    </div>
-                                  </div>
+                                  
                                   <div class="mb-3 mt-5">
                                     <label class="bg-light w-100 border" for="formInputProductDescription">Descripción</label>
                                     <textarea rows="6"class="form-control" id="formInputProductDescription" aria-label="textarea" maxlength="400" name="description" required><%= producto.description %> </textarea>
