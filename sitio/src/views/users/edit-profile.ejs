@@ -13,11 +13,12 @@
         <div class="col-sm-4 p-5 bg-light shadow rounded">
           <form action="/users/edit-profile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="d-flex justify-content-center flex-column  align-items-center">
-              
-              <img src="/img/avatars/<%= usuario.avatar%> " alt="user-profile-img" class=" rounded-circle w-50 ">
+              <div id="preview" class="rounded-circle w-50">
+              <img src="<%=usuario.avatar ? `/img/avatars/${usuario.avatar}` : `/img/avatars/default.png` %> " alt="user-profile-img" >
+            </div>
               <p class="text-danger mt-3" id="role-user-profile"><%= usuario.role %></p>
               <input type="file" name="fotoUsuario" id="selectedFile" style="display: none;"  accept=".jpg, .png, .jpeg">
-              <input class="mt-5 w-50 btn btn-primary "style="font-size: 1.5rem;" type="button" value="Seleccionar imágen" onclick="document.getElementById('selectedFile').click();"> 
+              <input class="mt-5 w-50 btn btn-primary " style="font-size: 1.5rem;" type="button" value="Seleccionar imágen" onclick="document.getElementById('selectedFile').click();"> 
               <a href="https://www.creartuavatar.com/" target="_blank"><input class="mt-5 w-150 px-5 btn btn-primary " style="font-size: 1.5rem;" type="button"  value="Crea tu avatar" ></a> 
           </div>
           </div>
@@ -48,6 +49,27 @@
 
   <!-- SCRIPT -->
   <%- include('../partials/scripts.ejs')%>
+
+  <script>
+    document.getElementById("selectedFile").onchange = function(e) {
+  // Creamos el objeto de la clase FileReader
+  let reader = new FileReader();
+
+  // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+  reader.readAsDataURL(e.target.files[0]);
+
+  // Le decimos que cuando este listo ejecute el código interno
+  reader.onload = function(){
+    let preview = document.getElementById('preview'),
+            image = document.createElement('img');
+
+    image.src = reader.result;
+
+    preview.innerHTML = '';
+    preview.append(image);
+  };
+}
+  </script>
 
 </body>
 
