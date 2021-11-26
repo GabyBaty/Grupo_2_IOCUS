@@ -113,7 +113,7 @@ module.exports = {
         let edades = db.Age.findAll();
         let producto = db.Product.findByPk(req.params.id,{
             include : [
-                {association : 'images'},
+                
                 {association : 'category'},
                 {association : 'age'},
                 {association : 'brand'}
@@ -139,15 +139,10 @@ module.exports = {
           
 
         if (!errores.isEmpty()) {
-            let images = req.files;
-            images.forEach(img => {
-                if(fs.existsSync(path.join(__dirname, '../../public/img/detalle/' + img.filename))){
-                    fs.unlinkSync(path.join(__dirname, '../../public/img/detalle/' + img.filename))
-                }
-            });
+            
             let producto = await db.Product.findByPk(req.params.id,{
                 include : [
-                    {association : 'images'},
+                   
                     {association : 'category'},
                     {association : 'age'},
                     {association : 'brand'}
@@ -187,27 +182,7 @@ module.exports = {
             },
         )  
              
-        if(req.files.length > 0) {
-                let uploadImages = req.files.map(img => img.filename)   //Se crea un array de la propiedad "filename" basado en req.files
-                
-                let productImages = await db.Image.findAll({where: {productId: req.params.id}})   //Se crea un array de la base de datos 
-
-                for (let i = 0; i < productImages.length; i++) {   // Se realiza el update de cada img en la db
-                     db.Image.update({
-                        file: uploadImages[i]
-                    },
-                    {
-                        where:{
-                        id: productImages[i].id
-                    }})
-                }
-
-                for (const oldImage of productImages) {
-                    
-                    fs.unlinkSync(path.join(__dirname, '../../public/img/detalle/' + oldImage.file))  // Se eliminan los datos antigüos
-                }
-            }
-        setTimeout(()=> {res.redirect('/')},1000)
+    setTimeout(()=> {res.redirect('/')},1000)
         
     }catch (error) {
         console.log(error)
